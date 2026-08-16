@@ -1,63 +1,63 @@
-/* Buttons & Interactive Components */
+/* Buttons & Corporate Components */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  padding: 0.85rem 1.75rem;
-  border-radius: var(--radius-full);
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radius-md);
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.925rem;
   text-decoration: none;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: transform var(--transition-bounce), box-shadow var(--transition-fast), background var(--transition-fast);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
 }
 
 .btn:active {
-  transform: scale(0.97);
+  transform: scale(0.98);
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  background: #2563eb;
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.28);
 }
 
 .btn-primary:hover {
+  background: #1d4ed8;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
 }
 
 .btn-secondary {
-  background: var(--bg-glass-card);
+  background: var(--bg-surface);
   color: var(--text-main);
   border-color: var(--border-subtle);
-  backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-surface-elevated);
   transform: translateY(-2px);
   border-color: var(--border-highlight);
 }
 
 .badge-playstore {
   display: inline-block;
-  height: 54px;
-  transition: transform var(--transition-bounce), filter var(--transition-fast);
+  height: 52px;
+  transition: transform var(--transition-fast), filter var(--transition-fast);
 }
 
 .badge-playstore img {
   height: 100%;
   width: auto;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 .badge-playstore:hover {
-  transform: translateY(-3px) scale(1.02);
-  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.3));
+  transform: translateY(-2px);
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.25));
 }
 
 .badge-appstore-coming {
@@ -65,9 +65,9 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.6rem 1.25rem;
-  border-radius: var(--radius-full);
-  background: var(--bg-glass-card);
-  border: 1px dashed var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
   font-size: 0.85rem;
   color: var(--text-muted);
 }
@@ -81,11 +81,11 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--bg-glass-card);
+  background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   color: var(--text-main);
-  padding: 0.4rem 0.85rem;
-  border-radius: var(--radius-full);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-sm);
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
@@ -104,7 +104,7 @@
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-dropdown);
-  min-width: 140px;
+  min-width: 160px;
   display: none;
   flex-direction: column;
   padding: 0.4rem;
@@ -119,7 +119,7 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0.55rem 0.75rem;
   border: none;
   background: none;
   color: var(--text-main);
@@ -138,33 +138,33 @@
 }
 
 .theme-toggle-btn {
-  background: var(--bg-glass-card);
+  background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   color: var(--text-main);
   width: 38px;
   height: 38px;
-  border-radius: 50%;
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 1.1rem;
-  transition: transform var(--transition-bounce), border-color var(--transition-fast);
+  font-size: 1rem;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
 }
 
 .theme-toggle-btn:hover {
-  transform: rotate(15deg);
   border-color: var(--border-highlight);
+  background: var(--bg-surface-elevated);
 }
 
-/* Modal Overlay & Card */
+/* Modal Overlay & Corporate Card */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(11, 19, 43, 0.75);
   backdrop-filter: blur(8px);
   z-index: 2000;
   display: flex;
@@ -192,8 +192,8 @@
   padding: 2.5rem;
   box-shadow: var(--shadow-dropdown);
   position: relative;
-  transform: translateY(20px);
-  transition: transform var(--transition-bounce);
+  transform: translateY(15px);
+  transition: transform var(--transition-normal);
 }
 
 .modal-overlay.active .modal-card {
@@ -204,17 +204,17 @@
   position: absolute;
   top: 1.25rem;
   right: 1.25rem;
-  background: var(--bg-glass-card);
+  background: var(--bg-surface-elevated);
   border: 1px solid var(--border-subtle);
   color: var(--text-main);
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .modal-header h3 {
@@ -249,7 +249,7 @@
   border: 1px solid var(--border-subtle);
   color: var(--text-main);
   padding: 0.75rem 1rem;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   font-family: var(--font-body);
   font-size: 0.95rem;
   outline: none;
