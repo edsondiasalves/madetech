@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MadeTech — Engenharia de Software Mobile & Soluções Nativas</title>
+  <meta name="description" content="A MadeTech é um estúdio de engenharia mobile especializado no desenvolvimento de aplicações nativas robustas, seguras e multiplataforma para utilizadores globais.">
+  <meta name="keywords" content="MadeTech, Engenharia Mobile, Software Nativo, Best Gym, Scrutinium, Android, Kotlin Multiplatform, Soluções Empresariais">
+  <meta name="author" content="MadeTech Software Engineering">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://madetech.app">
+  <meta property="og:title" content="MadeTech — Engenharia de Software Mobile & Soluções Nativas">
+  <meta property="og:description" content="Desenvolvimento de software mobile nativo, segurança rigorosa e arquiteturas escaláveis.">
+  <meta property="og:image" content="/assets/madetech-logo.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MadeTech App Studio",
+    "url": "https://madetech.app",
+    "logo": "https://madetech.app/assets/madetech-logo.svg",
+    "description": "Estúdio independente de desenvolvimento e publicação de aplicações móveis para a Google Play Store."
+  }
+  </script>
+  <script type="module" crossorigin src="./assets/main-DU4MKLgS.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-x-pVNOs8.css">
+</head>
+<body>
+
+  <!-- Animated Background Blobs -->
+  <div class="bg-decorations">
+    <div class="bg-blob bg-blob-1"></div>
+    <div class="bg-blob bg-blob-2"></div>
+    <div class="bg-blob bg-blob-3"></div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="#home" class="logo-brand">
+        <img src="./assets/madetech-logo.svg" alt="MadeTech Logo" class="logo-img">
+        <span>MadeTech</span>
+        <span class="studio-tag">Studio</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link" data-i18n="nav.home">Início</a></li>
+        <li><a href="#bestgym" class="nav-link" data-i18n="nav.bestgym">Best Gym</a></li>
+        <li><a href="#scrutinium" class="nav-link" data-i18n="nav.scrutinium">Scrutinium</a></li>
+        <li><a href="#about" class="nav-link" data-i18n="nav.about">Sobre Nós</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Language Switcher Dropdown -->
+        <div class="lang-switcher-wrap">
+          <button id="lang-btn" class="lang-btn">
+            <span id="lang-btn-label">🇵🇹 PT</span>
+            <span style="font-size: 0.7rem;">▼</span>
+          </button>
+          <div id="lang-dropdown" class="lang-dropdown">
+            <button class="lang-option" data-lang="pt-PT">🇵🇹 Portugal (PT)</button>
+            <button class="lang-option" data-lang="pt-BR">🇧🇷 Brasil (BR)</button>
+            <button class="lang-option" data-lang="en">🇬🇧 English</button>
+          </div>
+        </div>
+
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle-btn" class="theme-toggle-btn" title="Alternar Tema">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-pill">
+        <span class="hero-pill-dot"></span>
+        <span data-i18n="hero.badge">Estúdio Indie de Aplicações Mobile</span>
+      </div>
+
+      <h1 class="hero-title">
+        Criamos Apps de Alto Impacto para <span class="gradient-text">Ecrãs de Todo o Mundo</span>
+      </h1>
+
+      <p class="hero-subtitle" data-i18n="hero.subtitle">
+        Estúdio dedicado ao desenvolvimento e publicação de experiências mobile nativas, privadas e focadas na comunidade.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#bestgym" class="btn btn-primary" data-i18n="hero.cta.gym">Explorar Best Gym</a>
+        <a href="#scrutinium" class="btn btn-secondary" data-i18n="hero.cta.scrutinium">Descobrir Scrutinium</a>
+      </div>
+
+      <!-- Stats Counter Strip -->
+      <div class="stats-strip">
+        <div class="stat-item">
+          <span class="stat-number gradient-text">100%</span>
+          <span class="stat-label" data-i18n="stats.native">Código Nativo</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number gradient-text-lime">19+</span>
+          <span class="stat-label" data-i18n="stats.criteria">Critérios de Avaliação</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number gradient-text">100%</span>
+          <span class="stat-label" data-i18n="stats.privacy">Dados Privados</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number gradient-text-lime">Global</span>
+          <span class="stat-label" data-i18n="stats.global">Disponibilidade</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product 1: Best Gym Section -->
+  <section id="bestgym" class="section">
+    <div class="container">
+      <div class="product-showcase">
+        <!-- Info Column -->
+        <div class="product-info">
+          <div class="product-header-inline">
+            <img src="./assets/bestgym-icon.png" alt="Best Gym App Icon" class="product-app-icon">
+            <div class="product-meta-title">
+              <span class="section-badge" data-i18n="gym.badge">Descoberta & Avaliação de Academias</span>
+              <h3>Best Gym</h3>
+              <p>Android & iOS</p>
+            </div>
+          </div>
+
+          <h2 class="section-title" data-i18n="gym.title">
+            Encontra o teu ginásio ideal com a precisão da comunidade
+          </h2>
+
+          <p class="section-desc" data-i18n="gym.desc">
+            Mapa em tempo real, estado de abertura, notas detalhadas e comparação direta entre a comunidade Best Gym e avaliações do Google.
+          </p>
+
+          <!-- Feature Cards Grid -->
+          <div class="features-bullets">
+            <div class="feature-bullet-card">
+              <h4>🗺️ <span data-i18n="gym.feat1.title">Mapa Interativo</span></h4>
+              <p data-i18n="gym.feat1.desc">Visualiza academias próximas, status de abertura em tempo real, distância e contacto.</p>
+            </div>
+            <div class="feature-bullet-card">
+              <h4>📊 <span data-i18n="gym.feat2.title">19 Critérios</span></h4>
+              <p data-i18n="gym.feat2.desc">Classifica limpeza, equipamentos, vestiários, equipa, aulas, estacionamento e preços.</p>
+            </div>
+            <div class="feature-bullet-card">
+              <h4>🏆 <span data-i18n="gym.feat3.title">Rankings Categoria</span></h4>
+              <p data-i18n="gym.feat3.desc">Filtra as melhores academias por limpeza, custo-benefício ou atmosfera.</p>
+            </div>
+            <div class="feature-bullet-card">
+              <h4>⭐ <span data-i18n="gym.feat4.title">Notas Unificadas</span></h4>
+              <p data-i18n="gym.feat4.desc">Notas da comunidade MadeTech em conjunto com avaliações verificadas do Google.</p>
+            </div>
+          </div>
+
+          <!-- Play Store Link Badge & Details Link -->
+          <div class="badges-group">
+            <a href="https://play.google.com/store/apps/details?id=com.gymreviewer.app" target="_blank" rel="noopener" class="badge-playstore">
+              <img src="./assets/google-play-badge.svg" alt="Disponível no Google Play">
+            </a>
+            <a href="/bestgym-details.html" class="btn btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">
+              Ver Todas as Funcionalidades →
+            </a>
+          </div>
+        </div>
+
+        <!-- Phone Mockup Column -->
+        <div class="phone-mockup-wrapper" id="gym-mockup-container">
+          <!-- Rendered via src/js/mockups/gym-mockup.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product 2: Scrutinium Section -->
+  <section id="scrutinium" class="section">
+    <div class="container">
+      <div class="product-showcase reverse">
+        <!-- Info Column -->
+        <div class="product-info">
+          <div class="product-header-inline">
+            <img src="./assets/scrutinium-icon.png" alt="Scrutinium App Icon" class="product-app-icon">
+            <div class="product-meta-title">
+              <span class="section-badge" style="color: var(--color-lime);" data-i18n="scrutinium.badge">Opinião Pública & Estatística Viva</span>
+              <h3>Scrutinium</h3>
+              <p>Android & iOS</p>
+            </div>
+          </div>
+
+          <h2 class="section-title" data-i18n="scrutinium.title">
+            A Pergunta do Dia que mede o pulso da sociedade
+          </h2>
+
+          <p class="section-desc" data-i18n="scrutinium.desc">
+            Responde com A ou B, vê os resultados ao vivo e explora a distribuição das opiniões por género, idade, continente e orientação política.
+          </p>
+
+          <!-- Feature Cards Grid -->
+          <div class="features-bullets">
+            <div class="feature-bullet-card">
+              <h4>🔥 <span data-i18n="scrutinium.feat1.title">Pergunta do Dia</span></h4>
+              <p data-i18n="scrutinium.desc1">Uma questão diária relevante. Vota e descobre os resultados em tempo real.</p>
+            </div>
+            <div class="feature-bullet-card">
+              <h4>📈 <span data-i18n="scrutinium.feat2.title">Demografia Vivo</span></h4>
+              <p data-i18n="scrutinium.desc2">Análise profunda por género, faixa etária, escolaridade e orientação política.</p>
+            </div>
+            <div class="feature-bullet-card">
+              <h4>💡 <span data-i18n="scrutinium.feat3.title">Vota em Amanhã</span></h4>
+              <p data-i18n="scrutinium.desc3">Vota na pergunta do dia seguinte e sugere novas perguntas à comunidade.</p>
+            </div>
+            <div class="feature-bullet-card">
+              <h4>🔒 <span data-i18n="scrutinium.feat4.title">Privacidade</span></h4>
+              <p data-i18n="scrutinium.desc4">Modo convidado ou Google/Microsoft. Votação 100% segura e anónima.</p>
+            </div>
+          </div>
+
+          <!-- Play Store Link Badge & Details Link -->
+          <div class="badges-group">
+            <a href="https://play.google.com/store/apps/details?id=com.scrutinium.app" target="_blank" rel="noopener" class="badge-playstore">
+              <img src="./assets/google-play-badge.svg" alt="Disponível no Google Play">
+            </a>
+            <a href="/scrutinium-details.html" class="btn btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">
+              Ver Todas as Funcionalidades →
+            </a>
+          </div>
+        </div>
+
+        <!-- Phone Mockup Column -->
+        <div class="phone-mockup-wrapper" id="poll-mockup-container">
+          <!-- Rendered via src/js/mockups/poll-mockup.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" data-i18n="about.badge">Sobre a MadeTech</span>
+        <h2 class="section-title" data-i18n="about.title">Engenharia de Software Nativa & Foco na Privacidade</h2>
+        <p class="section-desc" data-i18n="about.desc">
+          A MadeTech é uma produtora e estúdio indie com o compromisso de criar aplicações robustas, rápidas e sem recolha abusiva de dados.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-icon">⚡</div>
+          <h3 data-i18n="about.card1.title">Desenvolvimento Nativo</h3>
+          <p data-i18n="about.card1.desc">Desempenho máximo e integração fluida com as APIs nativas do Android e iOS.</p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-icon">🛡️</div>
+          <h3 data-i18n="about.card2.title">Privacidade por Design</h3>
+          <p data-i18n="about.card2.desc">Os teus dados pertencem-te. Armazenamento seguro e cifrado sem rastreamento de terceiros.</p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-icon">🤝</div>
+          <h3 data-i18n="about.card3.title">Comunidade & Moderação</h3>
+          <p data-i18n="about.card3.desc">Conteúdo de alta qualidade garantido por moderação ativa e feedback da comunidade.</p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-icon">🌐</div>
+          <h3 data-i18n="about.card4.title">Experiência Multilingue</h3>
+          <p data-i18n="about.card4.desc">Aplicações preparadas desde a raiz para Português (PT-PT e PT-BR) e Inglês.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo-brand">
+            <img src="./assets/madetech-logo.svg" alt="MadeTech Logo" class="logo-img">
+            <span>MadeTech</span>
+          </a>
+          <p data-i18n="footer.mission">
+            MadeTech — Estúdio independente dedicado a criar apps memoráveis e úteis para a Google Play Store.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Aplicações</h4>
+          <ul>
+            <li><a href="#bestgym">Best Gym (Android)</a></li>
+            <li><a href="#scrutinium">Scrutinium (Android)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>MadeTech</h4>
+          <ul>
+            <li><a href="#about" data-i18n="nav.about">Sobre Nós</a></li>
+            <li><a href="#" data-modal-trigger="contact" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#" data-modal-trigger="privacy" data-i18n="nav.privacy">Política de Privacidade</a></li>
+            <li><a href="https://play.google.com/store/apps/developer?id=MadeTech" target="_blank" rel="noopener">Google Play Store</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer.rights">© 2026 MadeTech. Todos os direitos reservados.</span>
+        <span>Made with ❤️ in Portugal & Worldwide</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal: Privacy Policy -->
+  <div id="privacy-modal" class="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close-btn">&times;</button>
+      <div class="modal-header">
+        <h3 data-i18n="privacy.title">Termos & Política de Privacidade MadeTech</h3>
+      </div>
+      <div class="modal-body">
+        <p data-i18n="privacy.intro">A MadeTech valoriza a sua privacidade. Esta política descreve como as nossas aplicações (Best Gym e Scrutinium) tratam os seus dados.</p>
+        <h4 data-i18n="privacy.sec1.title">1. Recolha de Dados Minimalista</h4>
+        <p data-i18n="privacy.sec1.text">Apenas recolhemos os dados estritamente necessários para o funcionamento dos serviços. O Scrutinium permite votação anónima e o Best Gym utiliza a sua localização apenas localmente para mostrar academias próximas.</p>
+        <h4 data-i18n="privacy.sec2.title">2. Segurança & Autenticação</h4>
+        <p data-i18n="privacy.sec2.text">A autenticação (quando utilizada) é efetuada via fornecedores seguros como Google e Microsoft. Não armazenamos palavras-passe nos nossos servidores.</p>
+        <h4 data-i18n="privacy.sec3.title">3. Contacto & Suporte</h4>
+        <p data-i18n="privacy.sec3.text">Para questões relacionadas com a privacidade ou eliminação de conta, entre em contacto via suporte no app ou pelo email suporte@madetech.app.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Contact Form -->
+  <div id="contact-modal" class="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close-btn">&times;</button>
+      <div class="modal-header">
+        <h3 data-i18n="contact.title">Entrar em Contacto</h3>
+      </div>
+      <div class="modal-body">
+        <form id="contact-form" style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="form-group">
+            <label data-i18n="contact.name">O teu Nome</label>
+            <input type="text" class="form-control" required placeholder="Ex: João Silva">
+          </div>
+          <div class="form-group">
+            <label data-i18n="contact.email">Endereço de Email</label>
+            <input type="email" class="form-control" required placeholder="exemplo@email.com">
+          </div>
+          <div class="form-group">
+            <label data-i18n="contact.message">Mensagem</label>
+            <textarea class="form-control" required placeholder="Como podemos ajudar?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;" data-i18n="contact.send">Enviar Mensagem</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript Module -->
+</body>
+</html>
