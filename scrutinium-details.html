@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrutinium — Funcionalidades Detalhadas | MadeTech</title>
+  <meta name="description" content="Explore todas as funcionalidades da app Scrutinium: Pergunta do Dia, análise demográfica ao vivo, votação de candidatas e privacidade cifrada.">
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/src/styles/variables.css">
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="stylesheet" href="/src/styles/components.css">
+  <link rel="stylesheet" href="/src/styles/mockups.css">
+
+  <style>
+    .details-hero {
+      padding: 8rem 0 4rem;
+      text-align: center;
+    }
+    .details-app-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .details-app-icon {
+      width: 90px;
+      height: 90px;
+      border-radius: 22px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      object-fit: contain;
+    }
+    .grid-features-detail {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .detail-card {
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      background: var(--bg-glass-card);
+      border: 1px solid var(--border-subtle);
+      transition: transform var(--transition-fast), border-color var(--transition-fast);
+    }
+    .detail-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--border-highlight);
+    }
+    .detail-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .detail-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
+    }
+    .detail-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .tech-stack-box {
+      margin-top: 4rem;
+      padding: 2.5rem;
+      border-radius: var(--radius-lg);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-decorations">
+    <div class="bg-blob bg-blob-2"></div>
+    <div class="bg-blob bg-blob-3"></div>
+  </div>
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="/" class="logo-brand">
+        <img src="/assets/madetech-logo.svg" alt="MadeTech Logo" class="logo-img">
+        <span>MadeTech</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/" class="nav-link">← Voltar ao Início</a></li>
+        <li><a href="/bestgym-details.html" class="nav-link">Ver Best Gym</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="lang-switcher-wrap">
+          <button id="lang-btn" class="lang-btn">
+            <span id="lang-btn-label">🇵🇹 PT</span>
+            <span style="font-size: 0.7rem;">▼</span>
+          </button>
+          <div id="lang-dropdown" class="lang-dropdown">
+            <button class="lang-option" data-lang="pt-PT">🇵🇹 Portugal (PT)</button>
+            <button class="lang-option" data-lang="pt-BR">🇧🇷 Brasil (BR)</button>
+            <button class="lang-option" data-lang="en">🇬🇧 English</button>
+          </div>
+        </div>
+        <button id="theme-toggle-btn" class="theme-toggle-btn">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="details-hero">
+      <div class="details-app-header">
+        <img src="/assets/scrutinium-icon.png" alt="Scrutinium Icon" class="details-app-icon">
+        <div style="text-align: left;">
+          <span class="section-badge" style="color: var(--color-lime);">Opinião Pública & Estatística</span>
+          <h1 style="font-size: 2.5rem; margin: 0.2rem 0;">Scrutinium</h1>
+          <p style="color: var(--text-muted);">Android & iOS • Multiplatform Native App</p>
+        </div>
+      </div>
+
+      <p class="hero-subtitle" style="max-width: 760px; margin: 0 auto 2rem;">
+        Saiba como o Scrutinium mede o pulso da sociedade através da Pergunta do Dia com estatística transparente e demografia em tempo real.
+      </p>
+
+      <div class="badges-group" style="justify-content: center;">
+        <a href="https://play.google.com/store/apps/details?id=com.scrutinium.app" target="_blank" rel="noopener" class="badge-playstore">
+          <img src="/assets/google-play-badge.svg" alt="Disponível no Google Play">
+        </a>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <h2 class="section-title" style="text-align: center;">Funcionalidades Principais</h2>
+      <p class="section-desc" style="text-align: center;">Estatística transparente, segura e focada na comunidade.</p>
+
+      <div class="grid-features-detail">
+        <div class="detail-card">
+          <div class="detail-icon">🔥</div>
+          <h3>Pergunta do Dia</h3>
+          <p>Uma única pergunta diária focada em temas atuais (tecnologia, trabalho, ética, sociedade). Resposta binária rápida com resultados percentuais em direto.</p>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">📊</div>
+          <h3>Divisão Demográfica Completa</h3>
+          <p>Resultados filtráveis por Género (Masculino, Feminino, Não-binário), Faixa Etária, Nível Educacional, Continente e Orientação Política.</p>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">💡</div>
+          <h3>Votação em Perguntas Candidatas</h3>
+          <p>Decisão participativa: os utilizadores votam diariamente para selecionar qual das perguntas candidatas será a Pergunta do Dia de amanhã.</p>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">✍️</div>
+          <h3>Submissão de Novas Questões</h3>
+          <p>Qualquer utilizador pode propor perguntas à comunidade, que entram no pipeline de moderação e seleção pública.</p>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">📜</div>
+          <h3>Histórico Estatístico Ilimitado</h3>
+          <p>Arquivo completo de todas as perguntas anteriores para analisar tendências e evolução da opinião pública ao longo do tempo.</p>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">🔒</div>
+          <h3>Privacidade & Modo Convidado</h3>
+          <p>Sem recolha de dados pessoais identificáveis. Os votos são agregados e protegidos por cifragem sem associação direta à identidade do utilizador.</p>
+        </div>
+      </div>
+
+      <div class="tech-stack-box">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;" class="gradient-text-lime">Arquitetura & Tecnologia</h3>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+          Construído com a stack <strong>Compose Multiplatform (Kotlin)</strong> para máxima performance nativa no Android e iOS.
+        </p>
+        <ul style="list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; color: var(--text-main);">
+          <li>✓ <strong>UI:</strong> Jetpack Compose Multiplatform</li>
+          <li>✓ <strong>Tempo Confiável:</strong> Trusted Monotonic DateTime Provider</li>
+          <li>✓ <strong>Cliente HTTP:</strong> Ktor Client</li>
+          <li>✓ <strong>Backend:</strong> Cloud Firestore & Realtime Engine</li>
+          <li>✓ <strong>Modo Offline:</strong> Cache local de votos e histórico</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" style="margin-top: 4rem;">
+    <div class="container footer-bottom">
+      <span>© 2026 MadeTech. Todos os direitos reservados.</span>
+      <a href="/" style="color: var(--color-lime);">Voltar ao Início</a>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

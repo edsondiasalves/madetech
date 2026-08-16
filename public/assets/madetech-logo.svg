@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <!-- Background Glass Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+
+    <!-- Vibrant Gradient 1 (Left Leg) -->
+    <linearGradient id="gradLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+
+    <!-- Vibrant Gradient 2 (Center V) -->
+    <linearGradient id="gradCenter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <!-- Vibrant Gradient 3 (Right Leg) -->
+    <linearGradient id="gradRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a3e635"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Squircle Container with Subtle Border -->
+  <rect width="116" height="116" x="2" y="2" rx="30" fill="url(#bgGrad)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="2"/>
+
+  <!-- Geometric Stylized M -->
+  <g filter="url(#glow)">
+    <!-- Left Pillar -->
+    <path d="M 28 88 L 28 32 L 44 48 L 44 88 Z" fill="url(#gradLeft)"/>
+
+    <!-- Center Left Slope -->
+    <path d="M 44 48 L 60 72 L 44 88 Z" fill="url(#gradCenter)" opacity="0.9"/>
+
+    <!-- Center Right Slope -->
+    <path d="M 60 72 L 76 48 L 76 88 Z" fill="url(#gradCenter)"/>
+
+    <!-- Right Pillar -->
+    <path d="M 76 48 L 92 32 L 92 88 L 76 88 Z" fill="url(#gradRight)"/>
+
+    <!-- Dynamic Top Floating Accent Bar -->
+    <path d="M 28 32 L 60 58 L 92 32 L 76 22 L 60 38 L 44 22 Z" fill="#ffffff" opacity="0.95"/>
+  </g>
+</svg>
