@@ -69,7 +69,77 @@ Site moderno, esteticamente apelativo, responsivo e profissional para a **MadeTe
 
 ---
 
-## 🌐 Guia de Deploy
+## 🏗️ Compilar e Executar a App (Best Gym)
+
+O código-fonte da app **Best Gym** vive num repositório separado (`gymreviewer`, em Kotlin Multiplatform: módulos `composeApp`, `auth` e `shared`). Abaixo estão as instruções para compilar, executar e publicar.
+
+### Pré-requisitos
+- Android Studio (ou JDK 17) e Android SDK.
+- Ficheiro `local.properties` na raiz do projeto com as chaves:
+  - `MAPS_API_KEY` — chave da Google Maps.
+  - `ADMOB_ANDROID_APP_ID` / `ADMOB_ANDROID_BANNER_AD_UNIT_ID` / `ADMOB_ANDROID_INTERSTITIAL_AD_UNIT_ID` / `ADMOB_ANDROID_NATIVE_AD_UNIT_ID` — AdMob.
+- Para assinatura Release: ficheiro `keystore.properties` com `storeFile`, `storePassword`, `keyAlias` e `keyPassword`.
+
+### Compilar e executar
+```bash
+# A partir da raiz do repositório gymreviewer
+
+# APK de debug (rápido, para desenvolvimento)
+./gradlew :composeApp:assembleDebug
+
+# Instalar no dispositivo ligado
+./gradlew :composeApp:installDebug
+
+# AAB de release (para publicar na Google Play)
+./gradlew :composeApp:bundleRelease
+
+# APK de release
+./gradlew :composeApp:assembleRelease
+```
+Também pode abrir o projeto no Android Studio e executar o módulo **composeApp** num emulador/dispositivo. No iOS, a app é compilada a partir da pasta `iosApp` (Xcode).
+
+---
+
+## 🌐 Publicar Alterações no GitHub Pages (madetech.pt)
+
+O site e as páginas de políticas (Privacidade, Exclusão de Dados, etc.) são servidos a partir da branch **`gh-pages`**, que contém o conteúdo da pasta `dist/` gerada pelo Vite.
+
+### Fluxo de publicação
+1. Edite os ficheiros em `public/` (ex.: `public/gymreviewer/privacy-policy.html`, `delete-data.html`, e versões `-pt`).
+2. Gere a build estática (copia `public/` para `dist/`):
+   ```bash
+   npm run build
+   ```
+3. Confirme que as alterações apareceram em `dist/`.
+4. Publique na branch `gh-pages`:
+   ```bash
+   npm run deploy   # executa gh-pages -d dist
+   ```
+5. Faça commit e push do código-fonte (branch `main`):
+   ```bash
+   git add -A
+   git commit -m "Descrição da alteração"
+   git push origin main
+   ```
+
+### Publicação manual (alternativa ao `npm run deploy`)
+Se preferir fazer push manual da branch `gh-pages`:
+```bash
+git fetch origin gh-pages
+git worktree add /tmp/gh-deploy -b gh-pages-local FETCH_HEAD
+rm -rf /tmp/gh-deploy/gymreviewer
+cp -r dist/gymreviewer /tmp/gh-deploy/
+git -C /tmp/gh-deploy add -A gymreviewer
+git -C /tmp/gh-deploy commit -m "Atualizar políticas"
+git -C /tmp/gh-deploy push origin gh-pages-local:gh-pages
+git -C /tmp/gh-deploy worktree remove /tmp/gh-deploy
+```
+
+> Nota: a autenticação do remoto é via SSH (`git@github.com:edsondiasalves/madetech.git`). O domínio `madetech.pt` é apontado para as GitHub Pages através do ficheiro `public/CNAME`.
+
+---
+
+## 📖 Guia de Deploy
 
 O site foi construído como um conjunto de ficheiros estáticos extremamente leves (JAMstack), podendo ser alojado gratuitamente em várias plataformas:
 
