@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMAS — Aplicação Móvel de Gestão de Água & Saneamento | MadeTech</title>
+  <meta name="description" content="Documentação técnica completa e caso de estudo da aplicação móvel SMAS Almada: gestão de faturas, pagamentos Multibanco, envio de leituras e dados de contrato. Kotlin Multiplatform + ASP.NET Core 9.">
+  <meta name="keywords" content="SMAS, SMAS Almada, Gestão de Água, Faturas, Pagamentos Multibanco, Leituras de Contador, Kotlin Multiplatform, ASP.NET Core, .NET 9, SQL Server, Docker">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://madetech.pt/smas/">
+  <meta property="og:title" content="SMAS — Aplicação Móvel de Gestão de Água & Saneamento | MadeTech">
+  <meta property="og:description" content="Gestão digital de contas de água e saneamento: faturas, pagamentos, leituras e dados de contrato num único canal.">
+  <meta property="og:image" content="/assets/smas-icon.png">
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <style>
+    .details-hero {
+      padding: 8rem 0 4rem;
+      text-align: center;
+    }
+    .details-app-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .details-app-icon {
+      width: 90px;
+      height: 90px;
+      border-radius: 22px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      object-fit: contain;
+    }
+    .gradient-text-smas {
+      background: linear-gradient(135deg, #3cb4e5 0%, #2563eb 60%, #0284c7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .smas-badge {
+      color: #3cb4e5;
+      background: rgba(60, 180, 229, 0.12);
+      border: 1px solid rgba(60, 180, 229, 0.3);
+    }
+
+    .grid-features-detail {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .detail-card {
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      background: var(--bg-glass-card);
+      border: 1px solid var(--border-subtle);
+      transition: transform var(--transition-fast), border-color var(--transition-fast);
+    }
+    .detail-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(60, 180, 229, 0.45);
+    }
+    .detail-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .detail-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
+    }
+    .detail-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .detail-card ul {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      padding-left: 1.1rem;
+      margin-top: 0.5rem;
+    }
+    .detail-card li::marker {
+      color: #3cb4e5;
+    }
+
+    .tech-stack-box {
+      margin-top: 4rem;
+      padding: 2.5rem;
+      border-radius: var(--radius-lg);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+    }
+    .stack-grid {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      color: var(--text-main);
+    }
+    .stack-grid li {
+      font-size: 0.95rem;
+    }
+
+    .benefit-table-wrap {
+      overflow-x: auto;
+      margin-top: 2rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+    }
+    .benefit-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--bg-surface);
+    }
+    .benefit-table th, .benefit-table td {
+      text-align: left;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.9rem;
+      vertical-align: top;
+    }
+    .benefit-table th {
+      background: var(--bg-surface-elevated);
+      color: var(--text-main);
+      font-family: var(--font-display);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.78rem;
+    }
+    .benefit-table td {
+      color: var(--text-muted);
+    }
+    .benefit-table tr:last-child td {
+      border-bottom: none;
+    }
+    .mono {
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      font-size: 0.85rem;
+      color: #7dd3fc;
+    }
+    .pill {
+      display: inline-block;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-sm);
+      background: var(--color-primary-light);
+      border: 1px solid rgba(60, 180, 229, 0.25);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #3cb4e5;
+      margin: 0.15rem;
+    }
+    .arch-callout {
+      margin-top: 2rem;
+      padding: 1.5rem 2rem;
+      border-radius: var(--radius-md);
+      background: var(--color-primary-light);
+      border: 1px solid rgba(37, 99, 235, 0.3);
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .arch-callout strong { color: var(--text-main); }
+    .section-anchor {
+      scroll-margin-top: 90px;
+    }
+    .feature-letter {
+      display: inline-flex;
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: rgba(60, 180, 229, 0.12);
+      border: 1px solid rgba(60, 180, 229, 0.3);
+      color: #3cb4e5;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 800;
+      font-family: var(--font-display);
+      margin-bottom: 0.75rem;
+    }
+    .inline-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 768px) {
+      .inline-grid-2 { grid-template-columns: 1fr; }
+    }
+    .page-toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+      margin: 2rem auto 0;
+      max-width: 820px;
+    }
+    .page-toc a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.45rem 1rem;
+      border-radius: var(--radius-full);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      transition: color var(--transition-fast), border-color var(--transition-fast);
+    }
+    .page-toc a:hover {
+      color: #3cb4e5;
+      border-color: rgba(60, 180, 229, 0.45);
+    }
+    .screens-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .screen-card {
+      border-radius: var(--radius-lg);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      transition: transform var(--transition-fast), border-color var(--transition-fast);
+      display: flex;
+      flex-direction: column;
+    }
+    .screen-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(60, 180, 229, 0.45);
+    }
+    .screen-shot {
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .screen-body {
+      padding: 1.5rem;
+    }
+    .screen-body h3 {
+      font-size: 1.05rem;
+      color: var(--text-main);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .screen-body p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+    .screen-body ul {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      padding-left: 1.1rem;
+      margin-top: 0.5rem;
+    }
+    .screen-body li::marker { color: #3cb4e5; }
+    .screen-num {
+      flex-shrink: 0;
+      display: inline-flex;
+      width: 30px;
+      height: 30px;
+      border-radius: var(--radius-sm);
+      background: rgba(60, 180, 229, 0.12);
+      border: 1px solid rgba(60, 180, 229, 0.3);
+      color: #3cb4e5;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 800;
+      font-family: var(--font-display);
+    }
+    .screen-caption {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      opacity: 0.85;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px dashed var(--border-subtle);
+    }
+    .screen-caption strong { color: #7dd3fc; font-family: 'SFMono-Regular', Consolas, monospace; }
+  </style>
+  <script type="module" crossorigin src="../assets/main-548qjq55.js"></script>
+  <link rel="stylesheet" crossorigin href="../assets/main-8WjL_p7p.css">
+</head>
+<body>
+  <div class="bg-decorations">
+    <div class="bg-blob bg-blob-2"></div>
+    <div class="bg-blob bg-blob-3"></div>
+  </div>
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="/" class="logo-brand">
+        <img src="../assets/madetech-logo.svg" alt="MadeTech Logo" class="logo-img">
+        <span>MadeTech</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/" class="nav-link">← Voltar ao Início</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="lang-switcher-wrap">
+          <button id="lang-btn" class="lang-btn">
+            <span id="lang-btn-label">🇵🇹 PT</span>
+            <span style="font-size: 0.7rem;">▼</span>
+          </button>
+          <div id="lang-dropdown" class="lang-dropdown">
+            <button class="lang-option" data-lang="pt-PT">🇵🇹 Portugal (PT)</button>
+            <button class="lang-option" data-lang="pt-BR">🇧🇷 Brasil (BR)</button>
+            <button class="lang-option" data-lang="en">🇬🇧 English</button>
+          </div>
+        </div>
+        <button id="theme-toggle-btn" class="theme-toggle-btn">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="details-hero">
+      <div class="details-app-header">
+        <img src="../assets/smas-icon.png" alt="SMAS App Icon" class="details-app-icon">
+        <div style="text-align: left;">
+          <span class="section-badge smas-badge">Serviços Municipalizados de Água & Saneamento</span>
+          <h1 style="font-size: 2.5rem; margin: 0.2rem 0;">SMAS <span class="gradient-text-smas">Almada</span></h1>
+          <p style="color: var(--text-muted);">Android & iOS • App de Gestão de Contas de Água</p>
+        </div>
+      </div>
+
+      <p class="hero-subtitle" style="max-width: 800px; margin: 0 auto 1rem;">
+        Aplicação móvel que centraliza a relação digital entre a entidade gestora de água e saneamento e os seus clientes:
+        <strong style="color: var(--text-main);">faturas, pagamentos, leituras de contador, dados de contrato e comunicados</strong>
+        num único canal nativo, seguro e multiplataforma.
+      </p>
+
+      <div class="page-toc">
+        <a href="#contexto">Visão Geral</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#ecras">Ecrãs da App</a>
+        <a href="#fluxo">Fluxo da App</a>
+        <a href="#frontend">Arquitetura Front-end</a>
+        <a href="#backend">Backend & API</a>
+        <a href="#infra">Infraestrutura & CI/CD</a>
+        <a href="#qualidade">Qualidade & Testes</a>
+        <a href="#execucao">Como Executar</a>
+        <a href="#portfolio">Caso de Estudo</a>
+      </div>
+    </section>
+
+    <!-- Visão Geral -->
+    <section id="contexto" class="section section-anchor" style="padding-top: 2rem;">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <span class="section-badge smas-badge">Visão Geral</span>
+        <h2 class="section-title">A água como serviço digitalizado</h2>
+        <p class="section-desc" style="max-width: 720px;">
+          A SMAS Almada digitaliza o ciclo completo da relação com o cliente: consulta de cadastro e contrato,
+          histórico de faturas, pagamento por referência Multibanco, envio de leituras do contador e comunicação
+          de campanhas e avisos através do ecrã inicial.
+        </p>
+      </div>
+
+      <div class="arch-callout">
+        <strong>🚀 Projeto modular e moderno.</strong>
+        Front-end <strong>Android Kotlin Nativo</strong> e <strong>Kotlin Multiplatform (KMP)</strong> com UIs nativas para Android e iOS;
+        <strong>backend microserviço em ASP.NET Core 9.0</strong> com Swagger, <strong>Entity Framework Core + SQL Server</strong>
+        e <strong>deployment em Docker</strong>. Arquitetura de backend de fácil adaptação: integra-se a bases de dados ou
+        Web APIs existentes <em>sem necessidade de alterações no front-end</em> para adaptar a estrutura de dados já existente.
+      </div>
+
+      <div class="grid-features-detail" style="margin-top: 2rem;">
+        <div class="detail-card">
+          <div class="feature-letter">1</div>
+          <h3>Dois front-ends, uma só lógica</h3>
+          <p>Coexistência de duas implementações: uma Android 100% nativa (Jetpack Compose + Hilt + Retrofit) e uma versão multiplataforma (Compose Multiplatform) que partilha ~90% do código entre Android e iOS, com Interface nativa em SwiftUI/Xcode para iOS.</p>
+        </div>
+        <div class="detail-card">
+          <div class="feature-letter">2</div>
+          <h3>Arquitetura em camadas</h3>
+          <p>Estrutura <strong>ui → domain → data</strong> com repositórios, ViewModels com padrão State/Event, mappers DTO→domínio, injeção de dependências (Koin / Hilt) e navegação declarativa (Voyager / Navigation Compose).</p>
+        </div>
+        <div class="detail-card">
+          <div class="feature-letter">3</div>
+          <h3>Segurança por design</h3>
+          <p>Autenticação JWT com sessão gerida em armazenamento local seguro (<code>SessionManager</code> + DataStore/Multiplatform Settings), token Bearer via <code>AuthInterceptor</code>, e suporte a fluxos de ativação, recuperação de password e desbloqueio de conta.</p>
+        </div>
+        <div class="detail-card">
+          <div class="feature-letter">4</div>
+          <h3>Infraestrutura reprodutível</h3>
+          <p>Docker Compose com API + SQL Server, Dockerfile multi-stage, GitHub Actions CI para testes unitários, UI tests em emulador e geração de artefactos (APK e framework iOS) a cada push para <code>main</code>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section id="beneficios" class="section section-anchor">
+      <div class="section-header">
+        <span class="section-badge smas-badge">Proposta de Valor</span>
+        <h2 class="section-title">Benefícios para a Entidade Gestora</h2>
+        <p class="section-desc">
+          Cada funcionalidade foi desenhada para melhorar a relação com os clientes, simplificar processos e aumentar a eficiência operacional.
+        </p>
+      </div>
+
+      <div class="benefit-table-wrap">
+        <table class="benefit-table">
+          <thead>
+            <tr>
+              <th>Funcionalidade</th>
+              <th>Benefício para a SMAS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong style="color: var(--text-main);">Splash com comunicação</strong></td>
+              <td>Canal direto para comunicar campanhas, avisos e novidades aos utilizadores no arranque da app.</td>
+            </tr>
+            <tr>
+              <td><strong style="color: var(--text-main);">Dados cadastrais</strong></td>
+              <td>Exibição transparente dos dados do cliente e contrato, reduzindo pedidos de informação.</td>
+            </tr>
+            <tr>
+              <td><strong style="color: var(--text-main);">Histórico de faturas</strong></td>
+              <td>Transparência total e redução de pedidos de informação e reimpressões.</td>
+            </tr>
+            <tr>
+              <td><strong style="color: var(--text-main);">Detalhes de fatura</strong></td>
+              <td>Visualização detalhada da discriminação de custos e download da fatura oficial (PDF).</td>
+            </tr>
+            <tr>
+              <td><strong style="color: var(--text-main);">Dados de pagamento</strong></td>
+              <td>Integração com meios de pagamento via referência Multibanco; acelera cobranças e reduz pendências.</td>
+            </tr>
+            <tr>
+              <td><strong style="color: var(--text-main);">Envio de leituras</strong></td>
+              <td>Receção de leituras de contador em tempo real sem deslocação nem telefonemas.</td>
+            </tr>
+            <tr>
+              <td><strong style="color: var(--text-main);">Gestão de login</strong></td>
+              <td>Autenticação segura com base pronta para suporte futuro a SSO/MFA.</td>
+            </tr>
+            <tr>
+              <td><strong style="color: var(--text-main);">Backend microserviço</strong></td>
+              <td>Fácil integração com sistemas existentes, testabilidade elevada e documentação técnica Swagger.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Funcionalidades -->
+    <section id="funcionalidades" class="section section-anchor">
+      <h2 class="section-title" style="text-align: center;">Funcionalidades Implementadas</h2>
+      <p class="section-desc" style="text-align: center;">Tudo o que uma entidade de águas precisa para um canal digital completo.</p>
+
+      <div class="grid-features-detail">
+        <div class="detail-card">
+          <div class="detail-icon">💧</div>
+          <h3>Splash Screen com Carrossel</h3>
+          <p>Ecrã inicial com carrossel de campanhas e avisos (<code>CarouselItem</code>) e lista de funcionalidades em destaque (<code>FeatureItem</code>), servidos por endpoints públicos do backend — permite à entidade atualizar comunicação sem publicar nova versão da app.</p>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">🪪</div>
+          <h3>Dados do Contrato & Cadastro</h3>
+          <p>Cartão de contrato com todos os dados: cliente, NIF, morada, local de consumo, classe, tipo de contrato, entidade e número de contrato. Detalhe exibido diretamente no ecrã inicial após login.</p>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">📄</div>
+          <h3>Histórico de Faturas</h3>
+          <p>Lista completa de faturas com ano, número, data de emissão, valor e estado (<span class="pill">Pago</span> <span class="pill">Pendente</span>). Interface de lista com cabeçalho claro e navegação para o detalhe de cada documento.</p>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">🔎</div>
+          <h3>Detalhes da Fatura</h3>
+          <p>Visualização detalhada do documento: período de faturação, consumo em m³, leitura anterior e atual, discriminação de custos por categoria (<code>CostCategory</code>) e download da fatura oficial em PDF.</p>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">💳</div>
+          <h3>Pagamento por Multibanco</h3>
+          <p>Ecrã de pagamento com discriminação de valor (total e por rubrica) e dados de pagamento: <strong>Entidade</strong> e <strong>Referência</strong> MB, e valor total a pagar. Aumenta a rapidez de cobrança e reduz faturas em dívida.</p>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">📏</div>
+          <h3>Envio de Leituras</h3>
+          <p>Submissão da leitura do contador diretamente da app, com informação do prazo-limite, mês de referência e último valor comunicado. Feedback imediato do resultado da submissão.</p>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">🔐</div>
+          <h3>Autenticação Completa</h3>
+          <p>Login, registo, recuperação de password, ativação de conta e desbloqueio de utilizador. Sessão mantida com token JWT e logout seguro, preparado para evolução para SSO/MFA.</p>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">📢</div>
+          <h3>Comunicações & Avisos</h3>
+          <p>Área de comunicações dedicada para avisos de interrupções, campanhas de poupança de água, atualizações tarifárias e informação relevante para o cliente.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ecrãs da App -->
+    <section id="ecras" class="section section-anchor">
+      <div class="section-header">
+        <span class="section-badge smas-badge">App em Funcionamento</span>
+        <h2 class="section-title">Ecrãs da App</h2>
+        <p class="section-desc" style="max-width: 760px;">
+          Capturas de ecrã reais da aplicação Android nativa executada num dispositivo físico (Samsung Galaxy S20),
+          ligada ao backend ASP.NET Core 9.0 em execução local via Docker. Todos os dados apresentados provêm da
+          API em tempo real (dados de exemplo da seed).
+        </p>
+      </div>
+
+      <div class="screens-grid">
+        <div class="screen-card">
+          <img src="../smas/screens/01-splash.png" alt="Ecrã de splash com carrossel e funcionalidades" class="screen-shot" loading="lazy">
+          <div class="screen-body">
+            <h3><span class="screen-num">1</span> Splash & Carrossel</h3>
+            <p>Ecrã de arranque com comunicação dinâmica: carrossel de campanhas/avisos e destaques de funcionalidades (fatura eletrónica, leituras, gestão de contrato).</p>
+            <ul>
+              <li>Conteúdo servido por endpoints públicos do backend.</li>
+              <li>Permite à entidade atualizar a comunicação sem publicar nova versão.</li>
+              <li>Botões de acesso à área de cliente e contactos úteis.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <img src="../smas/screens/02-login.png" alt="Ecrã de login" class="screen-shot" loading="lazy">
+          <div class="screen-body">
+            <h3><span class="screen-num">2</span> Autenticação</h3>
+            <p>Ecrã de login com identificador flexível — <strong>Código de Entidade, Utilizador ou NIF</strong> — e senha.</p>
+            <ul>
+              <li>Autenticação JWT com token reutilizado em todas as chamadas autenticadas.</li>
+              <li>Acesso a registo e recuperação de senha.</li>
+              <li>Sessão persistida em armazenamento local seguro.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <img src="../smas/screens/03-login-filled.png" alt="Login preenchido com credenciais de teste" class="screen-shot" loading="lazy">
+          <div class="screen-body">
+            <h3><span class="screen-num">3</span> Credenciais Preenchidas</h3>
+            <p>Login preenchido com as credenciais de teste da seed (<span class="mono">1</span> / <span class="mono">1</span>), prontas a submeter com o botão ENTRAR.</p>
+            <ul>
+              <li>Validação do estado da conta antes da sessão: bloqueada, inativa ou senha para alterar.</li>
+              <li>Mensagens de erro devolvidas diretamente pelo backend.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <img src="../smas/screens/04-home.png" alt="Ecrã inicial com dados do contrato" class="screen-shot" loading="lazy">
+          <div class="screen-body">
+            <h3><span class="screen-num">4</span> Home — Dados do Contrato</h3>
+            <p>Ecrã inicial pós-login com o cartão do contrato e resumo do serviço.</p>
+            <ul>
+              <li><strong>Classe:</strong> Social — <strong>Tipo:</strong> Doméstico — <strong>Entidade:</strong> 0128806.</li>
+              <li><strong>Leituras:</strong> última de 1541.00 m³ em 29/09/2025; próxima estimada em 30/12/2025.</li>
+              <li><strong>Última fatura:</strong> €37.12 pendente, pagável até 26/12/2025.</li>
+              <li>Navegação inferior: Início, Faturas, Leitura.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <img src="../smas/screens/05-faturas.png" alt="Histórico de faturas" class="screen-shot" loading="lazy">
+          <div class="screen-body">
+            <h3><span class="screen-num">5</span> Histórico de Faturas</h3>
+            <p>Lista completa do histórico com documento, valor e estado.</p>
+            <ul>
+              <li>Fatura <strong>2025/5617001</strong> — €37.12 — <span class="pill">Pendente</span></li>
+              <li>Fatura <strong>2025/5617002</strong> — €36.91 — <span class="pill">Pago</span></li>
+              <li>Fatura <strong>2025/5617003</strong> — €26.66 — <span class="pill">Pago</span></li>
+              <li>Toque num documento para aceder ao detalhe.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <img src="../smas/screens/06-fatura-detalhe.png" alt="Detalhe da fatura com pagamento e download" class="screen-shot" loading="lazy">
+          <div class="screen-body">
+            <h3><span class="screen-num">6</span> Detalhe da Fatura</h3>
+            <p>Detalhe da fatura <strong>2025/5617001</strong>: emitida em 03/12/2025, vence em 26/12/2025, valor de <strong>€37.12</strong>, estado <span class="pill">Pendente</span>.</p>
+            <ul>
+              <li><strong>PAGAR FATURA</strong> — abre os dados de pagamento Multibanco.</li>
+              <li><strong>DESCARREGAR PDF</strong> — download da fatura oficial.</li>
+              <li>Secção "Detalhes da Fatura" com discriminação de custos (consumo por categoria).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <img src="../smas/screens/07-pagamento.png" alt="Ecrã de pagamento com referência Multibanco" class="screen-shot" loading="lazy">
+          <div class="screen-body">
+            <h3><span class="screen-num">7</span> Pagamento Multibanco</h3>
+            <p>Ecrã de pagamento com discriminação completa do valor e dados para pagamento.</p>
+            <ul>
+              <li>Água €12.91 · Saneamento €11.89 · Resíduos €7.55 · Taxas do Estado €3.99 · IVA €0.78.</li>
+              <li>Período de faturação: <strong>03/11/2025 a 02/12/2025</strong> — pagável até 26/12/2025.</li>
+              <li>Valor total a pagar: <strong>€37.12</strong>.</li>
+              <li>Dados Multibanco: entidade e referência para pagamento no terminal/cajero.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <img src="../smas/screens/08-leitura.png" alt="Ecrã de comunicação de leituras com prazo ativo" class="screen-shot" loading="lazy">
+          <div class="screen-body">
+            <h3><span class="screen-num">8</span> Comunicação de Leituras</h3>
+            <p>Submissão da leitura do contador diretamente da app, com prazo e último valor informado.</p>
+            <ul>
+              <li>Prazo ativo: <strong>Enviar Até 31 agosto 2026</strong> (data gerida pelo backend).</li>
+              <li>Último valor informado: <strong>1535.00 m³</strong> em 30/12/2025.</li>
+              <li>Validações de valor: leitura superior a 10 m³ e abaixo de 100.000 m³.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <img src="../smas/screens/09-leitura-submetida.png" alt="Confirmação de leitura submetida com sucesso" class="screen-shot" loading="lazy">
+          <div class="screen-body">
+            <h3><span class="screen-num">9</span> Leitura Submetida</h3>
+            <p>Confirmação em tempo real após o envio da leitura para o backend.</p>
+            <ul>
+              <li>Mensagem de sucesso: <strong>Leitura de 1546 m³ submetida com sucesso!</strong></li>
+              <li>Registo gravado na base de dados com data e origem ("App").</li>
+              <li>Feedback imediato do resultado da submissão.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p class="screen-caption" style="max-width: 760px; margin: 2rem auto 0; text-align: center;">
+        Capturas obtidas em dispositivo físico com o backend local em Docker.
+        Dados de exemplo da seed disponibilizados pelos endpoints
+        <strong>/api/reading/info</strong>, <strong>/api/invoices/history</strong> e <strong>/api/home/data</strong>.
+      </p>
+    </section>
+
+    <!-- Fluxo da app -->
+    <section id="fluxo" class="section section-anchor">
+      <div class="section-header">
+        <span class="section-badge smas-badge">Experiência do Utilizador</span>
+        <h2 class="section-title">Fluxo na App</h2>
+        <p class="section-desc">Do arranque ao pagamento, num fluxo contínuo e orientado por estados.</p>
+      </div>
+
+      <div class="grid-features-detail">
+        <div class="detail-card">
+          <h3>1 · Arranque</h3>
+          <p>Splash com carrossel de campanhas e destaque das funcionalidades da app. A entrada pode ser feita em modo convidado para explorar os destaques antes do login.</p>
+        </div>
+        <div class="detail-card">
+          <h3>2 · Autenticação</h3>
+          <p>Login com credenciais (registo, recuperação de password, ativação e desbloqueio disponíveis). O token JWT é guardado e reutilizado em todas as chamadas autenticadas.</p>
+        </div>
+        <div class="detail-card">
+          <h3>3 · Home</h3>
+          <p>Saudação personalizada, dados do contrato, última leitura, próximas leituras estimadas (SMAS Almada e cliente) e a fatura mais recente com ação rápida "PAGAR AGORA" se estiver pendente.</p>
+        </div>
+        <div class="detail-card">
+          <h3>4 · Faturas → Detalhe → Pagamento</h3>
+          <p>Navegação em pilha: histórico de faturas → detalhe com discriminação de custos e download PDF → dados de pagamento Multibanco com entidade, referência e valor total.</p>
+        </div>
+        <div class="detail-card">
+          <h3>5 · Leituras</h3>
+          <p>Submissão da leitura com validação do período e prazo. O histórico de leituras e as próximas datas estimadas mantêm o cliente informado.</p>
+        </div>
+        <div class="detail-card">
+          <h3>6 · Comunicações</h3>
+          <p>Consultas de avisos e comunicados emitidos pela entidade, mantendo o utilizador sempre atualizado sobre o serviço.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Arquitetura Front-end -->
+    <section id="frontend" class="section section-anchor">
+      <div class="tech-stack-box">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;" class="gradient-text-smas">Arquitetura Front-end (Kotlin Multiplatform)</h3>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+          A versão multiplataforma usa <strong>Compose Multiplatform (Kotlin)</strong> com interfaces 100% nativas no Android e iOS, partilhando a lógica de domínio, dados e DI num único módulo <span class="mono">composeApp</span>.
+        </p>
+
+        <h4 style="margin-bottom: 0.75rem;">Camadas</h4>
+        <div class="stack-grid">
+          <li>✓ <strong>UI:</strong> Compose Multiplatform + Material 3, padrão State/Event/ViewModel</li>
+          <li>✓ <strong>Domain:</strong> modelos e contratos de repositório (<span class="mono">domain/model</span>, <span class="mono">domain/repository</span>)</li>
+          <li>✓ <strong>Data:</strong> <span class="mono">ApiService</span> (Ktor), mappers DTO→domínio, <span class="mono">SessionManager</span> e repositórios fake</li>
+          <li>✓ <strong>DI:</strong> Koin (network, data, viewmodel e platform modules)</li>
+        </div>
+
+        <h4 style="margin: 1.5rem 0 0.75rem;">Stack técnica</h4>
+        <div style="margin-bottom: 1rem;">
+          <span class="pill">Kotlin Multiplatform</span>
+          <span class="pill">Compose Multiplatform</span>
+          <span class="pill">Material 3</span>
+          <span class="pill">Koin</span>
+          <span class="pill">Ktor Client</span>
+          <span class="pill">kotlinx.serialization</span>
+          <span class="pill">Multiplatform Settings</span>
+          <span class="pill">Voyager (Navigation)</span>
+          <span class="pill">Napier (Logging)</span>
+          <span class="pill">moko-mvvm</span>
+          <span class="pill">kotlinx-datetime</span>
+          <span class="pill">Kamel (Imagens)</span>
+          <span class="pill">BuildKonfig</span>
+          <span class="pill">Detekt</span>
+          <span class="pill">Jacoco</span>
+        </div>
+
+        <h4 style="margin: 1.5rem 0 0.75rem;">Versão Android Nativa (Referência)</h4>
+        <div>
+          <span class="pill">Kotlin + Jetpack Compose</span>
+          <span class="pill">Hilt (DI)</span>
+          <span class="pill">Retrofit + Moshi + OkHttp</span>
+          <span class="pill">Navigation Compose</span>
+          <span class="pill">Coil</span>
+          <span class="pill">DataStore Preferences</span>
+        </div>
+
+        <div class="arch-callout" style="margin-top: 2rem;">
+          <strong>Fluxo de dados:</strong>
+          a tela despacha um <em>evento</em> para o <em>ViewModel</em> → o ViewModel chama um <em>repositório</em> de domínio →
+          o repositório usa o <span class="mono">ApiService</span>/<span class="mono">SessionManager</span> → os DTOs são mapeados para modelos de domínio →
+          o ViewModel actualiza o <em>estado</em> e a UI recompoõe.
+        </div>
+      </div>
+    </section>
+
+    <!-- Backend -->
+    <section id="backend" class="section section-anchor">
+      <div class="tech-stack-box">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;" class="gradient-text-smas">Backend & API (ASP.NET Core 9)</h3>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+          Microserviço Web API em <strong>.NET 9.0</strong> com <strong>Entity Framework Core + SQL Server</strong>, autenticação <strong>JWT</strong> e documentação <strong>Swagger/OpenAPI</strong>. Arquitetura em camadas: Controllers → Services → Data.
+        </p>
+
+        <div class="inline-grid-2" style="margin-bottom: 1.5rem;">
+          <div>
+            <h4 style="margin-bottom: 0.75rem;">Stack técnica</h4>
+            <div>
+              <span class="pill">ASP.NET Core 9.0</span>
+              <span class="pill">Entity Framework Core</span>
+              <span class="pill">SQL Server</span>
+              <span class="pill">JWT Bearer</span>
+              <span class="pill">Swagger/OpenAPI</span>
+              <span class="pill">xUnit</span>
+              <span class="pill">FluentAssertions</span>
+              <span class="pill">Moq</span>
+              <span class="pill">Coverlet</span>
+              <span class="pill">Docker</span>
+            </div>
+          </div>
+          <div>
+            <h4 style="margin-bottom: 0.75rem;">Entidades (EF Core)</h4>
+            <div>
+              <span class="pill">UserEntity</span>
+              <span class="pill">ContractEntity</span>
+              <span class="pill">InvoiceEntity</span>
+              <span class="pill">ReadingEntity</span>
+              <span class="pill">NextReadingsEntity</span>
+              <span class="pill">ReadingPeriodEntity</span>
+              <span class="pill">CostCategoryEntity</span>
+              <span class="pill">FeatureEntity</span>
+              <span class="pill">CarouselEntity</span>
+            </div>
+          </div>
+        </div>
+
+        <h4 style="margin-bottom: 0.75rem;">Endpoints</h4>
+        <div class="benefit-table-wrap" style="margin-top: 0;">
+          <table class="benefit-table">
+            <thead>
+              <tr>
+                <th>Controller</th>
+                <th>Método</th>
+                <th>Endpoint</th>
+                <th>Auth</th>
+                <th>Descrição</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Authentication</td><td><span class="pill">POST</span></td><td class="mono">/api/authentication/login</td><td>—</td><td>Login do utilizador</td></tr>
+              <tr><td>Authentication</td><td><span class="pill">POST</span></td><td class="mono">/api/authentication/register</td><td>—</td><td>Registo de novo utilizador</td></tr>
+              <tr><td>Authentication</td><td><span class="pill">POST</span></td><td class="mono">/api/authentication/recover</td><td>—</td><td>Recuperação de password</td></tr>
+              <tr><td>Authentication</td><td><span class="pill">POST</span></td><td class="mono">/api/authentication/activate</td><td>—</td><td>Ativar conta de utilizador</td></tr>
+              <tr><td>Authentication</td><td><span class="pill">POST</span></td><td class="mono">/api/authentication/unlock</td><td>—</td><td>Desbloquear utilizador</td></tr>
+              <tr><td>Splash Content</td><td><span class="pill">GET</span></td><td class="mono">/api/splashcontent/features</td><td>—</td><td>Funcionalidades do splash</td></tr>
+              <tr><td>Splash Content</td><td><span class="pill">GET</span></td><td class="mono">/api/splashcontent/carousel</td><td>—</td><td>Itens do carrossel</td></tr>
+              <tr><td>Home</td><td><span class="pill">GET</span></td><td class="mono">/api/home/data</td><td>🔒</td><td>Dados do ecrã inicial (contrato, fatura, leituras)</td></tr>
+              <tr><td>Invoices</td><td><span class="pill">GET</span></td><td class="mono">/api/invoices/history</td><td>🔒</td><td>Histórico de faturas</td></tr>
+              <tr><td>Invoices</td><td><span class="pill">GET</span></td><td class="mono">/api/invoices/{id}</td><td>🔒</td><td>Detalhes de uma fatura</td></tr>
+              <tr><td>Invoices</td><td><span class="pill">GET</span></td><td class="mono">/api/invoices/{id}/payment</td><td>🔒</td><td>Dados de pagamento da fatura</td></tr>
+              <tr><td>Invoices</td><td><span class="pill">POST</span></td><td class="mono">/api/invoices/{id}/download</td><td>🔒</td><td>URL da fatura em PDF</td></tr>
+              <tr><td>Reading</td><td><span class="pill">GET</span></td><td class="mono">/api/reading/info</td><td>🔒</td><td>Informação para submissão de leitura</td></tr>
+              <tr><td>Reading</td><td><span class="pill">POST</span></td><td class="mono">/api/reading/submit</td><td>🔒</td><td>Submeter valor da leitura</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="arch-callout" style="margin-top: 1.5rem;">
+          <strong>Exemplo de arranque completo:</strong>
+          <span class="mono">docker-compose up --build</span> inicia a API (porta 5152, Swagger em <span class="mono">/swagger</span>) e o SQL Server (porta 1433).
+          As migrations são aplicadas automaticamente no arranque via <span class="mono">DbInitializer.Initialize()</span>, com seeding de dados de exemplo.
+        </div>
+      </div>
+    </section>
+
+    <!-- Infraestrutura -->
+    <section id="infra" class="section section-anchor">
+      <div class="tech-stack-box">
+        <div class="inline-grid-2">
+          <div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem;" class="gradient-text-smas">Infraestrutura</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">
+              <span class="mono">Docker Compose</span> com dois serviços: <span class="mono">smas</span> (API .NET) e
+              <span class="mono">sqlserver</span> (SQL Server 2022). Dockerfile multi-stage na raiz do backend.
+              Volume persistente <span class="mono">sqlserver_data</span> para os dados.
+            </p>
+            <div style="margin-top: 1rem;">
+              <span class="pill">Dockerfile</span>
+              <span class="pill">docker-compose.yml</span>
+              <span class="pill">appsettings.json</span>
+              <span class="pill">Porta API: 5152</span>
+              <span class="pill">Porta SQL: 1433</span>
+            </div>
+          </div>
+          <div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem;" class="gradient-text-smas">CI/CD (GitHub Actions)</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">
+              Dois workflows em <span class="mono">.github/workflows</span>:
+              <strong>.NET CI</strong> (build + testes em <code>main</code> e pull requests) e
+              <strong>CI multiplataforma</strong> (testes unitários, UI tests em emulador AVD, análise estática com baseline e
+              build de APK Android + framework iOS como artefactos).
+            </p>
+            <div style="margin-top: 1rem;">
+              <span class="pill">dotnet-ci.yml</span>
+              <span class="pill">ci.yml</span>
+              <span class="pill">macos-15-intel</span>
+              <span class="pill">ubunutu-latest</span>
+              <span class="pill">SonarQube (pronto)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Qualidade -->
+    <section id="qualidade" class="section section-anchor">
+      <div class="section-header">
+        <span class="section-badge smas-badge">Qualidade</span>
+        <h2 class="section-title">Testes & Integração Contínua</h2>
+        <p class="section-desc">Qualidade medida em cada etapa do pipeline, da linha de comando ao emulador.</p>
+      </div>
+
+      <div class="grid-features-detail">
+        <div class="detail-card">
+          <div class="detail-icon">🧪</div>
+          <h3>Testes Unitários (KMP)</h3>
+          <p>Testes partilhados em <span class="mono">commonTest</span> para fakes, mappers, DTOs, repositórios, <span class="mono">SessionManager</span> e ViewModels, executados no Android/JVM, iOS via <span class="mono">iosSimulatorArm64Test</span> ou agregados com <span class="mono">allTests</span>.</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">🤖</div>
+          <h3>UI Tests (Android Instrumented)</h3>
+          <p>Testes de interface com Compose UI Test (<span class="mono">connectedDebugAndroidTest</span>) cobrindo os ecrãs principais com <code>testTag</code> dedicados (Home, Invoices, Payment, etc.), executados em emulador no CI.</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">🔬</div>
+          <h3>Testes Backend (.NET)</h3>
+          <p>xUnit + FluentAssertions + Moq + EF Core InMemory abrangendo todos os controllers (Authentication, Home, Invoices, Reading, SplashContent) com cobertura via Coverlet (<span class="mono">dotnet test --collect:"XPlat Code Coverage"</span>).</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">📐</div>
+          <h3>Análise Estática & Cobertura</h3>
+          <p>Detekt com configuração e baseline dedicados (<span class="mono">config/detekt</span>) e relatório Jacoco de cobertura (<span class="mono">jacocoTestReport</span>) gerado automaticamente após os testes de debug.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Como executar -->
+    <section id="execucao" class="section section-anchor">
+      <div class="tech-stack-box">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;" class="gradient-text-smas">Como Executar & Repositórios</h3>
+
+        <div class="inline-grid-2">
+          <div>
+            <h4 style="margin-bottom: 0.75rem;">Backend (.NET)</h4>
+            <pre style="background: var(--bg-body); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; overflow-x: auto; font-size: 0.82rem; line-height: 1.7; color: var(--text-muted);"># Full stack (API + SQL Server)
+docker-compose up --build
+
+# API apenas (requer SQL Server a correr)
+dotnet watch run --project Smas.Api/Smas.Api.csproj
+
+# Testes
+dotnet test
+
+# Migrations
+dotnet ef migrations add &lt;Name&gt; -p Smas.Data -s Smas.Api
+dotnet ef database update -p Smas.Data -s Smas.Api</pre>
+          </div>
+          <div>
+            <h4 style="margin-bottom: 0.75rem;">Front-end (KMP)</h4>
+            <pre style="background: var(--bg-body); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; overflow-x: auto; font-size: 0.82rem; line-height: 1.7; color: var(--text-muted);"># Android - debug
+./gradlew :composeApp:assembleDebug
+./gradlew :composeApp:installDebug
+
+# Testes unitários (Android/JVM)
+./gradlew :composeApp:testDebugUnitTest
+
+# UI tests (emulador ligado)
+./gradlew :composeApp:connectedDebugAndroidTest
+
+# iOS (Xcode) - abrir iosApp/iosApp.xcodeproj
+./gradlew :composeApp:embedAndSignAppleFrameworkForXcode</pre>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem;">
+          <h4 style="margin-bottom: 0.75rem;">Localização dos projetos</h4>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            Backend: <span class="mono">~/projects/smas-dotnet</span> · Front-end nativo Android: <span class="mono">~/AndroidStudioProjects/smas</span> · Front-end multiplataforma: <span class="mono">~/AndroidStudioProjects/smas-multiplatform</span>
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <!-- Portfólio / Caso de Estudo -->
+    <section id="portfolio" class="section section-anchor">
+      <div class="section-header">
+        <span class="section-badge smas-badge">Caso de Estudo</span>
+        <h2 class="section-title">Proposta de Cessão do Código-fonte</h2>
+        <p class="section-desc" style="max-width: 760px;">
+          Projeto desenvolvido pela MadeTech como caso real de engenharia de software para o setor dos serviços municipalizados,
+          formalizado numa proposta de cessão total de direitos patrimoniais à entidade gestora.
+        </p>
+      </div>
+
+      <div class="grid-features-detail" style="margin-top: 2rem;">
+        <div class="detail-card">
+          <div class="feature-letter">A</div>
+          <h3>O que está incluído na cessão</h3>
+          <ul>
+            <li><strong>Front-end:</strong> Android Kotlin Nativo e Kotlin Multiplatform, com UIs nativas para Android e iOS.</li>
+            <li><strong>Backend:</strong> Microserviço em .NET Core 9.0 com documentação Swagger.</li>
+            <li><strong>Base de dados:</strong> Entity Framework Core com SQL Server e scripts de criação/população.</li>
+            <li><strong>Infraestrutura:</strong> Dockerfiles e instruções de deployment.</li>
+            <li><strong>Documentação:</strong> README, guia de instalação, endpoints Swagger e notas técnicas.</li>
+            <li><strong>Entrega:</strong> Repositório Git completo (com histórico), artefactos de build e instruções CI/CD básicas.</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <div class="feature-letter">B</div>
+          <h3>Termos propostos (indicativos)</h3>
+          <ul>
+            <li><strong>Modelo:</strong> cessão total de direitos patrimoniais sobre o código-fonte e documentação.</li>
+            <li><strong>Preço indicativo:</strong> €18.000 (totalmente negociáveis).</li>
+            <li><strong>Pagamento:</strong> 50% na assinatura do contrato; 50% na entrega do repositório e documentação.</li>
+            <li><strong>Garantia:</strong> correção de bugs críticos nos primeiros 30 dias após entrega (limite de 10 horas).</li>
+            <li><strong>Suporte pós-entrega:</strong> disponível mediante contrato de manutenção separado.</li>
+            <li><strong>Flexibilidade:</strong> aplicação totalmente adaptável — todas as funcionalidades podem ser customizadas conforme a necessidade da entidade.</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <div class="feature-letter">C</div>
+          <h3>Combinação de stacks</h3>
+          <ul>
+            <li><strong>Kotlin Multiplatform + Compose Multiplatform</strong> — UI nativa Android & iOS com lógica partilhada.</li>
+            <li><strong>Android nativo</strong> — Jetpack Compose, Hilt, Retrofit, Navigation Compose.</li>
+            <li><strong>ASP.NET Core 9 + EF Core + SQL Server</strong> — API segura, testável e documentada.</li>
+            <li><strong>Docker Compose</strong> — ambiente de desenvolvimento e produção reprodutível.</li>
+            <li><strong>GitHub Actions</strong> — CI com testes unitários, UI tests e artefactos de build.</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <div class="feature-letter">D</div>
+          <h3>Adaptabilidade</h3>
+          <p>
+            A arquitetura de backend é de fácil adaptação e integra-se a bases de dados ou Web APIs existentes
+            <strong>sem necessidade de alterações no front-end</strong>. O mapeamento de dados é isolado na camada
+            de repositórios, o que permite reutilizar toda a interface móvel sobre o sistema de faturação já instalado.
+          </p>
+          <p style="margin-top: 0.75rem; color: var(--text-main);">
+            Setor: <span class="pill">Serviços Municipalizados</span> <span class="pill">Água & Saneamento</span> <span class="pill">Faturação & Pagamentos</span>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" style="margin-top: 4rem;">
+    <div class="container footer-bottom">
+      <span>© 2026 MadeTech. Todos os direitos reservados.</span>
+      <a href="/" style="color: #3cb4e5;">Voltar ao Início</a>
+    </div>
+  </footer>
+
+</body>
+</html>
