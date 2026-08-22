@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MadeTech - Modern Web Design</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-light: rgba(99, 102, 241, 0.15);
+            --primary-dark: #3b5cf0;
+            --secondary: #8b5cf6;
+            --accent: #f87e3d;
+            --success: #10b981;
+            --warning: #ea580c;
+            --dark: #111827;
+            --light: #f3f4f6;
+            --gray-50: #f9fafb;
+            --gray-800: #1f2937;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 20px rgba(0,0,0,0.15);
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --font-display: 'Outfit', sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-attachment: fixed;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: white;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo-img {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .logo-text {
+            font-weight: 700;
+            color: var(--dark);
+            font-size: 1.2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .nav-link {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width var(--transition-normal);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-links li {
+            position: relative;
+        }
+        
+        .nav-links li:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 6rem 0 6rem;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, white 0%, transparent 50%, white 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.25rem, 5vw, 1.75rem);
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.5;
+        }
+        
+        .hero-ctas {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid white;
+            color: white;
+            background: transparent;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: var(--dark);
+            border-color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-secondary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Main Content */
+        .section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 6vw, 3rem);
+            margin-bottom: 2.5rem;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .section-badge {
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.4rem 1rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .section-header .section-title {
+            margin: 0;
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .card {
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            padding: 2.5rem;
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+        }
+        
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .detail-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .detail-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            padding: 2rem;
+            border: 1px solid var(--primary-light);
+            transition: all var(--transition-fast);
+        }
+        
+        .detail-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .detail-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .detail-card p {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .footer-link {
+            color: #cbd5e1;
+            text-decoration: none;
+            display: block;
+            margin: 0.5rem 0;
+            transition: color var(--transition-fast);
+        }
+        
+        .footer-link:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+        
+        /* Footer Brand */
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-brand img {
+            width: 40px;
+            height: 40px;
+        }
+        
+        /* Footer Links */
+        .footer-col {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .footer-col a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin: 0.5rem 0;
+            transition: color var(--transition-fast);
+        }
+        
+        .footer-col a:hover {
+            color: white;
+        }
+        
+        /* Footer Links */
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+        
+        /* Footer Bottom */
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+        
+        /* Footer Brand */
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-brand img {
+            width: 40px;
+            height: 40px;
+        }
+        
+        /* Footer Links */
+        .footer-col {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .footer-col a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin: 0.5rem 0;
+            transition: color var(--transition-fast);
+        }
+        
+        .footer-col a:hover {
+            color: white;
+        }
+        
+        /* Footer Bottom */
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+        
+        /* Footer Brand */
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-brand img {
+            width: 40px;
+            height: 40px;
+        }
+        
+        /* Footer Links */
+        .footer-col {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .footer-col a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin: 0.5rem 0;
+            transition: color var(--transition-fast);
+        }
+        
+        .footer-col a:hover {
+            color: white;
+        }
+        
+        /* Footer Bottom */
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+        
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .hero {
+                padding: 8rem 0 8rem;
+            }
+            
+            .hero-title {
+                font-size: clamp(3rem, 10vw, 6rem);
+            }
+            
+            .hero-ctas {
+                justify-content: center;
+            }
+            
+            .section {
+                padding: 8rem 0;
+            }
+            
+            .features-grid {
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+        
+        /* Performance Optimizations */
+        .lazy-load {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .hero {
+                background: white;
+                color: black;
+            }
+            
+            .btn {
+                border: 1px solid black;
+            }
+        }
+        
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+        
+        /* Dark Mode Support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: var(--dark);
+                color: var(--light);
+            }
+            
+            header {
+                background: var(--dark);
+            }
+            
+            .hero {
+                background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+            }
+            
+            .btn {
+                background: var(--dark);
+                color: var(--light);
+                border-color: var(--light);
+            }
+            
+            .btn-primary {
+                background: var(--light);
+                color: var(--dark);
+                border-color: var(--light);
+            }
+            
+            .footer {
+                background: var(--dark);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container navbar-inner">
+            <a href="#" class="logo">
+                <img src="/assets/madetech-logo.svg" alt="MadeTech Logo" class="logo-img">
+                <span>MadeTech</span>
+                <span class="studio-tag">Studio</span>
+            </a>
+            
+            <nav class="nav-links">
+                <li><a href="#" class="nav-link active">Início</a></li>
+                <li><a href="#bestgym" class="nav-link">Best Gym</a></li>
+                <li><a href="#scrutinium" class="nav-link">Scrutinium</a></li>
+                <li><a href="#about" class="nav-link">Sobre Nós</a></li>
+            </nav>
+            
+            <div class="nav-actions">
+                <div class="lang-switcher-wrap">
+                    <button id="lang-btn" class="lang-btn">
+                        <span id="lang-btn-label">🇵🇹 PT</span>
+                        <span style="font-size: 0.7rem;">▼</span>
+                    </button>
+                    <div id="lang-dropdown" class="lang-dropdown">
+                        <button class="lang-option" data-lang="pt-PT">🇵🇹 Portugal (PT)</button>
+                        <button class="lang-option" data-lang="pt-BR">🇧🇷 Brasil (BR)</button>
+                        <button class="lang-option" data-lang="en">🇬🇧 English</button>
+                    </div>
+                </div>
+                
+                <button id="theme-toggle-btn" class="theme-toggle-btn" title="Alternar Tema">🌙</button>
+            </div>
+        </div>
+    </header>
+    
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="hero-title">
+                Criamos Apps de Alto Impacto para <span class="gradient-text">Ecrãs de Todo o Mundo</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                Estúdio dedicado ao desenvolvimento de aplicações mobile nativas, seguras e focadas na comunidade.
+            </p>
+            
+            <div class="hero-ctas">
+                <a href="#bestgym" class="btn btn-primary">Explorar Best Gym</a>
+                <a href="#scrutinium" class="btn btn-secondary">Descobrir Scrutinium</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="bestgym" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Guia Definitivo de Academias</span>
+                <h2 class="section-title">Best Gym</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="card">
+                    <div class="detail-icon">🗺️</div>
+                    <h3>Mapa Interativo em Tempo Real</h3>
+                    <p>Localização geográfica com status de abertura dinâmico, cálculo de distância, horário de funcionamento completo e navegação rápida.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="detail-icon">⚖️</div>
+                    <h3>Avaliação em 19 Critérios</h3>
+                    <p>Classificação justa e transparente em 19 parâmetros cruciais para a experiência do utilizador.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="detail-icon">🌟</div>
+                    <h3>Unificação com Google Reviews</h3>
+                    <p>Consolidação transparente entre as notas detalhadas da comunidade e avaliações globais do Google Maps.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="detail-icon">🏆</div>
+                    <h3>Rankings Especializados</h3>
+                    <p>Filtros imediatos para descobrir os ginásios mais limpos da cidade, com melhor relação custo-benefício.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="detail-icon">🔑</div>
+                    <h3>Autenticação Flexível</h3>
+                    <p>Acesso rápido via Google, Microsoft Azure AD ou Modo Convidado sem complicações.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="detail-icon">💎</div>
+                    <h3>Versão Premium</h3>
+                    <p>Assinatura opcional via Google Play Billing com remoção total de anúncios e pesquisa avançada por área do mapa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="scrutinium" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Opinião Pública & Estatística</span>
+                <h2 class="section-title">Scrutinium</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="card">
+                    <div class="detail-icon">🔥</div>
+                    <h3>Pergunta do Dia</h3>
+                    <p>Uma única pergunta diária focada em temas atuais. Resposta binária rápida com resultados percentuais em direto.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="detail-icon">📊</div>
+                    <h3>Divisão Demográfica Completa</h3>
+                    <p>Resultados filtráveis por Género, Faixa Etária, Nível Educacional, Continente e Orientação Política.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="detail-icon">💡</div>
+                    <h3>Votação em Perguntas Candidatas</h3>
+                    <p>Os utilizadores votam diariamente para selecionar qual das perguntas candidatas será a Pergunta do Dia.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="detail-icon">🔒</div>
+                    <h3>Privacidade & Modo Convidado</h3>
+                    <p>Sem recolha de dados pessoais identificáveis. Os votos são agregados e protegidos por cifragem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Sobre a MadeTech</span>
+                <h2 class="section-title">Engenharia de Software Nativa & Foco na Privacidade</h2>
+            </div>
+            
+            <div class="about-grid">
+                <div class="card">
+                    <div class="about-icon">⚡</div>
+                    <h3>Desenvolvimento Nativo</h3>
+                    <p>Desempenho máximo e integração fluida com as APIs nativas do Android e iOS.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="about-icon">🛡️</div>
+                    <h3>Privacidade por Design</h3>
+                    <p>Os teus dados pertencem-te. Armazenamento seguro e cifrado sem rastreamento de terceiros.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="about-icon">🤝</div>
+                    <h3>Comunidade & Moderação</h3>
+                    <p>Conteúdo de alta qualidade garantido por moderação ativa e feedback da comunidade.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="about-icon">🌐</div>
+                    <h3>Experiência Multilingue</h3>
+                    <p>Aplicações preparadas desde a raiz para Português (PT-PT e PT-BR) e Inglês.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="/assets/madetech-logo.svg" alt="MadeTech Logo" class="logo-img">
+                        <span>MadeTech</span>
+                    </a>
+                    <p>
+                        MadeTech — Estúdio independente dedicado a criar apps memoráveis e úteis para a Google Play Store.
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Aplicações</h4>
+                    <ul>
+                        <li><a href="#bestgym" class="footer-link">Best Gym (Android)</a></li>
+                        <li><a href="#scrutinium" class="footer-link">Scrutinium (Android)</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>MadeTech</h4>
+                    <ul>
+                        <li><a href="#about" class="footer-link">Sobre Nós</a></li>
+                        <li><a href="#" class="footer-link">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#" class="footer-link">Política de Privacidade</a></li>
+                        <li><a href="#" class="footer-link">Termos de Serviço</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <span>© 2026 MadeTech. Todos os direitos reservados.</span>
+                <span>Made with ❤️ in Portugal & Worldwide</span>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile navigation toggle
+            const mobileNavToggle = document.createElement('button');
+            mobileNavToggle.className = 'mobile-nav-toggle';
+            mobileNavToggle.textContent = '☰';
+            mobileNavToggle.setAttribute('aria-label', 'Toggle navigation');
+            
+            // Create mobile menu
+            const mobileMenu = document.createElement('div');
+            mobileMenu.className = 'mobile-menu';
+            mobileMenu.innerHTML = `
+                <ul class="nav-links" style="flex-direction: column; gap: 1rem;">
+                    <li><a href="#" class="nav-link active">Início</a></li>
+                    <li><a href="#bestgym" class="nav-link">Best Gym</a></li>
+                    <li><a href="#scrutinium" class="nav-link">Scrutinium</a></li>
+                    <li><a href="#about" class="nav-link">Sobre Nós</a></li>
+                </ul>
+            `;
+            
+            document.querySelector('.navbar').insertBefore(mobileNavToggle, document.querySelector('.nav-links'));
+            document.querySelector('.navbar').appendChild(mobileMenu);
+            
+            // Mobile menu toggle
+            mobileNavToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+                mobileNavToggle.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
+            });
+            
+            // Smooth scrolling
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(link.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            }
+            
+            // Theme toggle
+            const themeBtn = document.getElementById('theme-toggle-btn');
+            const html = document.documentElement;
+            
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            html.setAttribute('data-theme', savedTheme);
+            themeBtn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+            
+            themeBtn.addEventListener('click', () => {
+                const currentTheme = html.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                themeBtn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+            });
+            
+            // Initialize mockups
+            if (typeof initGymMockup === 'function') {
+                initGymMockup('pt-PT');
+            }
+            if (typeof initPollMockup === 'function') {
+                initPollMockup('pt-PT');
+            }
+        });
+        
+        // Theme toggle
+        document.getElementById('theme-toggle-btn').addEventListener('click', () => {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            document.getElementById('theme-toggle-btn').textContent = newTheme === 'dark' ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>

@@ -14,9 +14,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        bestgym: resolve(__dirname, 'bestgym-details.html'),
-        scrutinium: resolve(__dirname, 'scrutinium-details.html'),
-        smas: resolve(__dirname, 'smas/index.html')
+        'bestgym/index': resolve(__dirname, 'bestgym/index.html'),
+        'scrutinium/index': resolve(__dirname, 'scrutinium/index.html'),
+        'smas/index': resolve(__dirname, 'smas/index.html')
       }
     }
   }
