@@ -9,11 +9,37 @@
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://madetech.pt/smas/">
-  <meta property="og:title" content="SMAS — Aplicação Móvel de Gestão de Água & Saneamento | MadeTech">
-  <meta property="og:description" content="Gestão digital de contas de água e saneamento: faturas, pagamentos, leituras e dados de contrato num único canal.">
-  <meta property="og:image" content="/assets/smas-icon.png">
-
+  <meta property="og:title" content="SMAS Almada — Gestão de Água & Saneamento | MadeTech">
+  <meta property="og:description" content="App oficial SMAS Almada: faturas, pagamentos Multibanco, leituras contador, dados contrato, comunicados. Android/iOS nativo, Kotlin Multiplatform, backend ASP.NET Core 9. Grátis para clientes.">
+  <meta property="og:image" content="https://madetech.pt/assets/smas-og.png">
+  <meta property="og:site_name" content="MadeTech">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@madetech">
+  <meta name="twitter:title" content="SMAS Almada — Gestão de Água & Saneamento">
+  <meta name="twitter:description" content="Faturas, pagamentos Multibanco, leituras, contrato num único canal. App nativa Android/iOS para clientes SMAS.">
+  <meta name="twitter:image" content="https://madetech.pt/assets/smas-og.png">
+  
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="pt-PT" href="https://madetech.pt/smas/">
+  <link rel="alternate" hreflang="pt-BR" href="https://madetech.pt/smas/">
+  <link rel="alternate" hreflang="en" href="https://madetech.pt/smas/">
+  <link rel="alternate" hreflang="x-default" href="https://madetech.pt/smas/">
+  
+  <link rel="canonical" href="https://madetech.pt/smas/">
+  <meta name="robots" content="index, follow">
+  
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="preload" as="image" href="/assets/smas-icon.png">
+  <link rel="preload" as="image" href="/assets/google-play-badge.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -21,6 +47,108 @@
   <link rel="stylesheet" href="/src/styles/variables.css">
   <link rel="stylesheet" href="/src/styles/main.css">
   <link rel="stylesheet" href="/src/styles/components.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SMAS Almada",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Android, iOS",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "url": "https://play.google.com/store/apps/details?id=com.smas.app"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "89",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "description": "SMAS Almada é a aplicação móvel oficial dos Serviços Municipalizados de Água e Saneamento de Almada. Permite gestão completa de contas: consulta de faturas, pagamentos Multibanco, envio de leituras de contador, dados de contrato e comunicados. Disponível em versão nativa Android e multiplataforma (Kotlin Multiplatform) para iOS.",
+    "featureList": [
+      "Consulta de faturas com histórico completo e download PDF",
+      "Pagamento por referência Multibanco (entidade/referência/valor)",
+      "Envio de leituras de contador com validação e prazo",
+      "Dados de contrato e cadastro do cliente",
+      "Comunicados e avisos da entidade (interrupções, campanhas)",
+      "Autenticação JWT segura com recuperação de conta"
+    ],
+    "author": {
+      "@type": "Organization",
+      "name": "MadeTech",
+      "url": "https://madetech.pt"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SMAS Almada",
+      "url": "https://smas.pt"
+    },
+    "datePublished": "2024-06-01",
+    "dateModified": "2026-08-22",
+    "inLanguage": "pt-PT",
+    "isAccessibleForFree": true,
+    "permissions": "https://play.google.com/store/apps/details?id=com.smas.app",
+    "screenshot": "https://madetech.pt/assets/smas-screenshot.png",
+    "softwareVersion": "2.0.0",
+    "releaseNotes": "Novas funcionalidades de leituras, melhorias de UI, correções de bugs"
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "A app SMAS é gratuita para os clientes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim, a aplicação é 100% gratuita para todos os clientes dos SMAS Almada. Não há custos de download, subscrição ou uso. Os pagamentos de faturas via Multibanco são processados diretamente com a entidade bancária, sem taxas adicionais pela app."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona o envio de leituras?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Na secção 'Leituras', o cliente vê o prazo ativo (ex: 'Enviar Até 31 agosto 2026'), o último valor comunicado e insere a nova leitura. A app valida automaticamente (mínimo 10 m³, máximo 100.000 m³) e envia para o backend em tempo real. Recebes confirmação imediata de sucesso."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso pagar faturas diretamente na app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. Na secção 'Faturas', tocas numa fatura pendente → 'PAGAR FATURA' → vês a discriminação completa (água, saneamento, resíduos, taxas, IVA) e os dados Multibanco: Entidade, Referência e Valor Total. Copias ou anotas para pagar em qualquer terminal/caixa Multibanco ou homebanking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "E se esquecer a password ou a conta estiver bloqueada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A app tem fluxos completos de recuperação: 'Esqueci a password' envia link de reset por email, 'Ativar conta' para novos utilizadores, e 'Desbloquear utilizador' para contas bloqueadas por tentativas falhadas. Tudo seguro via JWT e armazenamento local cifrado."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A app funciona em iOS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! Existem duas versões: (1) Android nativo (Jetpack Compose + Hilt + Retrofit) e (2) Kotlin Multiplatform com Compose Multiplatform que partilha ~90% do código e tem UI nativa SwiftUI no iOS. Ambas usam o mesmo backend ASP.NET Core 9."
+        }
+      }
+    ]
+  }
+  </script>
 
   <style>
     .details-hero {
@@ -311,8 +439,8 @@
 
       <ul class="nav-links">
         <li><a href="/" class="nav-link" target="_blank" rel="noopener noreferrer">← Voltar ao Início</a></li>
-        <li><a href="../bestgym/" class="nav-link" target="_blank" rel="noopener noreferrer">Ver Best Gym</a></li>
-        <li><a href="../scrutinium/" class="nav-link" target="_blank" rel="noopener noreferrer">Ver Scrutinium</a></li>
+        <li><a href="/bestgym/" class="nav-link" target="_blank" rel="noopener noreferrer">Ver Best Gym</a></li>
+        <li><a href="/scrutinium/" class="nav-link" target="_blank" rel="noopener noreferrer">Ver Scrutinium</a></li>
       </ul>
 
       <div class="nav-actions">

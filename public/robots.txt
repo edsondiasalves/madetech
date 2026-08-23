@@ -1,0 +1,17 @@
+# robots.txt for madetech.pt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://madetech.pt/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 10
+
+# Disallow admin/private areas (none currently)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /api/
+
+# Host directive (deprecated but still used by some)
+Host: https://madetech.pt

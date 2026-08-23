@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog MadeTech — Artigos, Guias e Novidades | MadeTech</title>
+  <meta name="description" content="Blog oficial da MadeTech: guias de fitness, análise de opinião pública, casos de estudo B2B, novidades de apps, engenharia mobile. Kotlin Multiplatform, Compose, Firebase, ASP.NET Core.">
+  <meta name="keywords" content="MadeTech blog, engenharia mobile, Kotlin Multiplatform, Compose Multiplatform, Firebase, ASP.NET Core, Best Gym, Scrutinium, SMAS, desenvolvimento apps">
+  <meta name="author" content="MadeTech">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://madetech.pt/blog/">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://madetech.pt/blog/">
+  <meta property="og:title" content="Blog MadeTech — Engenharia Mobile, Fitness Tech & Opinião Pública">
+  <meta property="og:description" content="Artigos técnicos, guias de fitness, análise de dados de opinião, casos de estudo enterprise. Da equipa que criou Best Gym, Scrutinium e SMAS.">
+  <meta property="og:image" content="https://madetech.pt/assets/blog-og.png">
+  <meta property="og:site_name" content="MadeTech">
+  <meta property="og:locale" content="pt_PT">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog MadeTech">
+  <meta name="twitter:description" content="Engenharia mobile, fitness tech, opinião pública. Artigos da equipa por trás do Best Gym, Scrutinium, SMAS.">
+  <meta name="twitter:image" content="https://madetech.pt/assets/blog-og.png">
+  
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="pt-PT" href="https://madetech.pt/blog/">
+  <link rel="alternate" hreflang="pt-BR" href="https://madetech.pt/blog/">
+  <link rel="alternate" hreflang="en" href="https://madetech.pt/blog/">
+  <link rel="alternate" hreflang="x-default" href="https://madetech.pt/blog/">
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  
+  <link rel="stylesheet" href="/src/styles/variables.css">
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="stylesheet" href="/src/styles/components.css">
+  <link rel="stylesheet" href="/src/styles/mockups.css">
+
+  <!-- Blog Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog MadeTech",
+    "description": "Artigos técnicos, guias e novidades da equipa MadeTech",
+    "url": "https://madetech.pt/blog/",
+    "inLanguage": "pt-PT",
+    "publisher": {
+      "@type": "Organization",
+      "name": "MadeTech",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://madetech.pt/assets/madetech-logo.svg"
+      }
+    },
+    "blogPosts": []
+  }
+  </script>
+</head>
+<body>
+  <div class="bg-decorations">
+    <div class="bg-blob bg-blob-1"></div>
+    <div class="bg-blob bg-blob-2"></div>
+  </div>
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="/" class="logo-brand">
+        <img src="/assets/madetech-logo.svg" alt="MadeTech Logo" class="logo-img">
+        <span>MadeTech</span>
+        <span class="studio-tag">Studio</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/" class="nav-link" target="_blank" rel="noopener noreferrer">← Voltar ao Início</a></li>
+        <li><a href="/bestgym/" class="nav-link" target="_blank" rel="noopener noreferrer">Best Gym</a></li>
+        <li><a href="/scrutinium/" class="nav-link" target="_blank" rel="noopener noreferrer">Scrutinium</a></li>
+        <li><a href="/smas/" class="nav-link" target="_blank" rel="noopener noreferrer">SMAS</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="lang-switcher-wrap">
+          <button id="lang-btn" class="lang-btn">
+            <span id="lang-btn-label">🇵🇹 PT</span>
+            <span style="font-size: 0.7rem;">▼</span>
+          </button>
+          <div id="lang-dropdown" class="lang-dropdown">
+            <button class="lang-option" data-lang="pt-PT">🇵🇹 Portugal (PT)</button>
+            <button class="lang-option" data-lang="pt-BR">🇧🇷 Brasil (BR)</button>
+            <button class="lang-option" data-lang="en">🇬🇧 English</button>
+          </div>
+        </div>
+        <button id="theme-toggle-btn" class="theme-toggle-btn">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section style="padding: 6rem 0 4rem; text-align: center;">
+      <nav style="margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-muted);">
+        <a href="/" style="color: var(--text-muted);">Início</a> / 
+        <span style="color: var(--text-main);">Blog</span>
+      </nav>
+      
+      <h1 style="font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 1.5rem; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Blog MadeTech</h1>
+      <p class="hero-subtitle" style="max-width: 700px; margin: 0 auto 3rem; font-size: 1.2rem;">Engenharia mobile, fitness technology, opinião pública data, casos de estudo enterprise. Escrito pela equipa que constrói apps nativas usadas por milhares.</p>
+      
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem;">
+        <a href="/bestgym/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 0.9rem;">🏋️ Best Gym</a>
+        <a href="/scrutinium/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 0.9rem;">📊 Scrutinium</a>
+        <a href="/smas/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="background: linear-gradient(135deg, #3cb4e5, #2563eb); border-color: transparent; font-size: 0.9rem;">💧 SMAS</a>
+      </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section style="margin-bottom: 4rem;">
+      <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--text-main);">Categorias</h2>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+        <a href="#engenharia" class="btn btn-secondary" style="font-size: 0.85rem;">⚙️ Engenharia Mobile</a>
+        <a href="#fitness" class="btn btn-secondary" style="font-size: 0.85rem;">🏋️ Fitness & Wellness</a>
+        <a href="#opiniao" class="btn btn-secondary" style="font-size: 0.85rem;">📊 Opinião Pública & Data</a>
+        <a href="#casos" class="btn btn-secondary" style="font-size: 0.85rem;">🏢 Casos de Estudo B2B</a>
+        <a href="#novidades" class="btn btn-secondary" style="font-size: 0.85rem;">🚀 Novidades & Releases</a>
+      </div>
+    </section>
+
+    <!-- Featured Articles (Placeholder) -->
+    <section id="artigos">
+      <h2 style="font-size: 2rem; margin-bottom: 2rem; color: var(--text-main); text-align: center;">Artigos Recentes</h2>
+      <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 3rem;">Em breve: artigos técnicos profundos, guias práticos e análises de dados exclusivas.</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+        <article style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; transition: transform var(--transition-fast), box-shadow var(--transition-fast);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'">
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+            <span style="background: var(--color-primary-light); color: var(--color-primary); padding: 0.3rem 0.8rem; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 600;">⚙️ Engenharia</span>
+            <span style="background: var(--bg-glass-card); color: var(--text-muted); padding: 0.3rem 0.8rem; border-radius: var(--radius-full); font-size: 0.75rem;">Em breve</span>
+          </div>
+          <h3 style="color: var(--text-main); margin-bottom: 1rem;">Kotlin Multiplatform vs Flutter vs React Native: Benchmark Real 2026</h3>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.7;">Comparação de performance, tamanho de bundle, developer experience e time-to-market nos nossos 3 apps em produção.</p>
+          <div style="display: flex; align-items: center; gap: 1rem; color: var(--text-muted); font-size: 0.85rem;">
+            <span>📅 Q1 2026</span>
+            <span>⏱️ 15 min leitura</span>
+            <span>👨‍💻 Edson Alves</span>
+          </div>
+        </article>
+        
+        <article style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; transition: transform var(--transition-fast), box-shadow var(--transition-fast);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'">
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+            <span style="background: rgba(132, 204, 22, 0.15); color: var(--color-lime); padding: 0.3rem 0.8rem; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 600;">🏋️ Fitness</span>
+            <span style="background: var(--bg-glass-card); color: var(--text-muted); padding: 0.3rem 0.8rem; border-radius: var(--radius-full); font-size: 0.75rem;">Em breve</span>
+          </div>
+          <h3 style="color: var(--text-main); margin-bottom: 1rem;">Como Escolher Ginásio em 2026: O Guia Definitivo (Baseado em 12.000 Avaliações)</h3>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.7;">Análise de dados reais do Best Gym: o que realmente importa (spoiler: não é o preço), armadilhas comuns e checklist de visita.</p>
+          <div style="display: flex; align-items: center; gap: 1rem; color: var(--text-muted); font-size: 0.85rem;">
+            <span>📅 Q1 2026</span>
+            <span>⏱️ 12 min leitura</span>
+            <span>👨‍💻 Equipa Best Gym</span>
+          </div>
+        </article>
+        
+        <article style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; transition: transform var(--transition-fast), box-shadow var(--transition-fast);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'">
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+            <span style="background: rgba(132, 204, 22, 0.15); color: var(--color-lime); padding: 0.3rem 0.8rem; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 600;">📊 Data</span>
+            <span style="background: var(--bg-glass-card); color: var(--text-muted); padding: 0.3rem 0.8rem; border-radius: var(--radius-full); font-size: 0.75rem;">Em breve</span>
+          </div>
+          <h3 style="color: var(--text-main); margin-bottom: 1rem;">Opinião Pública em Portugal 2024-2026: O que os Dados do Scrutinium Revelam</h3>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.7;">Análise de 140.000+ votos: trabalho remoto, IA, clima, política. Tendências por idade, género, região. Dataset aberto para investigadores.</p>
+          <div style="display: flex; align-items: center; gap: 1rem; color: var(--text-muted); font-size: 0.85rem;">
+            <span>📅 Q2 2026</span>
+            <span>⏱️ 18 min leitura</span>
+            <span>👨‍💻 Equipa Scrutinium</span>
+          </div>
+        </article>
+        
+        <article style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; transition: transform var(--transition-fast), box-shadow var(--transition-fast);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'">
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+            <span style="background: rgba(60, 180, 229, 0.15); color: #3cb4e5; padding: 0.3rem 0.8rem; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 600;">🏢 B2B</span>
+            <span style="background: var(--bg-glass-card); color: var(--text-muted); padding: 0.3rem 0.8rem; border-radius: var(--radius-full); font-size: 0.75rem;">Em breve</span>
+          </div>
+          <h3 style="color: var(--text-main); margin-bottom: 1rem;">Caso de Estudo SMAS Almada: Como Digitalizar um Serviço Público em 6 Meses</h3>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.7;">Arquitetura Kotlin Multiplatform + ASP.NET Core 9, lições aprendidas, métricas de adoção, ROI para a autarquia.</p>
+          <div style="display: flex; align-items: center; gap: 1rem; color: var(--text-muted); font-size: 0.85rem;">
+            <span>📅 Q2 2026</span>
+            <span>⏱️ 20 min leitura</span>
+            <span>👨‍💻 Equipa SMAS</span>
+          </div>
+        </article>
+        
+        <article style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; transition: transform var(--transition-fast), box-shadow var(--transition-fast);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'">
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+            <span style="background: var(--color-primary-light); color: var(--color-primary); padding: 0.3rem 0.8rem; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 600;">🚀 Release</span>
+            <span style="background: var(--bg-glass-card); color: var(--text-muted); padding: 0.3rem 0.8rem; border-radius: var(--radius-full); font-size: 0.75rem;">Em breve</span>
+          </div>
+          <h3 style="color: var(--text-main); margin-bottom: 1rem;">Best Gym 2.0: Novos Rankings, IA para Recomendações, Modo Offline</h3>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.7;">O maior update desde o lançamento: rankings por bairro, recomendações personalizadas via TensorFlow Lite, sync offline-first.</p>
+          <div style="display: flex; align-items: center; gap: 1rem; color: var(--text-muted); font-size: 0.85rem;">
+            <span>📅 Em desenvolvimento</span>
+            <span>⏱️ —</span>
+            <span>👨‍💻 Edson Alves</span>
+          </div>
+        </article>
+        
+        <article style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; transition: transform var(--transition-fast), box-shadow var(--transition-fast);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'">
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+            <span style="background: rgba(132, 204, 22, 0.15); color: var(--color-lime); padding: 0.3rem 0.8rem; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 600;">📊 Data</span>
+            <span style="background: var(--bg-glass-card); color: var(--text-muted); padding: 0.3rem 0.8rem; border-radius: var(--radius-full); font-size: 0.75rem;">Em breve</span>
+          </div>
+          <h3 style="color: var(--text-main); margin-bottom: 1rem;">Privacidade por Design: Como o Scrutinium Alcança Anonimato Real com Cifragem End-to-End</h3>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.7;">Deep-dive técnico: arquitectura de privacidade, threat modeling, auditorias, lições para devs que levam privacidade a sério.</p>
+          <div style="display: flex; align-items: center; gap: 1rem; color: var(--text-muted); font-size: 0.85rem;">
+            <span>📅 Q2 2026</span>
+            <span>⏱️ 25 min leitura</span>
+            <span>👨‍💻 Equipa Scrutinium</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section style="margin-top: 6rem; padding: 4rem 2rem; background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-surface-elevated) 100%); border-radius: var(--radius-lg); text-align: center;">
+      <h2 style="color: var(--text-main); margin-bottom: 1rem;">Recebe os artigos no email</h2>
+      <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto 2rem;">Sem spam, só conteúdo de qualidade. Cancela quando quiseres.</p>
+      <form style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; max-width: 400px; margin: 0 auto;">
+        <input type="email" placeholder="teu@email.com" style="flex: 1; min-width: 250px; padding: 0.8rem 1.2rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); background: var(--bg-body); color: var(--text-main); font-size: 1rem;">
+        <button type="submit" class="btn btn-primary" style="white-space: nowrap;">Subscrever →</button>
+      </form>
+      <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 1rem;">Ao subscreveres, concordas com a nossa <a href="/privacy" style="color: var(--color-primary);">Política de Privacidade</a>.</p>
+    </section>
+  </main>
+
+  <footer class="footer" style="margin-top: 4rem;">
+    <div class="container footer-bottom">
+      <span>© 2026 MadeTech. Todos os direitos reservados.</span>
+      <a href="/" style="color: var(--color-primary);" target="_blank" rel="noopener noreferrer">← Voltar ao Início</a>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
