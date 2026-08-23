@@ -11,7 +11,7 @@ export const translations = {
     // Hero
     'hero.badge': 'Estúdio de Engenharia & Desenvolvimento Mobile',
     'hero.title': 'Engenharia de Software Mobile de Classe Empresarial',
-    'hero.subtitle': 'Desenvolvemos soluções nativas de elevada performance, segurança rigorosa e arquitetura escalável para utilizadores globais na Google Play Store.',
+    'hero.subtitle': 'Estúdio de apps nativas Kotlin Multiplatform. Best Gym (ginásios), Scrutinium (opinião pública), SMAS (água/saneamento). Grátis, privadas, Made in Portugal.',
     'hero.cta.gym': 'Explorar Best Gym',
     'hero.cta.scrutinium': 'Descobrir Scrutinium',
     
@@ -23,14 +23,14 @@ export const translations = {
 
     // Best Gym Section
     'gym.badge': 'Solução Empresarial de Descoberta & Avaliação',
-    'gym.title': 'Plataforma Integrada de Descoberta e Avaliação de Academias',
+    'gym.title': 'Plataforma Integrada de Descoberta e Avaliação de Ginásios',
     'gym.desc': 'Mapeamento em tempo real, validação de horários de funcionamento, algoritmo de pontuação com 19 critérios e consolidação transparente com avaliações do Google Maps.',
     'gym.feat1.title': 'Mapeamento & Geolocalização',
-    'gym.feat1.desc': 'Visualização em tempo real de instalações desportivas, distância exata, estado de abertura dinâmico, horário de funcionamento e dados de contacto.',
+    'gym.feat1.desc': 'Visualização em tempo real de ginásios, distância exata, estado de abertura dinâmico, horário de funcionamento e dados de contacto.',
     'gym.feat2.title': 'Matriz de 19 Critérios de Avaliação',
     'gym.feat2.desc': 'Métrica granular sobre limpeza, equipamentos, vestiários, corpo técnico, aulas de grupo, gestão de espaço e relação custo-benefício.',
     'gym.feat3.title': 'Rankings & Índices de Qualidade',
-    'gym.feat3.desc': 'Algoritmos de classificação direta para identificar as instalações com melhor desempenho por categoria técnica e localização.',
+    'gym.feat3.desc': 'Algoritmos de classificação direta para identificar os ginásios com melhor desempenho por categoria técnica e localização.',
     'gym.feat4.title': 'Curadoria & Moderação Ativa',
     'gym.feat4.desc': 'Verificação rigorosa de avaliações, prevenção de avaliações fraudulentas e painel desktop especializado de gestão de dados.',
     'gym.cta': 'Disponível na Google Play Store',

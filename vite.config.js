@@ -15,6 +15,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         'bestgym/index': resolve(__dirname, 'bestgym/index.html'),
+        'best-gym/index': resolve(__dirname, 'best-gym/index.html'),
         'scrutinium/index': resolve(__dirname, 'scrutinium/index.html'),
         'smas/index': resolve(__dirname, 'smas/index.html')
       }
