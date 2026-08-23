@@ -264,3 +264,39 @@ textarea.form-control {
   resize: vertical;
   min-height: 120px;
 }
+
+/* Inline SVG icons */
+.icon-svg {
+  width: 1.35em;
+  height: 1.35em;
+  vertical-align: -0.28em;
+  flex-shrink: 0;
+}
+.detail-icon .icon-svg,
+.about-icon .icon-svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* App Store badge (coming soon) */
+.badge-appstore {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  opacity: 0.55;
+  filter: grayscale(0.35);
+  align-self: flex-start;
+}
+.badge-appstore img {
+  height: 52px;
+  width: auto;
+  border-radius: 10px;
+}
+.badge-appstore small {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-lime);
+  font-weight: 600;
+}

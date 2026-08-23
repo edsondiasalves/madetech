@@ -132,6 +132,12 @@ export const translations = {
     'footer.legal': 'Termos & Conformidade',
     'footer.contact': 'Contacto Institucional',
     'footer.rights': '© 2026 MadeTech. Todos os direitos reservados.',
+    'footer.applications': 'Aplicações',
+    'footer.legal': 'Legal',
+    'footer.bestgym': 'Best Gym (Android)',
+    'footer.scrutinium': 'Scrutinium (Android)',
+    'footer.smas': 'SMAS (Android)',
+    'footer.googleplay': 'Google Play Store',
     
     // Privacy Modal
     'privacy.title': 'Política de Privacidade & Conformidade MadeTech',
@@ -149,6 +155,8 @@ export const translations = {
     'contact.email': 'Email Profissional',
     'contact.message': 'Assunto / Mensagem',
     'contact.send': 'Enviar Comunicação',
+    'contact.sending': 'A enviar…',
+    'contact.sent': '✓ Mensagem Enviada!',
     'contact.success': 'Comunicação enviada com sucesso. A nossa equipa responderá no prazo máximo de 24 horas úteis.'
   },
 
@@ -302,6 +310,8 @@ export const translations = {
     'contact.email': 'E-mail Profissional',
     'contact.message': 'Assunto / Mensagem',
     'contact.send': 'Enviar Comunicação',
+    'contact.sending': 'A enviar…',
+    'contact.sent': '✓ Mensagem Enviada!',
     'contact.success': 'Comunicação enviada com sucesso. Nossa equipe responderá no prazo máximo de 24 horas úteis.'
   },
 
@@ -438,6 +448,8 @@ export const translations = {
     'contact.email': 'Work Email Address',
     'contact.message': 'Subject / Inquiry Details',
     'contact.send': 'Submit Inquiry',
+    'contact.sending': 'Sending…',
+    'contact.sent': '✓ Message Sent!',
     'contact.success': 'Inquiry submitted successfully. Our team will respond within 24 business hours.'
   }
 };
