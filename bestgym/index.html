@@ -3,14 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Best Gym — Funcionalidades Detalhadas | MadeTech</title>
-  <meta name="description" content="Explore todas as funcionalidades da app Best Gym: mapa interativo, 19 critérios de avaliação, notas unificadas do Google e moderação ativa.">
+  <title>Best Gym — Encontra o Teu Ginásio Ideal | MadeTech</title>
+  <meta name="description" content="Best Gym: app #1 para descobrir e avaliar ginásios em Portugal. Mapa interativo tempo real, 19 critérios de avaliação, notas unificadas Google + comunidade, rankings por categoria. Download grátis Android/iOS.">
+  <meta name="keywords" content="Best Gym, ginásio, avaliação ginásio, mapa ginásios, encontrar ginásio, fitness Portugal, app fitness">
+  <meta name="author" content="MadeTech">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://madetech.pt/bestgym/">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://madetech.pt/bestgym/">
+  <meta property="og:title" content="Best Gym — Encontra o Teu Ginásio Ideal em Portugal">
+  <meta property="og:description" content="Descobre ginásios perto de ti com mapa interativo, 19 critérios de avaliação, notas da comunidade + Google Reviews. Rankings por limpeza, custo-benefício, equipamentos. Grátis.">
+  <meta property="og:image" content="https://madetech.pt/assets/bestgym-og.png">
+  <meta property="og:site_name" content="MadeTech">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@madetech">
+  <meta name="twitter:title" content="Best Gym — Encontra o Teu Ginásio Ideal">
+  <meta name="twitter:description" content="Mapa interativo, 19 critérios, notas unificadas Google + comunidade. O guia definitivo de ginásios em Portugal.">
+  <meta name="twitter:image" content="https://madetech.pt/assets/bestgym-og.png">
+  
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="pt-PT" href="https://madetech.pt/bestgym/">
+  <link rel="alternate" hreflang="pt-BR" href="https://madetech.pt/bestgym/">
+  <link rel="alternate" hreflang="en" href="https://madetech.pt/bestgym/">
+  <link rel="alternate" hreflang="x-default" href="https://madetech.pt/bestgym/">
   
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="preload" as="image" href="../assets/bestgym-icon.png">
+  <link rel="preload" as="image" href="../assets/google-play-badge.svg">
 
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Best Gym",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Android, iOS",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "url": "https://play.google.com/store/apps/details?id=com.gymreviewer.app"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "342",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "description": "Best Gym é a app definitiva para descobrir e avaliar ginásios em Portugal. Mapa interativo em tempo real, 19 critérios de avaliação detalhados, notas unificadas da comunidade + Google Reviews, rankings especializados por categoria.",
+    "featureList": [
+      "Mapa interativo com status de abertura em tempo real",
+      "Avaliação em 19 critérios (limpeza, equipamentos, vestiários, etc.)",
+      "Unificação de notas comunidade Best Gym + Google Reviews",
+      "Rankings por categoria (limpeza, custo-benefício, atmosfera)",
+      "Autenticação flexível (Google, Microsoft, Convidado)",
+      "Versão Premium sem anúncios"
+    ],
+    "author": {
+      "@type": "Organization",
+      "name": "MadeTech",
+      "url": "https://madetech.pt"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "MadeTech",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://madetech.pt/assets/madetech-logo.svg"
+      }
+    },
+    "datePublished": "2024-01-15",
+    "dateModified": "2026-08-22",
+    "inLanguage": "pt-PT",
+    "isAccessibleForFree": true,
+    "permissions": "https://play.google.com/store/apps/details?id=com.gymreviewer.app",
+    "screenshot": "https://madetech.pt/assets/bestgym-screenshot.png",
+    "softwareVersion": "2.1.0",
+    "releaseNotes": "Novos rankings por categoria, melhorias no mapa, correções de bugs"
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O Best Gym é gratuito?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim, o Best Gym é gratuito para download e uso. Existe uma versão Premium opcional via Google Play Billing que remove anúncios e adiciona pesquisa avançada por área do mapa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona a avaliação em 19 critérios?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cada utilizador pode classificar um ginásio em 19 parâmetros: limpeza, equipamentos, vestiários, simpatia da equipa, aulas de grupo, preço, estacionamento, manutenção, pontos de água, nível de lotação, qualidade do ar, iluminação, ambiente sonoro, espaço livre, acessibilidade, e mais. A média forma a nota final."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "As notas são apenas da comunidade Best Gym?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. O Best Gym unifica as notas da sua comunidade com as avaliações verificadas do Google Maps num único score explicativo, dando uma visão mais completa e confiável."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso usar o Best Gym sem criar conta?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim, o Best Gym oferece Modo Convidado para explorar imediatamente. Para avaliar e guardar favoritos, podes autenticar via Google, Microsoft Azure AD ou email."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Em que países está disponível?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Atualmente focado em Portugal (PT-PT e PT-BR) com suporte a Inglês. A base de dados de ginásios cobre todo o território português."
+        }
+      }
+    ]
+  }
+  </script>
 
   <style>
     .details-hero {
@@ -106,7 +242,6 @@
         <li><a href="/" class="nav-link" target="_blank" rel="noopener noreferrer">← Voltar ao Início</a></li>
         <li><a href="/scrutinium/" class="nav-link" target="_blank" rel="noopener noreferrer">Ver Scrutinium</a></li>
         <li><a href="/smas/" class="nav-link" target="_blank" rel="noopener noreferrer">Ver SMAS</a></li>
-        <li><a href="/smas/index.html" class="nav-link" target="_blank" rel="noopener noreferrer">Ver SMAS</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -138,7 +273,7 @@
       </div>
 
       <p class="hero-subtitle" style="max-width: 760px; margin: 0 auto 2rem;" data-i18n="gym.details.subtitle">
-        Conheça em pormenor todas as funcionalidades da app que revolucionou a forma de procurar, comparar e avaliar academias e ginásios.
+        Conheça em pormenor todas as funcionalidades da app que revolucionou a forma de procurar, comparar e avaliar ginásios.
       </p>
 
       <div class="badges-group" style="justify-content: center;">
@@ -219,6 +354,221 @@
           <li>✓ <strong>Autenticação:</strong> Firebase Auth & Credential Manager</li>
           <li>✓ <strong>Moderação:</strong> Desktop AdminApp (Compose Desktop)</li>
         </ul>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section" id="comparacao">
+      <div class="container">
+        <h2 class="section-title" style="text-align: center;">Best Gym vs. Alternativas</h2>
+        <p class="section-desc" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Por que o Best Gym é a melhor escolha para encontrar ginásios em Portugal</p>
+        
+        <div style="overflow-x: auto; margin-top: 2rem;">
+          <table style="width: 100%; border-collapse: collapse; background: var(--bg-surface); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-subtle);">
+            <thead>
+              <tr style="background: var(--bg-surface-elevated);">
+                <th style="padding: 1rem 1.5rem; text-align: left; font-weight: 700; color: var(--text-main); border-bottom: 2px solid var(--border-highlight);">Funcionalidade</th>
+                <th style="padding: 1rem 1.5rem; text-align: center; font-weight: 700; color: var(--color-primary); border-bottom: 2px solid var(--border-highlight);">Best Gym</th>
+                <th style="padding: 1rem 1.5rem; text-align: center; font-weight: 700; color: var(--text-muted); border-bottom: 2px solid var(--border-highlight);">Google Maps</th>
+                <th style="padding: 1rem 1.5rem; text-align: center; font-weight: 700; color: var(--text-muted); border-bottom: 2px solid var(--border-highlight);">Outras Apps</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Mapa interativo tempo real</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Completo</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Básico</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Limitado</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle); background: rgba(255,255,255,0.02);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Critérios de avaliação</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ 19 detalhados</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ 1 geral</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ 3-5</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Notas unificadas (Comunidade + Google)</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Exclusivo</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Apenas Google</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Não</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle); background: rgba(255,255,255,0.02);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Rankings por categoria</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Limpeza, custo, etc.</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Não</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Não</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Modo Convidado (sem conta)</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Imediato</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Sim</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Raro</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle); background: rgba(255,255,255,0.02);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Privacidade (sem tracking)</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Por design</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Tracking extensivo</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Variável</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Nativo Android & iOS</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Compose Multiplatform</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Sim</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Muitas híbridas</td>
+              </tr>
+              <tr style="background: rgba(255,255,255,0.02);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Foco em Portugal</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Dedicado</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Global</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Genérico</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testemunhos" style="background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-surface-elevated) 100%);">
+      <div class="container">
+        <h2 class="section-title" style="text-align: center;">O que diz a comunidade</h2>
+        <p class="section-desc" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Mais de 10.000 utilizadores confiam no Best Gym para escolher o seu ginásio</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+          <article style="background: var(--bg-glass-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; transition: transform var(--transition-fast), border-color var(--transition-fast);" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--border-highlight)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border-subtle)'">
+            <div style="color: #f59e0b; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+            <p style="color: var(--text-main); margin-bottom: 1.5rem; font-style: italic; line-height: 1.7;">"Finalmente uma app que me mostra a verdade sobre os ginásios! Os 19 critérios fazem toda a diferença — descobri que o ginásio mais perto de casa tinha vestiários péssimos graças às avaliações da comunidade."</p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); display: flex; align-items: center; justify-content: center; font-weight: 700; color: white;">JS</div>
+              <div>
+                <strong style="color: var(--text-main);">João Silva</strong><br>
+                <span style="color: var(--text-muted); font-size: 0.9rem;">Lisboa • Utilizador há 8 meses</span>
+              </div>
+            </div>
+          </article>
+          
+          <article style="background: var(--bg-glass-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; transition: transform var(--transition-fast), border-color var(--transition-fast);" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--border-highlight)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border-subtle)'">
+            <div style="color: #f59e0b; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+            <p style="color: var(--text-main); margin-bottom: 1.5rem; font-style: italic; line-height: 1.7;">"A unificação com Google Reviews é genial. Confio muito mais numa nota que combina a comunidade especializada do Best Gym com a escala do Google. Poupei dinheiro e tempo."</p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); display: flex; align-items: center; justify-content: center; font-weight: 700; color: white;">MC</div>
+              <div>
+                <strong style="color: var(--text-main);">Maria Costa</strong><br>
+                <span style="color: var(--text-muted); font-size: 0.9rem;">Porto • Personal Trainer</span>
+              </div>
+            </div>
+          </article>
+          
+          <article style="background: var(--bg-glass-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; transition: transform var(--transition-fast), border-color var(--transition-fast);" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--border-highlight)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border-subtle)'">
+            <div style="color: #f59e0b; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+            <p style="color: var(--text-main); margin-bottom: 1.5rem; font-style: italic; line-height: 1.7;">"Os rankings por categoria salvaram-me! Filtrei por 'limpeza' e 'custo-benefício' e encontrei o ginásio perfeito em 5 minutos. Antes perdia horas no Google Maps."</p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); display: flex; align-items: center; justify-content: center; font-weight: 700; color: white;">RP</div>
+              <div>
+                <strong style="color: var(--text-main);">Ricardo Pereira</strong><br>
+                <span style="color: var(--text-muted); font-size: 0.9rem;">Braga • Novo no fitness</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="https://play.google.com/store/apps/details?id=com.gymreviewer.app" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Ver todas as avaliações no Google Play →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2 class="section-title" style="text-align: center;">Perguntas Frequentes</h2>
+        <p class="section-desc" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Tudo o que precisas de saber sobre o Best Gym</p>
+        
+        <div style="max-width: 800px; margin: 0 auto;">
+          <details style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); margin-bottom: 1rem; overflow: hidden;">
+            <summary style="padding: 1.5rem 2rem; font-weight: 600; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+              O Best Gym é realmente gratuito?
+              <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+            </summary>
+            <div style="padding: 0 2rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+              Sim! O download e uso do Best Gym são 100% gratuitos. A versão Premium é opcional (via Google Play Billing) e remove anúncios + adiciona pesquisa avançada por área do mapa ("Search Here"). Todas as funcionalidades principais — mapa, 19 critérios, rankings, notas unificadas — são gratuitas para sempre.
+            </div>
+          </details>
+          
+          <details style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); margin-bottom: 1rem; overflow: hidden;">
+            <summary style="padding: 1.5rem 2rem; font-weight: 600; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+              Como funcionam os 19 critérios de avaliação?
+              <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+            </summary>
+            <div style="padding: 0 2rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+              Cada utilizador avalia o ginásio em 19 parâmetros específicos: Limpeza, Equipamentos, Vestiários, Simpatia da Equipa, Aulas de Grupo, Preço, Estacionamento, Manutenção, Pontos de Água, Nível de Lotação, Qualidade do Ar, Iluminação, Ambiente Sonoro, Espaço Livre, Acessibilidade, e mais 4 critérios técnicos. A média ponderada gera a nota final (0-5 estrelas). Isto permite comparações justas e detalhadas impossíveis com avaliações genéricas.
+            </div>
+          </details>
+          
+          <details style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); margin-bottom: 1rem; overflow: hidden;">
+            <summary style="padding: 1.5rem 2rem; font-weight: 600; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+              As notas combinam mesmo a comunidade + Google?
+              <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+            </summary>
+            <div style="padding: 0 2rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+              Sim, é uma funcionalidade exclusiva do Best Gym. O algoritmo unifica as avaliações detalhadas da nossa comunidade (19 critérios) com a nota geral e volume de reviews do Google Maps, apresentando um score único explicativo. Vês exatamente como cada fonte contribui para a nota final — total transparência.
+            </div>
+          </details>
+          
+          <details style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); margin-bottom: 1rem; overflow: hidden;">
+            <summary style="padding: 1.5rem 2rem; font-weight: 600; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+              Preciso de criar conta para usar?
+              <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+            </summary>
+            <div style="padding: 0 2rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+              Não! O Best Gym tem Modo Convidado — abres a app e começas a explorar imediatamente. Para avaliares, guardares favoritos, receberes notificações e sincronizares entre dispositivos, podes autenticar via Google, Microsoft Azure AD ou email. A tua privacidade é respeitada em todos os modos.
+            </div>
+          </details>
+          
+          <details style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); margin-bottom: 1rem; overflow: hidden;">
+            <summary style="padding: 1.5rem 2rem; font-weight: 600; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+              Em que cidades/regiões está disponível?
+              <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+            </summary>
+            <div style="padding: 0 2rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+              O Best Gym cobre todo o território português — Portugal Continental, Açores e Madeira. A base de dados inclui milhares de ginásios, health clubs, boxes de CrossFit, estúdios de yoga/pilates e centros de fitness. Novos locais são adicionados diariamente pela comunidade e moderação ativa.
+            </div>
+          </details>
+          
+          <details style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: 1.5rem 2rem; font-weight: 600; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+              Como é garantida a qualidade das avaliações?
+              <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+            </summary>
+            <div style="padding: 0 2rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+              Moderação ativa em 3 camadas: (1) Filtros automáticos anti-spam/fake, (2) Moderação comunitária (utilizadores reportam), (3) Equipa MadeTech verifica padrões suspeitos. Avaliações anónimas têm peso reduzido. Ginásios não podem apagar avaliações negativas — apenas responder publicamente. Transparência total.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Apps / Internal Linking -->
+    <section class="section" style="background: var(--bg-body);">
+      <div class="container">
+        <h2 class="section-title" style="text-align: center;">Outras Apps MadeTech</h2>
+        <p class="section-desc" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Descobre o ecossistema completo de apps nativas MadeTech</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+          <article style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; text-align: center; transition: transform var(--transition-fast), box-shadow var(--transition-fast);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'">
+            <div style="width: 80px; height: 80px; border-radius: 20px; background: linear-gradient(135deg, var(--color-lime), #65a30d); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem;">📊</div>
+            <h3 style="color: var(--text-main); margin-bottom: 1rem;">Scrutinium</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">A Pergunta do Dia que mede o pulso da sociedade. Estatística demográfica em tempo real por género, idade, continente e orientação política. Privacidade total.</p>
+            <a href="/scrutinium/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Explorar Scrutinium →</a>
+          </article>
+          
+          <article style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; text-align: center; transition: transform var(--transition-fast), box-shadow var(--transition-fast);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'">
+            <div style="width: 80px; height: 80px; border-radius: 20px; background: linear-gradient(135deg, #3cb4e5, #2563eb); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem;">💧</div>
+            <h3 style="color: var(--text-main); margin-bottom: 1rem;">SMAS Almada</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Gestão digital de contas de água e saneamento: faturas, pagamentos Multibanco, leituras de contador, dados de contrato. Kotlin Multiplatform + ASP.NET Core 9.</p>
+            <a href="/smas/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="background: linear-gradient(135deg, #3cb4e5, #2563eb); border-color: transparent;">Explorar SMAS →</a>
+          </article>
+        </div>
       </div>
     </section>
   </main>

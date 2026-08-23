@@ -3,37 +3,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MadeTech — Engenharia de Software Mobile & Soluções Nativas</title>
-  <meta name="description" content="A MadeTech é um estúdio de engenharia mobile especializado no desenvolvimento de aplicações nativas robustas, seguras e multiplataforma para utilizadores globais.">
-  <meta name="keywords" content="MadeTech, Engenharia Mobile, Software Nativo, Best Gym, Scrutinium, Android, Kotlin Multiplatform, Soluções Empresariais">
+  <title>MadeTech — Estúdio de Apps Mobile Nativas | Best Gym, Scrutinium, SMAS</title>
+  <meta name="description" content="MadeTech: estúdio independente de apps mobile nativas. Best Gym (ginásios), Scrutinium (opinião pública), SMAS (água/saneamento). Kotlin Multiplatform, Android & iOS. Download grátis.">
+  <meta name="keywords" content="MadeTech, Best Gym, Scrutinium, SMAS, apps mobile, Kotlin Multiplatform, Android, iOS, ginásio, opinião pública, água saneamento">
   <meta name="author" content="MadeTech Software Engineering">
-
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://madetech.pt/">
+  
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://madetech.app">
-  <meta property="og:title" content="MadeTech — Engenharia de Software Mobile & Soluções Nativas">
-  <meta property="og:description" content="Desenvolvimento de software mobile nativo, segurança rigorosa e arquiteturas escaláveis.">
-  <meta property="og:image" content="/assets/madetech-logo.svg">
-
+  <meta property="og:url" content="https://madetech.pt/">
+  <meta property="og:title" content="MadeTech — Estúdio de Apps Mobile Nativas para Portugal">
+  <meta property="og:description" content="Best Gym: encontra ginásios. Scrutinium: opinião pública. SMAS: gestão água. Apps nativas Kotlin Multiplatform, grátis, privadas, Made in Portugal.">
+  <meta property="og:image" content="https://madetech.pt/assets/madetech-og.png">
+  <meta property="og:site_name" content="MadeTech">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@madetech">
+  <meta name="twitter:title" content="MadeTech — Apps Mobile Nativas">
+  <meta name="twitter:description" content="Best Gym, Scrutinium, SMAS. Três apps nativas, uma missão: software útil, privado e bonito.">
+  <meta name="twitter:image" content="https://madetech.pt/assets/madetech-og.png">
+  
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="pt-PT" href="https://madetech.pt/">
+  <link rel="alternate" hreflang="pt-BR" href="https://madetech.pt/">
+  <link rel="alternate" hreflang="en" href="https://madetech.pt/">
+  <link rel="alternate" hreflang="x-default" href="https://madetech.pt/">
+  
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="apple-touch-icon" href="/assets/madetech-icon-180.png">
+  <link rel="manifest" href="./manifest.json">
+  
+  <!-- Google Fonts - Performance Optimized -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+  
+  <!-- Critical Resource Preloads -->
+  <link rel="preload" as="image" href="./assets/madetech-logo.svg">
+  <link rel="preload" as="image" href="./assets/bestgym-icon.png">
+  <link rel="preload" as="image" href="./assets/scrutinium-icon.png">
+  <link rel="preload" as="image" href="./assets/smas-icon.png">
+  <link rel="preload" as="image" href="./assets/google-play-badge.svg">
+  
+  <!-- DNS Prefetch for external resources -->
+  <link rel="dns-prefetch" href="https://play.google.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  
   <!-- Stylesheets -->
+  
+  <!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="./sitemap.xml">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "MadeTech App Studio",
-    "url": "https://madetech.app",
-    "logo": "https://madetech.app/assets/madetech-logo.svg",
-    "description": "Estúdio independente de desenvolvimento e publicação de aplicações móveis para a Google Play Store."
+    "name": "MadeTech",
+    "url": "https://madetech.pt",
+    "logo": "https://madetech.pt/assets/madetech-logo.svg",
+    "description": "Estúdio independente de desenvolvimento e publicação de aplicações móveis nativas para Android e iOS. Especialistas em Kotlin Multiplatform, Compose Multiplatform, Firebase, ASP.NET Core.",
+    "sameAs": [
+      "https://play.google.com/store/apps/developer?id=MadeTech",
+      "https://github.com/madetech",
+      "https://linkedin.com/company/madetech"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+351-XXX-XXX-XXX",
+      "contactType": "customer service",
+      "availableLanguage": ["Portuguese", "English"],
+      "areaServed": "PT"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "PT",
+      "addressLocality": "Portugal"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Edson Alves"
+    },
+    "foundingDate": "2024",
+    "numberOfEmployees": "1-10",
+    "knowsAbout": ["Kotlin Multiplatform", "Compose Multiplatform", "Android Development", "iOS Development", "Firebase", "ASP.NET Core", "Mobile App Development"]
+  }
+  </script>
+
+  <!-- ItemList for apps -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Aplicações MadeTech",
+    "description": "Portfólio de aplicações móveis nativas desenvolvidas pela MadeTech",
+    "numberOfItems": 3,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Best Gym",
+          "url": "https://madetech.pt/bestgym/",
+          "applicationCategory": "HealthApplication",
+          "operatingSystem": "Android, iOS"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Scrutinium",
+          "url": "https://madetech.pt/scrutinium/",
+          "applicationCategory": "SocialNetworkingApplication",
+          "operatingSystem": "Android, iOS"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "SMAS Almada",
+          "url": "https://madetech.pt/smas/",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Android, iOS"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://madetech.pt/"
+    }]
   }
   </script>
   <script type="module" crossorigin src="./assets/main-548qjq55.js"></script>
