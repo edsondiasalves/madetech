@@ -693,6 +693,222 @@ export const translations = {
     'smas.landing.faq5.q': 'Does the app work on iOS?',
     'smas.landing.faq5.a': 'Yes! There are two versions: (1) Native Android (Jetpack Compose + Hilt + Retrofit) and (2) Kotlin Multiplatform with Compose Multiplatform sharing ~90% of code with native SwiftUI UI on iOS. Both use the same ASP.NET Core 9 backend.',
 
+    // Scrutinium Testimonials
+    'scrutinium.landing.test.1': 'I love seeing how opinion changes by age and gender. The remote work question showed a fascinating generational divide — 86% of 18-24 in favor vs 52% of 45+. Real data, not Twitter opinions.',
+    'scrutinium.landing.test.1.author': 'Lisbon • Social researcher',
+    'scrutinium.landing.test.2': 'Finally a place where I can vote anonymously and see serious results. Privacy is real — I\'ve used guest mode for months. The history lets me see how opinion on AI changed drastically in 2 years.',
+    'scrutinium.landing.test.2.author': 'Porto • Software engineer',
+    'scrutinium.landing.test.3': 'The feature to vote on tomorrow\'s question is brilliant. I feel my voice counts in setting the agenda. I suggested a question about AI in education and it became the Question of the Day the following week!',
+    'scrutinium.landing.test.3.author': 'Coimbra • University student',
+
+    // Scrutinium FAQ
+    'scrutinium.landing.faq1.q': 'Is Scrutinium really 100% free and ad-free?',
+    'scrutinium.landing.faq1.a': 'Yes! Zero costs, zero ads, zero tracking. Scrutinium is a MadeTech public utility project to democratize access to reliable public opinion data. MadeTech\'s business model comes from B2B apps (like SMAS) and custom projects, not from your data.',
+    'scrutinium.landing.faq2.q': 'How is vote anonymity guaranteed?',
+    'scrutinium.landing.faq2.a': 'Three layers: (1) End-to-end vote encryption — not even MadeTech sees your individual vote, only the aggregate. (2) Identity separation — your profile (if authenticated) is never linked to your vote in the database. (3) Guest Mode — vote without any account, zero personal data. Results show only aggregated percentages.',
+    'scrutinium.landing.faq3.q': 'Who chooses the Question of the Day?',
+    'scrutinium.landing.faq3.a': 'The community! Daily: (1) Users submit new questions. (2) Community moderation + MadeTech team filter spam/duplicates. (3) Candidate questions go to vote. (4) The most voted becomes the next day\'s Question of the Day. You decide the agenda.',
+    'scrutinium.landing.faq4.q': 'Can I see results by country/region?',
+    'scrutinium.landing.faq4.a': 'Yes! The "Continent" filter shows results by Europe, South America, North America, etc. For Portugal specifically, data is robust (majority of users). We\'re working on country and district filters for future versions.',
+    'scrutinium.landing.faq5.q': 'How are sensitive/ethical questions handled?',
+    'scrutinium.landing.faq5.a': 'Strict moderation: hate, discrimination, illegality or sensationalism questions are rejected. The MadeTech team follows public ethical guidelines. The goal is to measure informed public opinion, not polarize. Topics: technology, work, society, ethics, science, environment.',
+    'scrutinium.landing.faq6.q': 'Is data available for researchers?',
+    'scrutinium.landing.faq6.a': 'Yes, for legitimate academic research. Contact us at research@madetech.pt with project description, institution and ethical framework. We provide anonymized and aggregated datasets (CSV/JSON) under responsible use agreement. Free for public universities.',
+
+    // Scrutinium Related Apps
+    'scrutinium.landing.related.title': 'Other MadeTech Apps',
+    'scrutinium.landing.related.desc': 'The complete ecosystem of native MadeTech apps',
+    'scrutinium.landing.related.gym.title': 'Best Gym',
+    'scrutinium.landing.related.gym.desc': 'Find your ideal gym with real-time map, 19 criteria, unified Google + community ratings. Rankings by cleanliness, value for money, equipment.',
+    'scrutinium.landing.related.smas.title': 'SMAS Almada',
+    'scrutinium.landing.related.smas.desc': 'Digital water/sanitation management: invoices, Multibanco payments, readings, contract. Kotlin Multiplatform + ASP.NET Core 9. B2B enterprise grade.',
+
+    // Tugazenship Testimonials
+    'tugazenship.landing.test.title': 'What Tugazenship users say',
+    'tugazenship.landing.test.desc': 'Thousands of applicants and families track their Portuguese citizenship with peace of mind',
+    'tugazenship.landing.test.1': 'Tracking my grandchild process (Article 1-D) from Brazil was distressing. With Tugazenship I know exactly the estimated completion date and get alerts when the phase changes at IRN.',
+    'tugazenship.landing.test.1.author': 'Rio de Janeiro • Portuguese Grandchild (Art. 1-D)',
+    'tugazenship.landing.test.2': 'The Article 6.1 (5 years residence) document guide helped me prepare all records flawlessly. The time estimate matched the Registry progress in Lisbon!',
+    'tugazenship.landing.test.2.author': 'Lisbon • Naturalization by Residence (Art. 6.1)',
+    'tugazenship.landing.test.3': 'I have 3 family processes (mine by marriage and our children\'s). The app lets me keep everything in one account and switch quickly between them. Essential!',
+    'tugazenship.landing.test.3.author': 'Porto • Acquisition by Marriage (Art. 3.1)',
+
+    // Tugazenship FAQ
+    'tugazenship.landing.faq1.q': 'Is Tugazenship an official IRN application?',
+    'tugazenship.landing.faq1.a': 'Tugazenship is developed by MadeTech and acts as an independent intelligent tool to consult and track processes on the official Instituto dos Registos e do Notariado (IRN) portal, adding predictive estimates and article guides.',
+    'tugazenship.landing.faq2.q': 'How are completion predictions calculated?',
+    'tugazenship.landing.faq2.a': 'Our algorithm analyzes the process submission date, the registry where it\'s located, the applicable law article, and historical IRN progress data to calculate progress percentage and estimate the probable completion date.',
+    'tugazenship.landing.faq3.q': 'Where can I check my nationality article requirements?',
+    'tugazenship.landing.faq3.a': 'In the integrated app guide, you find the complete list of documents and conditions required for over 18 articles of the Nationality Law (e.g.: Article 1-C Ius Soli, 1-D Grandchildren, 3.1 Marriage, 6.1 5-year Residence, 6.7 Sephardic Jews, 6.9 Ascendants).',
+    'tugazenship.landing.faq4.q': 'Is the application free and secure?',
+    'tugazenship.landing.faq4.a': 'Yes! Tugazenship is free to download. Authentication via Google or Microsoft is encrypted and used solely to sync your processes securely across devices.',
+    'tugazenship.landing.faq5.q': 'Can I track more than one process simultaneously?',
+    'tugazenship.landing.faq5.a': 'Yes! You can add multiple family processes and track the evolution of each one in a centralized and organized way.',
+    'tugazenship.landing.faq6.q': 'What languages are available in Tugazenship?',
+    'tugazenship.landing.faq6.a': 'The application offers multilingual support in Portuguese, English, Hindi, Bengali, Urdu and Ukrainian.',
+
+    // Tugazenship Privacy Section
+    'tugazenship.landing.privacy.title': 'Compliance & Privacy',
+    'tugazenship.landing.privacy.desc': 'Your data is protected under the General Data Protection Regulation (GDPR). We offer full transparency and autonomy.',
+    'tugazenship.landing.privacy.btn1': 'Privacy Policy (EN)',
+    'tugazenship.landing.privacy.btn2': 'Privacy Policy (PT)',
+    'tugazenship.landing.privacy.btn3': 'Remove Account & Data',
+
+    // Tugazenship Related Apps
+    'tugazenship.landing.related.title': 'Other MadeTech Apps',
+    'tugazenship.landing.related.desc': 'The complete ecosystem of native MadeTech apps',
+    'tugazenship.landing.related.scrutinium.title': 'Scrutinium',
+    'tugazenship.landing.related.scrutinium.desc': 'The Question of the Day that measures public opinion with live demographic breakdown (gender, age, political orientation), community voting and 100% private.',
+    'tugazenship.landing.related.gym.title': 'Best Gym',
+    'tugazenship.landing.related.gym.desc': 'Find your ideal gym with real-time map, 19 criteria, unified Google + community ratings. Rankings by cleanliness, value for money, equipment.',
+    'tugazenship.landing.related.smas.title': 'SMAS Almada',
+    'tugazenship.landing.related.smas.desc': 'Digital water/sanitation management: invoices, Multibanco payments, readings, contract. Kotlin Multiplatform + ASP.NET Core 9. B2B enterprise grade.',
+
+    // SMAS Screens Captions
+    'smas.landing.screens.caption': 'Captures obtained on physical device with local backend in Docker. Sample data provided by endpoints <strong>/api/reading/info</strong>, <strong>/api/invoices/history</strong> and <strong>/api/home/data</strong>.',
+
+    // SMAS Benefits
+    'smas.landing.benefits.title': 'Benefits for the Managing Entity',
+
+    // SMAS Flow
+    'smas.landing.flow.title': 'App Flow',
+    'smas.landing.flow.desc': 'From launch to payment, in a continuous state-driven flow.',
+    'smas.landing.flow.1.title': '1 · Launch',
+    'smas.landing.flow.1.desc': 'Splash with campaign carousel and app feature highlights. Entry can be in guest mode to explore highlights before login.',
+    'smas.landing.flow.2.title': '2 · Authentication',
+    'smas.landing.flow.2.desc': 'Login with credentials (registration, password recovery, activation and unblocking available). JWT token stored and reused in all authenticated calls.',
+    'smas.landing.flow.3.title': '3 · Home',
+    'smas.landing.flow.3.desc': 'Personalized greeting, contract data, last reading, next estimated readings (SMAS Almada and client) and latest invoice with quick "PAY NOW" action if pending.',
+    'smas.landing.flow.4.title': '4 · Invoices → Detail → Payment',
+    'smas.landing.flow.4.desc': 'Stack navigation: invoice history → detail with cost breakdown and PDF download → Multibanco payment data with entity, reference and total amount.',
+    'smas.landing.flow.5.title': '5 · Readings',
+    'smas.landing.flow.5.desc': 'Reading submission with period and deadline validation. Reading history and next estimated dates keep the client informed.',
+    'smas.landing.flow.6.title': '6 · Communications',
+    'smas.landing.flow.6.desc': 'Query notices and communications issued by the entity, keeping the user always updated on the service.',
+
+    // SMAS Frontend Architecture
+    'smas.landing.frontend.title': 'Front-end Architecture (Kotlin Multiplatform)',
+    'smas.landing.frontend.desc': 'The multiplatform version uses <strong>Compose Multiplatform (Kotlin)</strong> with 100% native interfaces on Android and iOS, sharing domain logic, data and DI in a single <span class="mono">composeApp</span> module.',
+    'smas.landing.frontend.layers.title': 'Layers',
+    'smas.landing.frontend.layers.ui': '✓ <strong>UI:</strong> Compose Multiplatform + Material 3, State/Event/ViewModel pattern',
+    'smas.landing.frontend.layers.domain': '✓ <strong>Domain:</strong> models and repository contracts (<span class="mono">domain/model</span>, <span class="mono">domain/repository</span>)',
+    'smas.landing.frontend.layers.data': '✓ <strong>Data:</strong> <span class="mono">ApiService</span> (Ktor), DTO→domain mappers, <span class="mono">SessionManager</span> and fake repositories',
+    'smas.landing.frontend.layers.di': '✓ <strong>DI:</strong> Koin (network, data, viewmodel and platform modules)',
+    'smas.landing.frontend.stack.title': 'Tech Stack',
+    'smas.landing.frontend.native.title': 'Native Android Version (Reference)',
+    'smas.landing.frontend.native.stack': 'Kotlin + Jetpack Compose, Hilt (DI), Retrofit + Moshi + OkHttp, Navigation Compose, Coil, DataStore Preferences',
+    'smas.landing.frontend.dataflow': '<strong>Data flow:</strong> screen dispatches an <em>event</em> to the <em>ViewModel</em> → ViewModel calls a <em>domain repository</em> → repository uses <span class="mono">ApiService</span>/<span class="mono">SessionManager</span> → DTOs mapped to domain models → ViewModel updates <em>state</em> and UI recomposes.',
+
+    // SMAS Backend
+    'smas.landing.backend.title': 'Backend & API (ASP.NET Core 9)',
+    'smas.landing.backend.desc': 'Web API microservice in <strong>.NET 9.0</strong> with <strong>Entity Framework Core + SQL Server</strong>, <strong>JWT</strong> authentication and <strong>Swagger/OpenAPI</strong> documentation. Layered architecture: Controllers → Services → Data.',
+    'smas.landing.backend.stack.title': 'Tech Stack',
+    'smas.landing.backend.stack.items': 'ASP.NET Core 9.0, Entity Framework Core, SQL Server, JWT Bearer, Swagger/OpenAPI, xUnit, FluentAssertions, Moq, Coverlet, Docker',
+    'smas.landing.backend.entities.title': 'Entities (EF Core)',
+    'smas.landing.backend.entities.items': 'UserEntity, ContractEntity, InvoiceEntity, ReadingEntity, NextReadingsEntity, ReadingPeriodEntity, CostCategoryEntity, FeatureEntity, CarouselEntity',
+    'smas.landing.backend.endpoints.title': 'Endpoints',
+    'smas.landing.backend.endpoints.headers': 'Controller,Method,Endpoint,Auth,Description',
+    'smas.landing.backend.endpoints.rows': 'Authentication,POST,/api/authentication/login,—,User login;Authentication,POST,/api/authentication/register,—,New user registration;Authentication,POST,/api/authentication/recover,—,Password recovery;Authentication,POST,/api/authentication/activate,—,Activate user account;Authentication,POST,/api/authentication/unlock,—,Unblock user;Splash Content,GET,/api/splashcontent/features,—,Splash features;Splash Content,GET,/api/splashcontent/carousel,—,Carousel items;Home,GET,/api/home/data,🔒,Home screen data (contract, invoice, readings);Invoices,GET,/api/invoices/history,🔒,Invoice history;Invoices,GET,/api/invoices/{id},🔒,Invoice details;Invoices,GET,/api/invoices/{id}/payment,🔒,Invoice payment data;Invoices,POST,/api/invoices/{id}/download,🔒,PDF invoice URL;Reading,GET,/api/reading/info,🔒,Reading submission info;Reading,POST,/api/reading/submit,🔒,Submit reading value',
+    'smas.landing.backend.startup': '<strong>Complete startup example:</strong> <span class="mono">docker-compose up --build</span> starts the API (port 5152, Swagger at <span class="mono">/swagger</span>) and SQL Server (port 1433). Migrations are applied automatically on startup via <span class="mono">DbInitializer.Initialize()</span>, with sample data seeding.',
+
+    // SMAS Infrastructure
+    'smas.landing.infra.title': 'Infrastructure',
+    'smas.landing.infra.desc': '<span class="mono">Docker Compose</span> with two services: <span class="mono">smas</span> (.NET API) and <span class="mono">sqlserver</span> (SQL Server 2022). Multi-stage Dockerfile at backend root. Persistent volume <span class="mono">sqlserver_data</span> for data.',
+    'smas.landing.infra.stack': 'Dockerfile, docker-compose.yml, appsettings.json, API Port: 5152, SQL Port: 1433',
+
+    // SMAS CI/CD
+    'smas.landing.cicd.title': 'CI/CD (GitHub Actions)',
+    'smas.landing.cicd.desc': 'Two workflows in <span class="mono">.github/workflows</span>: <strong>.NET CI</strong> (build + tests on <code>main</code> and pull requests) and <strong>Multiplatform CI</strong> (unit tests, UI tests on AVD emulator, static analysis with baseline and build of Android APK + iOS framework as artifacts).',
+    'smas.landing.cicd.stack': 'dotnet-ci.yml, ci.yml, macos-15-intel, ubuntu-latest, SonarQube (ready)',
+
+    // SMAS Quality
+    'smas.landing.quality.title': 'Tests & Continuous Integration',
+    'smas.landing.quality.desc': 'Quality measured at every pipeline stage, from command line to emulator.',
+    'smas.landing.quality.unit.title': 'Unit Tests (KMP)',
+    'smas.landing.quality.unit.desc': 'Shared tests in <span class="mono">commonTest</span> for fakes, mappers, DTOs, repositories, <span class="mono">SessionManager</span> and ViewModels, executed on Android/JVM, iOS via <span class="mono">iosSimulatorArm64Test</span> or aggregated with <span class="mono">allTests</span>.',
+    'smas.landing.quality.ui.title': 'UI Tests (Android Instrumented)',
+    'smas.landing.quality.ui.desc': 'UI tests with Compose UI Test (<span class="mono">connectedDebugAndroidTest</span>) covering main screens with dedicated <code>testTag</code> (Home, Invoices, Payment, etc.), executed on emulator in CI.',
+    'smas.landing.quality.backend.title': 'Backend Tests (.NET)',
+    'smas.landing.quality.backend.desc': 'xUnit + FluentAssertions + Moq + EF Core InMemory covering all controllers (Authentication, Home, Invoices, Reading, SplashContent) with coverage via Coverlet (<span class="mono">dotnet test --collect:"XPlat Code Coverage"</span>).',
+    'smas.landing.quality.static.title': 'Static Analysis & Coverage',
+    'smas.landing.quality.static.desc': 'Detekt with dedicated config and baseline (<span class="mono">config/detekt</span>) and Jacoco coverage report (<span class="mono">jacocoTestReport</span>) generated automatically after debug tests.',
+
+    // SMAS Execution
+    'smas.landing.exec.title': 'How to Run & Repositories',
+    'smas.landing.exec.backend.title': 'Backend (.NET)',
+    'smas.landing.exec.backend.cmd1': '# Full stack (API + SQL Server)',
+    'smas.landing.exec.backend.cmd2': 'docker-compose up --build',
+    'smas.landing.exec.backend.cmd3': '',
+    'smas.landing.exec.backend.cmd4': '# API only (requires running SQL Server)',
+    'smas.landing.exec.backend.cmd5': 'dotnet watch run --project Smas.Api/Smas.Api.csproj',
+    'smas.landing.exec.backend.cmd6': '',
+    'smas.landing.exec.backend.cmd7': '# Tests',
+    'smas.landing.exec.backend.cmd8': 'dotnet test',
+    'smas.landing.exec.backend.cmd9': '',
+    'smas.landing.exec.backend.cmd10': '# Migrations',
+    'smas.landing.exec.backend.cmd11': 'dotnet ef migrations add <Name> -p Smas.Data -s Smas.Api',
+
+    // SMAS Related Apps
+    'smas.landing.related.title': 'Other MadeTech Apps',
+    'smas.landing.related.desc': 'The complete ecosystem of native MadeTech apps',
+    'smas.landing.related.gym.title': 'Best Gym',
+    'smas.landing.related.gym.desc': 'Find your ideal gym with real-time map, 19 criteria, unified Google + community ratings. Rankings by cleanliness, value for money, equipment.',
+    'smas.landing.related.scrutinium.title': 'Scrutinium',
+    'smas.landing.related.scrutinium.desc': 'The Question of the Day that measures public opinion with live demographic breakdown (gender, age, political orientation), community voting and 100% private.',
+    'smas.landing.related.tugazenship.title': 'Tugazenship',
+    'smas.landing.related.tugazenship.desc': 'Track your Portuguese citizenship process in real-time with IRN updates, predictive estimates and complete article guide.',
+
+    // Best Gym Testimonials
+    'gym.landing.testimonial.1': 'Finally an app that shows the truth about gyms! The 19 criteria make all the difference — I discovered the gym closest to home had terrible locker rooms thanks to the community.',
+    'gym.landing.testimonial.1.author': 'Lisbon',
+    'gym.landing.testimonial.2': 'The unification with Google Reviews is genius. I trust a score that combines the specialized community with Google\'s scale much more. Saved time and money.',
+    'gym.landing.testimonial.2.author': 'Porto • Personal Trainer',
+    'gym.landing.testimonial.3': 'The category rankings saved me! I filtered by cleanliness and value for money and found the perfect gym in 5 minutes. Before I wasted hours searching.',
+    'gym.landing.testimonial.3.author': 'Braga',
+
+    // Best Gym FAQ
+    'gym.landing.faq1.q': 'Is Best Gym really free?',
+    'gym.landing.faq1.a': 'Yes, 100% free to download and use. The Premium version is optional (via Google Play Billing) and removes ads + adds advanced map area search ("Search Here"). All core features — map, 19 criteria, rankings, unified ratings — are free forever.',
+    'gym.landing.faq2.q': 'How do the 19 evaluation criteria work?',
+    'gym.landing.faq2.a': 'Each user rates the gym on 19 specific parameters: Cleanliness, Equipment, Locker Rooms, Staff Friendliness, Group Classes, Price, Parking, Maintenance, Water Points, Crowding Level, Air Quality, Lighting, Sound Environment, Free Space, Accessibility, and 4 more technical criteria. The weighted average generates the final score (0-5 stars). This enables fair and detailed comparisons impossible with generic ratings.',
+    'gym.landing.faq3.q': 'Do the ratings really combine community + Google?',
+    'gym.landing.faq3.a': 'Yes, it\'s a Best Gym exclusive feature. The algorithm unifies our community\'s detailed evaluations (19 criteria) with the overall rating and review volume from Google Maps, presenting a single explanatory score. You see exactly how each source contributes to the final score — total transparency.',
+    'gym.landing.faq4.q': 'Do I need to create an account to use it?',
+    'gym.landing.faq4.a': 'No! Best Gym has Guest Mode — open the app and start exploring immediately. To rate, save favorites, receive notifications and sync across devices, you can authenticate via Google, Microsoft Azure AD or email. Your privacy is respected in all modes.',
+    'gym.landing.faq5.q': 'Which cities/regions is it available in?',
+    'gym.landing.faq5.a': 'Best Gym covers all Portuguese territory — Mainland Portugal, Azores and Madeira. The database includes thousands of gyms, health clubs, CrossFit boxes, yoga/pilates studios and fitness centers. New locations are added daily by the community and active moderation.',
+    'gym.landing.faq6.q': 'How is evaluation quality ensured?',
+    'gym.landing.faq6.a': 'Active moderation in 3 layers: (1) Automatic anti-spam/fake filters, (2) Community moderation (users report), (3) MadeTech team verifies suspicious patterns. Anonymous reviews have reduced weight. Gyms cannot delete negative reviews — only respond publicly. Total transparency.',
+
+    // Best Gym Related Apps
+    'gym.landing.related.title': 'Other MadeTech Apps',
+    'gym.landing.related.desc': 'Discover the complete ecosystem of native MadeTech apps',
+    'gym.landing.related.scrutinium.title': 'Scrutinium',
+    'gym.landing.related.scrutinium.desc': 'The Question of the Day that measures public opinion with live demographic breakdown (gender, age, political orientation), community voting and 100% private.',
+    'gym.landing.related.smas.title': 'SMAS Almada',
+    'gym.landing.related.smas.desc': 'Digital water/sanitation management: invoices, Multibanco payments, readings, contract. Kotlin Multiplatform + ASP.NET Core 9. B2B enterprise grade.',
+    'gym.landing.related.tugazenship.title': 'Tugazenship',
+    'gym.landing.related.tugazenship.desc': 'Track your Portuguese citizenship process in real-time with IRN updates, predictive estimates and complete article guide.',
+
+    // Best Gym CTA
+    'gym.landing.cta.btn': '📱 View all reviews on Google Play →',
+
+    // Main index.html footer
+    'footer.legal': 'Terms & Compliance',
+    'footer.rights': '© 2026 MadeTech. All rights reserved.',
+    'footer.back_home': 'Back to Home',
+
+    // Tugazenship Google Play button
+    'tugazenship.cta': 'View on Google Play →',
+
+    // Scrutinium Google Play button
+    'scrutinium.cta': 'View on Google Play →',
+
+    // SMAS Google Play badge is image, skip
+
+    // Best Gym Google Play button
+    'gym.cta': 'View all reviews on Google Play →',
+
     // Footer & Modals
     'footer.mission': 'MadeTech — Mobile software engineering studio dedicated to developing secure, high-performance, and field-tested applications.',
     'footer.legal': 'Terms & Compliance',
