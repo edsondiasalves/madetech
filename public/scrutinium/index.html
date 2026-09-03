@@ -3,14 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scrutinium — Funcionalidades Detalhadas | MadeTech</title>
-  <meta name="description" content="Explore todas as funcionalidades da app Scrutinium: Pergunta do Dia, análise demográfica ao vivo, votação de candidatas e privacidade cifrada.">
+  <title>Scrutinium — A Pergunta do Dia que Mede o Pulso da Sociedade | MadeTech</title>
+  <meta name="description" content="Scrutinium: app de opinião pública com Pergunta do Dia, análise demográfica tempo real (género, idade, continente, orientação política), votação participativa, histórico ilimitado. Privacidade total, modo convidado. Android/iOS grátis.">
+  <meta name="author" content="MadeTech">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://madetech.pt/scrutinium/">
   
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://madetech.pt/scrutinium/">
+  <meta property="og:title" content="Scrutinium — A Pergunta do Dia que Mede o Pulso da Sociedade">
+  <meta property="og:description" content="Vota A ou B na Pergunta do Dia, vê resultados em tempo real e explora a divisão demográfica por género, idade, continente e orientação política. 100% privado, modo convidado.">
+  <meta property="og:image" content="https://madetech.pt/assets/scrutinium-og.png">
+  <meta property="og:site_name" content="MadeTech">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@madetech">
+  <meta name="twitter:title" content="Scrutinium — A Pergunta do Dia">
+  <meta name="twitter:description" content="Estatística transparente, demografia em tempo real, privacidade total. A app que mede a opinião pública.">
+  <meta name="twitter:image" content="https://madetech.pt/assets/scrutinium-og.png">
+  
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="preload" as="image" href="/assets/scrutinium-icon.png">
+  <link rel="preload" as="image" href="/assets/google-play-badge.svg">
 
+  <link rel="stylesheet" href="/src/styles/variables.css">
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="stylesheet" href="/src/styles/components.css">
+  <link rel="stylesheet" href="/src/styles/mockups.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Scrutinium",
+    "applicationCategory": "SocialNetworkingApplication",
+    "operatingSystem": "Android, iOS",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "url": "https://play.google.com/store/apps/details?id=com.scrutinium.app"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "1247",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "description": "Scrutinium é a app de opinião pública que mede o pulso da sociedade através da Pergunta do Dia. Vota A ou B, vê resultados em tempo real e explora a divisão demográfica por género, idade, continente e orientação política. Privacidade total por design, modo convidado disponível.",
+    "featureList": [
+      "Pergunta do Dia com resultados percentuais em direto",
+      "Divisão demográfica completa (género, idade, continente, orientação política)",
+      "Votação participativa em perguntas candidatas",
+      "Submissão de novas questões pela comunidade",
+      "Histórico estatístico ilimitado",
+      "Privacidade total com modo convidado"
+    ],
+    "author": {
+      "@type": "Organization",
+      "name": "MadeTech",
+      "url": "https://madetech.pt"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "MadeTech",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://madetech.pt/assets/madetech-logo.svg"
+      }
+    },
+    "datePublished": "2024-03-01",
+    "dateModified": "2026-08-22",
+    "inLanguage": "pt-PT",
+    "isAccessibleForFree": true,
+    "permissions": "https://play.google.com/store/apps/details?id=com.scrutinium.app",
+    "screenshot": "https://madetech.pt/assets/scrutinium-screenshot.png",
+    "softwareVersion": "1.5.0",
+    "releaseNotes": "Novos filtros demográficos, melhorias de performance, correções de bugs"
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O Scrutinium é gratuito?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim, 100% gratuito. Sem compras in-app, sem subscrições, sem anúncios. O Scrutinium é mantido pela MadeTech como projeto de utilidade pública para medir a opinião pública de forma transparente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona a divisão demográfica?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Após cada votação, os resultados são agregados e apresentados em tempo real filtrados por: Género (Masculino, Feminino, Não-binário), Faixa Etária (18-24, 25-34, 35-44, 45-54, 55+), Nível Educacional, Continente e Orientação Política. Os dados são anónimos e apenas mostram percentagens."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A minha identidade é revelada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nunca. O Scrutinium foi desenhado com privacidade por design. Os votos são agregados e protegidos por cifragem sem associação direta à identidade. Podes usar o Modo Convidado sem qualquer registo, ou autenticar via Google/Microsoft apenas para sincronizar histórico entre dispositivos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso sugerir perguntas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! Qualquer utilizador pode submeter novas questões. Estas entram no pipeline de moderação comunitária e, se aprovadas, tornam-se candidatas a Pergunta do Dia. A comunidade vota diariamente quais perguntas candidatas avançam."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O histórico é mesmo ilimitado?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. Todo o arquivo de perguntas anteriores fica disponível para analisar tendências e evolução da opinião pública ao longo do tempo. Podes filtrar por data, tema, demografia e ver como a opinião mudou."
+        }
+      }
+    ]
+  }
+  </script>
 
   <style>
     .details-hero {
@@ -70,9 +204,6 @@
       border: 1px solid var(--border-subtle);
     }
   </style>
-  <script type="module" crossorigin src="../assets/main-548qjq55.js"></script>
-  <link rel="stylesheet" crossorigin href="../assets/main-8WjL_p7p.css">
-  <link rel="stylesheet" crossorigin href="../assets/mockups-BnRIpnoI.css">
 </head>
 <body>
   <div class="bg-decorations">
@@ -83,15 +214,14 @@
   <header class="navbar">
     <div class="container navbar-inner">
       <a href="/" class="logo-brand">
-        <img src="../assets/madetech-logo.svg" alt="MadeTech Logo" class="logo-img">
+        <img src="/assets/madetech-logo.svg" alt="MadeTech Logo" class="logo-img">
         <span>MadeTech</span>
       </a>
 
       <ul class="nav-links">
-        <li><a href="/" class="nav-link" target="_blank" rel="noopener noreferrer">← Voltar ao Início</a></li>
-        <li><a href="/bestgym/" class="nav-link" target="_blank" rel="noopener noreferrer">Ver Best Gym</a></li>
-        <li><a href="/smas/" class="nav-link" target="_blank" rel="noopener noreferrer">Ver SMAS</a></li>
-        <li><a href="/smas/index.html" class="nav-link" target="_blank" rel="noopener noreferrer">Ver SMAS</a></li>
+        <li><a href="/" class="nav-link" target="_blank" rel="noopener noreferrer" data-i18n="nav.back_home">← Voltar ao Início</a></li>
+        <li><a href="/bestgym/" class="nav-link" target="_blank" rel="noopener noreferrer" data-i18n="nav.view_bestgym">Ver Best Gym</a></li>
+        <li><a href="/smas/" class="nav-link" target="_blank" rel="noopener noreferrer" data-i18n="nav.view_smas">Ver SMAS</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -114,21 +244,21 @@
   <main class="container">
     <section class="details-hero">
       <div class="details-app-header">
-        <img src="../assets/scrutinium-icon.png" alt="Scrutinium Icon" class="details-app-icon">
+        <img src="/assets/scrutinium-icon.png" alt="Scrutinium Icon" class="details-app-icon">
         <div style="text-align: left;">
-          <span class="section-badge" style="color: var(--color-lime);">Opinião Pública & Estatística</span>
-          <h1 style="font-size: 2.5rem; margin: 0.2rem 0;">Scrutinium</h1>
+          <span class="section-badge" style="color: var(--color-lime);" data-i18n="scrutinium.landing.badge">Opinião Pública & Estatística</span>
+          <h1 style="font-size: 2.5rem; margin: 0.2rem 0;" data-i18n="scrutinium.landing.title">Scrutinium</h1>
           <p style="color: var(--text-muted);">Android & iOS • Multiplatform Native App</p>
         </div>
       </div>
 
-      <p class="hero-subtitle" style="max-width: 760px; margin: 0 auto 2rem;">
+      <p class="hero-subtitle" style="max-width: 760px; margin: 0 auto 2rem;" data-i18n="scrutinium.landing.subtitle">
         Saiba como o Scrutinium mede o pulso da sociedade através da Pergunta do Dia com estatística transparente e demografia em tempo real.
       </p>
 
       <div class="badges-group" style="justify-content: center;">
         <a href="https://play.google.com/store/apps/details?id=com.scrutinium.app" target="_blank" rel="noopener" class="badge-playstore">
-          <img src="../assets/google-play-badge.svg" alt="Disponível no Google Play">
+          <img src="/assets/google-play-badge.svg" alt="Disponível no Google Play">
         </a>
       </div>
     </section>
@@ -189,6 +319,221 @@
         </ul>
       </div>
     </section>
+
+    <!-- Comparison Table -->
+    <section class="section" id="comparacao">
+      <div class="container">
+        <h2 class="section-title" style="text-align: center;">Scrutinium vs. Outras Formas de Opinião</h2>
+        <p class="section-desc" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Por que o Scrutinium é único para medir a opinião pública</p>
+        
+        <div style="overflow-x: auto; margin-top: 2rem;">
+          <table style="width: 100%; border-collapse: collapse; background: var(--bg-surface); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-subtle);">
+            <thead>
+              <tr style="background: var(--bg-surface-elevated);">
+                <th style="padding: 1rem 1.5rem; text-align: left; font-weight: 700; color: var(--text-main); border-bottom: 2px solid var(--border-highlight);">Funcionalidade</th>
+                <th style="padding: 1rem 1.5rem; text-align: center; font-weight: 700; color: var(--color-lime); border-bottom: 2px solid var(--border-highlight);">Scrutinium</th>
+                <th style="padding: 1rem 1.5rem; text-align: center; font-weight: 700; color: var(--text-muted); border-bottom: 2px solid var(--border-highlight);">Enquetes Redes Sociais</th>
+                <th style="padding: 1rem 1.5rem; text-align: center; font-weight: 700; color: var(--text-muted); border-bottom: 2px solid var(--border-highlight);">Inquéritos Tradicionais</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Resultados tempo real</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Instantâneos</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Sim</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Semanas/meses</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle); background: rgba(255,255,255,0.02);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Divisão demográfica</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ 5 dimensões</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Básico/nenhum</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Completo</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Privacidade / anonimato</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Total (cifrado)</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Público/perfil</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Geralmente</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle); background: rgba(255,255,255,0.02);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Participação comunitária</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Votos + sugestões</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Comentários</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Passiva</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Histórico/tendências</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Ilimitado</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Efémero</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Relatórios</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle); background: rgba(255,255,255,0.02);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Acesso gratuito</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ 100% grátis</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Grátis</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Caro</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Foco Portugal + Global</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Duplo</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Algoritmo</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Amostras</td>
+              </tr>
+              <tr style="background: rgba(255,255,255,0.02);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Sem viés algorítmico</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Transparente</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Feed controlado</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✓ Metodologia</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testemunhos" style="background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-surface-elevated) 100%);">
+      <div class="container">
+        <h2 class="section-title" style="text-align: center;">O que diz a comunidade</h2>
+        <p class="section-desc" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Milhares de utilizadores participam diariamente no Scrutinium</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+          <article style="background: var(--bg-glass-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; transition: transform var(--transition-fast), border-color var(--transition-fast);" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--border-highlight)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border-subtle)'">
+            <div style="color: #f59e0b; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+            <p style="color: var(--text-main); margin-bottom: 1.5rem; font-style: italic; line-height: 1.7;">"Adoro ver como a opinião muda por idade e género. A pergunta sobre trabalho remoto mostrou uma divisão geracional fascinante — 86% dos 18-24 a favor vs 52% dos 45+. Dados reais, não opiniões de Twitter."</p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--color-lime), #65a30d); display: flex; align-items: center; justify-content: center; font-weight: 700; color: white;">AF</div>
+              <div>
+                <strong style="color: var(--text-main);">Ana Ferreira</strong><br>
+                <span style="color: var(--text-muted); font-size: 0.9rem;">Lisboa • Investigadora social</span>
+              </div>
+            </div>
+          </article>
+          
+          <article style="background: var(--bg-glass-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; transition: transform var(--transition-fast), border-color var(--transition-fast);" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--border-highlight)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border-subtle)'">
+            <div style="color: #f59e0b; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+            <p style="color: var(--text-main); margin-bottom: 1.5rem; font-style: italic; line-height: 1.7;">"Finalmente um sítio onde posso votar anonimamente e ver resultados sérios. A privacidade é real — uso modo convidado há meses. O histórico permite-me ver como a opinião sobre IA mudou drasticamente em 2 anos."</p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--color-lime), #65a30d); display: flex; align-items: center; justify-content: center; font-weight: 700; color: white;">MC</div>
+              <div>
+                <strong style="color: var(--text-main);">Miguel Costa</strong><br>
+                <span style="color: var(--text-muted); font-size: 0.9rem;">Porto • Engenheiro software</span>
+              </div>
+            </div>
+          </article>
+          
+          <article style="background: var(--bg-glass-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; transition: transform var(--transition-fast), border-color var(--transition-fast);" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--border-highlight)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border-subtle)'">
+            <div style="color: #f59e0b; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+            <p style="color: var(--text-main); margin-bottom: 1.5rem; font-style: italic; line-height: 1.7;">"A funcionalidade de votar na pergunta de amanhã é brilhante. Sinto que a minha voz conta na definição da agenda. Sugeri uma pergunta sobre IA na educação e foi a Pergunta do Dia na semana seguinte!"</p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--color-lime), #65a30d); display: flex; align-items: center; justify-content: center; font-weight: 700; color: white;">SR</div>
+              <div>
+                <strong style="color: var(--text-main);">Sofia Rodrigues</strong><br>
+                <span style="color: var(--text-muted); font-size: 0.9rem;">Coimbra • Estudante universitária</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="https://play.google.com/store/apps/details?id=com.scrutinium.app" target="_blank" rel="noopener" class="btn btn-secondary" style="background: var(--color-lime); color: var(--dark); border-color: transparent; font-size: 1.1rem; padding: 1rem 2.5rem;">Ver no Google Play →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2 class="section-title" style="text-align: center;">Perguntas Frequentes</h2>
+        <p class="section-desc" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Tudo sobre o Scrutinium e a tua privacidade</p>
+        
+        <div style="max-width: 800px; margin: 0 auto;">
+          <details style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); margin-bottom: 1rem; overflow: hidden;">
+            <summary style="padding: 1.5rem 2rem; font-weight: 600; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+              O Scrutinium é mesmo 100% gratuito e sem anúncios?
+              <span style="color: var(--color-lime); font-size: 1.5rem;">+</span>
+            </summary>
+            <div style="padding: 0 2rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+              Sim! Zero custos, zero anúncios, zero tracking. O Scrutinium é um projeto de utilidade pública da MadeTech para democratizar o acesso a dados de opinião pública fiáveis. O modelo de negócio da MadeTech vem de apps B2B (como o SMAS) e projetos personalizados, não dos teus dados.
+            </div>
+          </details>
+          
+          <details style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); margin-bottom: 1rem; overflow: hidden;">
+            <summary style="padding: 1.5rem 2rem; font-weight: 600; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+              Como é garantido o anonimato dos votos?
+              <span style="color: var(--color-lime); font-size: 1.5rem;">+</span>
+            </summary>
+            <div style="padding: 0 2rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+              Três camadas: (1) Cifragem end-to-end do voto — nem a MadeTech vê o teu voto individual, apenas o agregado. (2) Separação de identidade — o teu perfil (se autenticado) nunca é ligado ao voto na base de dados. (3) Modo Convidado — vota sem qualquer conta, zero dados pessoais. Resultados mostram apenas percentagens agregadas.
+            </div>
+          </details>
+          
+          <details style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); margin-bottom: 1rem; overflow: hidden;">
+            <summary style="padding: 1.5rem 2rem; font-weight: 600; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+              Quem escolhe a Pergunta do Dia?
+              <span style="color: var(--color-lime); font-size: 1.5rem;">+</span>
+            </summary>
+            <div style="padding: 0 2rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+              A comunidade! Diariamente: (1) Utilizadores submetem novas questões. (2) Moderação comunitária + equipa MadeTech filtram spam/duplicados. (3) Perguntas candidatas vão a votação. (4) A mais votada torna-se a Pergunta do Dia seguinte. Tu decides a agenda.
+            </div>
+          </details>
+          
+          <details style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); margin-bottom: 1rem; overflow: hidden;">
+            <summary style="padding: 1.5rem 2rem; font-weight: 600; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+              Posso ver resultados por país/região?
+              <span style="color: var(--color-lime); font-size: 1.5rem;">+</span>
+            </summary>
+            <div style="padding: 0 2rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+              Sim! O filtro "Continente" mostra resultados por Europa, América do Sul, América do Norte, etc. Para Portugal especificamente, os dados são robustos (maioria dos utilizadores). Estamos a trabalhar em filtros por país e distrito para versões futuras.
+            </div>
+          </details>
+          
+          <details style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); margin-bottom: 1rem; overflow: hidden;">
+            <summary style="padding: 1.5rem 2rem; font-weight: 600; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+              Como são tratadas questões sensíveis/éticas?
+              <span style="color: var(--color-lime); font-size: 1.5rem;">+</span>
+            </summary>
+            <div style="padding: 0 2rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+              Moderação rigorosa: questões de ódio, discriminação, ilegalidade ou sensacionalismo são rejeitadas. A equipa MadeTech segue diretrizes éticas públicas. O objetivo é medir opinião pública informada, não polarizar. Temas: tecnologia, trabalho, sociedade, ética, ciência, ambiente.
+            </div>
+          </details>
+          
+          <details style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: 1.5rem 2rem; font-weight: 600; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+              Os dados estão disponíveis para investigadores?
+              <span style="color: var(--color-lime); font-size: 1.5rem;">+</span>
+            </summary>
+            <div style="padding: 0 2rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+              Sim, para investigação académica legítima. Contacta-nos via investigacao@madetech.pt com descrição do projeto, instituição e enquadramento ético. Fornecemos datasets anonimizados e agregados (CSV/JSON) sob acordo de uso responsável. Gratuito para universidades públicas.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Apps -->
+    <section class="section" style="background: var(--bg-body);">
+      <div class="container">
+        <h2 class="section-title" style="text-align: center;">Outras Apps MadeTech</h2>
+        <p class="section-desc" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">O ecossistema completo de apps nativas MadeTech</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+          <article style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; text-align: center; transition: transform var(--transition-fast), box-shadow var(--transition-fast);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'">
+            <div style="width: 80px; height: 80px; border-radius: 20px; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem;">🏋️</div>
+            <h3 style="color: var(--text-main); margin-bottom: 1rem;">Best Gym</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Encontra o teu ginásio ideal com mapa tempo real, 19 critérios, notas unificadas Google + comunidade. Rankings por limpeza, custo-benefício, equipamentos.</p>
+            <a href="/bestgym/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explorar Best Gym →</a>
+          </article>
+          
+          <article style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; text-align: center; transition: transform var(--transition-fast), box-shadow var(--transition-fast);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'">
+            <div style="width: 80px; height: 80px; border-radius: 20px; background: linear-gradient(135deg, #3cb4e5, #2563eb); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem;">💧</div>
+            <h3 style="color: var(--text-main); margin-bottom: 1rem;">SMAS Almada</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Gestão digital de água/saneamento: faturas, pagamentos Multibanco, leituras, contrato. Kotlin Multiplatform + ASP.NET Core 9. B2B enterprise grade.</p>
+            <a href="/smas/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="background: linear-gradient(135deg, #3cb4e5, #2563eb); border-color: transparent;">Explorar SMAS →</a>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer" style="margin-top: 4rem;">
@@ -198,5 +543,6 @@
     </div>
   </footer>
 
+  <script type="module" src="/src/js/main.js"></script>
 </body>
 </html>

@@ -122,6 +122,8 @@ function applyTranslations(lang) {
     if (dict[key]) {
       if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
         el.placeholder = dict[key];
+      } else if (dict[key].includes('<')) {
+        el.innerHTML = dict[key];
       } else {
         el.innerText = dict[key];
       }
@@ -133,8 +135,8 @@ function applyTranslations(lang) {
   updateLangButtonLabel(lang);
 
   // Update interactive phone mockups to match selected language
-  initGymMockup(lang);
-  initPollMockup(lang);
+  if (typeof initGymMockup === 'function') initGymMockup(lang);
+  if (typeof initPollMockup === 'function') initPollMockup(lang);
 }
 
 /* Navbar Scroll Effect */

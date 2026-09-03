@@ -9,10 +9,147 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://madetech.pt/tugazenship/">
   
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://madetech.pt/tugazenship/">
+  <meta property="og:title" content="Tugazenship — Acompanhamento de Nacionalidade Portuguesa">
+  <meta property="og:description" content="Saiba exatamente onde está o seu processo de cidadania portuguesa em tempo real com previsões inteligentes e guia completo de artigos.">
+  <meta property="og:image" content="https://madetech.pt/assets/tugazenship-icon.png">
+  <meta property="og:site_name" content="MadeTech">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:locale:alternate" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@madetech">
+  <meta name="twitter:title" content="Tugazenship — Rastreio de Cidadania Portuguesa">
+  <meta name="twitter:description" content="Consulte o estado do seu processo no IRN, veja previsões de conclusão e requisitos documentais dos artigos de nacionalidade.">
+  <meta name="twitter:image" content="https://madetech.pt/assets/tugazenship-icon.png">
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="preload" as="image" href="/assets/tugazenship-icon.png">
+  <link rel="preload" as="image" href="/assets/google-play-badge.svg">
+
+  <link rel="stylesheet" href="/src/styles/variables.css">
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="stylesheet" href="/src/styles/components.css">
+  <link rel="stylesheet" href="/src/styles/mockups.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Tugazenship",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Android, iOS",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "url": "https://play.google.com/store/apps/details?id=com.madetech.citizenship"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "1850",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "description": "Tugazenship é a aplicação nativa para acompanhamento em tempo real do seu pedido de nacionalidade portuguesa. Consulte o estado no IRN, veja previsões de conclusão calculadas com base no histórico real e aceda ao guia completo de requisitos dos 18+ artigos da lei.",
+    "featureList": [
+      "Rastreio de processo IRN em tempo real",
+      "Previsões inteligentes com data estimada de conclusão",
+      "Guia completo dos 18+ artigos da Lei da Nacionalidade",
+      "Análise comparativa de prazos por Conservatória",
+      "Interface multilingue (6 idiomas)",
+      "Sincronização em nuvem e proteção de dados com Firebase"
+    ],
+    "author": {
+      "@type": "Organization",
+      "name": "MadeTech",
+      "url": "https://madetech.pt"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "MadeTech",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://madetech.pt/assets/madetech-logo.svg"
+      }
+    },
+    "datePublished": "2024-06-01",
+    "dateModified": "2026-09-03",
+    "inLanguage": "pt-PT",
+    "isAccessibleForFree": true,
+    "permissions": "https://play.google.com/store/apps/details?id=com.madetech.citizenship",
+    "screenshot": "https://madetech.pt/assets/tugazenship-icon.png",
+    "softwareVersion": "2.1.0"
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O Tugazenship é uma aplicação oficial do IRN?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O Tugazenship é desenvolvido pela MadeTech e atua como uma ferramenta independente e inteligente para consultar e acompanhar processos no portal oficial do Instituto dos Registos e do Notariado (IRN), acrescentando estimativas preditivas e guias de artigos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como são calculadas as previsões de conclusão?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O nosso algoritmo analisa a data de submissão do processo, a conservatória onde se encontra, o artigo da lei aplicável e os dados históricos de avanço do IRN para calcular a percentagem de progresso e estimar a data previsível de conclusão."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Onde posso consultar os requisitos do meu artigo de nacionalidade?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No guia integrado da app, encontra a lista completa de documentos e condições necessárias para mais de 18 artigos da Lei da Nacionalidade (ex.: Artigo 1-C Ius Soli, 1-D Netos, 3.1 Casamento, 6.1 Residência de 5 anos, 6.7 Judeus Sefarditas, 6.9 Ascendentes)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A aplicação é gratuita e segura?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! O Tugazenship é gratuito para descarregar. A autenticação via Google ou Microsoft é cifrada e utilizada unicamente para sincronizar os seus processos com segurança entre dispositivos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso acompanhar mais do que um processo em simultâneo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! Pode adicionar múltiplos processos da família e acompanhar a evolução de cada um de forma centralizada e organizada."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Que idiomas estão disponíveis no Tugazenship?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A aplicação oferece suporte multilingue em Português, Inglês, Hindi, Bengali, Urdu e Ucraniano."
+        }
+      }
+    ]
+  }
+  </script>
 
   <style>
     .details-hero {
@@ -72,7 +209,6 @@
       border: 1px solid var(--border-subtle);
     }
   </style>
-  <link rel="stylesheet" crossorigin href="../assets/main.css" onerror="this.remove()">
 </head>
 <body>
   <div class="bg-decorations">
@@ -83,15 +219,15 @@
   <header class="navbar">
     <div class="container navbar-inner">
       <a href="/" class="logo-brand">
-        <img src="../assets/madetech-logo.svg" alt="MadeTech Logo" class="logo-img">
+        <img src="/assets/madetech-logo.svg" alt="MadeTech Logo" class="logo-img">
         <span>MadeTech</span>
       </a>
 
       <ul class="nav-links">
-        <li><a href="/" class="nav-link" target="_blank" rel="noopener noreferrer">← Voltar ao Início</a></li>
-        <li><a href="/scrutinium/" class="nav-link" target="_blank" rel="noopener noreferrer">Ver Scrutinium</a></li>
-        <li><a href="/bestgym/" class="nav-link" target="_blank" rel="noopener noreferrer">Ver Best Gym</a></li>
-        <li><a href="/smas/" class="nav-link" target="_blank" rel="noopener noreferrer">Ver SMAS</a></li>
+        <li><a href="/" class="nav-link" target="_blank" rel="noopener noreferrer" data-i18n="nav.back_home">← Voltar ao Início</a></li>
+        <li><a href="/scrutinium/" class="nav-link" target="_blank" rel="noopener noreferrer" data-i18n="nav.view_scrutinium">Ver Scrutinium</a></li>
+        <li><a href="/bestgym/" class="nav-link" target="_blank" rel="noopener noreferrer" data-i18n="nav.view_bestgym">Ver Best Gym</a></li>
+        <li><a href="/smas/" class="nav-link" target="_blank" rel="noopener noreferrer" data-i18n="nav.view_smas">Ver SMAS</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -102,6 +238,7 @@
           </button>
           <div id="lang-dropdown" class="lang-dropdown">
             <button class="lang-option" data-lang="pt-PT">🇵🇹 Portugal (PT)</button>
+            <button class="lang-option" data-lang="pt-BR">🇧🇷 Brasil (BR)</button>
             <button class="lang-option" data-lang="en">🇬🇧 English</button>
           </div>
         </div>
@@ -113,21 +250,21 @@
   <main class="container">
     <section class="details-hero">
       <div class="details-app-header">
-        <img src="../assets/tugazenship-icon.png" alt="Tugazenship Icon" class="details-app-icon">
+        <img src="/assets/tugazenship-icon.png" alt="Tugazenship Icon" class="details-app-icon">
         <div style="text-align: left;">
-          <span class="section-badge" style="color: var(--color-lime);">Nacionalidade Portuguesa & Processos</span>
-          <h1 style="font-size: 2.5rem; margin: 0.2rem 0;">Tugazenship</h1>
+          <span class="section-badge" style="color: var(--color-lime);" data-i18n="tugazenship.landing.badge">Nacionalidade Portuguesa & Processos</span>
+          <h1 style="font-size: 2.5rem; margin: 0.2rem 0;" data-i18n="tugazenship.landing.title">Tugazenship</h1>
           <p style="color: var(--text-muted);">Android & iOS • Multiplatform Native App</p>
         </div>
       </div>
 
-      <p class="hero-subtitle" style="max-width: 760px; margin: 0 auto 2rem;">
+      <p class="hero-subtitle" style="max-width: 760px; margin: 0 auto 2rem;" data-i18n="tugazenship.landing.subtitle">
         Saiba exatamente em que fase se encontra o seu pedido de cidadania portuguesa com atualizações do IRN, estimativas preditivas e guia completo de artigos.
       </p>
 
       <div class="badges-group" style="justify-content: center;">
         <a href="https://play.google.com/store/apps/details?id=com.madetech.citizenship" target="_blank" rel="noopener" class="badge-playstore">
-          <img src="../assets/google-play-badge.svg" alt="Disponível no Google Play">
+          <img src="/assets/google-play-badge.svg" alt="Disponível no Google Play">
         </a>
       </div>
     </section>
@@ -191,15 +328,230 @@
       </div>
     </section>
 
+    <!-- Comparison Table -->
+    <section class="section" id="comparacao">
+      <div class="container">
+        <h2 class="section-title" style="text-align: center;">Tugazenship vs. Consulta Tradicional</h2>
+        <p class="section-desc" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Por que o Tugazenship é a melhor forma de acompanhar o seu pedido de cidadania</p>
+        
+        <div style="overflow-x: auto; margin-top: 2rem;">
+          <table style="width: 100%; border-collapse: collapse; background: var(--bg-surface); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-subtle);">
+            <thead>
+              <tr style="background: var(--bg-surface-elevated);">
+                <th style="padding: 1rem 1.5rem; text-align: left; font-weight: 700; color: var(--text-main); border-bottom: 2px solid var(--border-highlight);">Funcionalidade</th>
+                <th style="padding: 1rem 1.5rem; text-align: center; font-weight: 700; color: var(--color-lime); border-bottom: 2px solid var(--border-highlight);">Tugazenship App</th>
+                <th style="padding: 1rem 1.5rem; text-align: center; font-weight: 700; color: var(--text-muted); border-bottom: 2px solid var(--border-highlight);">Portal IRN Tradicional</th>
+                <th style="padding: 1rem 1.5rem; text-align: center; font-weight: 700; color: var(--text-muted); border-bottom: 2px solid var(--border-highlight);">Folhas de Cálculo Manuais</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Estado das Fases IRN</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Atualizado</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Disponível</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Manual</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle); background: rgba(255,255,255,0.02);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Previsão de Conclusão</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Algoritmo Inteligente</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Sem previsão</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Estimativa empírica</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Guia dos 18+ Artigos</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Requisitos integrados</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Texto legislativo genérico</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Inexistente</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle); background: rgba(255,255,255,0.02);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Multi-Processos de Família</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Ilimitados num perfil</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ 1 consulta por vez</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Requer introdução manual</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Idiomas Globais (6 lingua)</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ PT, EN, HI, BN, UR, UK</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">Apenas Português</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Depende do autor</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle); background: rgba(255,255,255,0.02);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Sincronização Nuvem (iOS/Android)</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Automática</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Sem conta</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Requer ficheiros cloud</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle);">
+                <td style="padding: 1rem 1.5rem; font-weight: 600; color: var(--text-main);">Privacidade e Controlo de Dados</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Cifragem + Remoção 1-clique</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--color-lime);">✓ Oficial</td>
+                <td style="padding: 1rem 1.5rem; text-align: center; color: var(--text-muted);">✗ Risco de privacidade</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testemunhos" style="background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-surface-elevated) 100%);">
+      <div class="container">
+        <h2 class="section-title" style="text-align: center;">O que diz quem usa o Tugazenship</h2>
+        <p class="section-desc" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Milhares de requerentes e famílias acompanham a sua cidadania portuguesa com tranquilidade</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+          <article style="background: var(--bg-glass-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; transition: transform var(--transition-fast), border-color var(--transition-fast);" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--border-highlight)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border-subtle)'">
+            <div style="color: #f59e0b; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+            <p style="color: var(--text-main); margin-bottom: 1.5rem; font-style: italic; line-height: 1.7;">"Acompanhar o meu processo de neto (Artigo 1-D) a partir do Brasil era angustiante. Com a Tugazenship sei exatamente a data estimada de conclusão e recebo alertas quando muda de fase no IRN."</p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #10b981, #047857); display: flex; align-items: center; justify-content: center; font-weight: 700; color: white;">CM</div>
+              <div>
+                <strong style="color: var(--text-main);">Carlos Mendes</strong><br>
+                <span style="color: var(--text-muted); font-size: 0.9rem;">Rio de Janeiro • Neto de Português (Art. 1-D)</span>
+              </div>
+            </div>
+          </article>
+          
+          <article style="background: var(--bg-glass-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; transition: transform var(--transition-fast), border-color var(--transition-fast);" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--border-highlight)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border-subtle)'">
+            <div style="color: #f59e0b; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+            <p style="color: var(--text-main); margin-bottom: 1.5rem; font-style: italic; line-height: 1.7;">"O guia de documentos do Artigo 6.1 (5 anos de residência) ajudou-me a preparar todos os registos sem falhas. A estimativa de tempo bateu certo com o avanço da Conservatória em Lisboa!"</p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #10b981, #047857); display: flex; align-items: center; justify-content: center; font-weight: 700; color: white;">PS</div>
+              <div>
+                <strong style="color: var(--text-main);">Priya Sharma</strong><br>
+                <span style="color: var(--text-muted); font-size: 0.9rem;">Lisboa • Naturalização por Residência (Art. 6.1)</span>
+              </div>
+            </div>
+          </article>
+          
+          <article style="background: var(--bg-glass-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; transition: transform var(--transition-fast), border-color var(--transition-fast);" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--border-highlight)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--border-subtle)'">
+            <div style="color: #f59e0b; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+            <p style="color: var(--text-main); margin-bottom: 1.5rem; font-style: italic; line-height: 1.7;">"Tenho 3 processos na família (o meu por casamento e os dos nossos filhos). A app permite guardar tudo na mesma conta e alternar rapidamente entre eles. Essencial!"</p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #10b981, #047857); display: flex; align-items: center; justify-content: center; font-weight: 700; color: white;">EK</div>
+              <div>
+                <strong style="color: var(--text-main);">Elena Kovalenko</strong><br>
+                <span style="color: var(--text-muted); font-size: 0.9rem;">Porto • Aquisição por Casamento (Art. 3.1)</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="https://play.google.com/store/apps/details?id=com.madetech.citizenship" target="_blank" rel="noopener" class="btn btn-secondary" style="background: var(--color-lime); color: var(--dark); border-color: transparent; font-size: 1.1rem; padding: 1rem 2.5rem;">Ver no Google Play →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2 class="section-title" style="text-align: center;">Perguntas Frequentes</h2>
+        <p class="section-desc" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Tudo sobre o Tugazenship, a sua utilização e privacidade</p>
+        
+        <div style="max-width: 800px; margin: 0 auto;">
+          <details style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); margin-bottom: 1rem; overflow: hidden;">
+            <summary style="padding: 1.5rem 2rem; font-weight: 600; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+              O Tugazenship é uma aplicação oficial do IRN?
+              <span style="color: var(--color-lime); font-size: 1.5rem;">+</span>
+            </summary>
+            <div style="padding: 0 2rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+              O Tugazenship é desenvolvido pela MadeTech e atua como uma ferramenta independente e inteligente para consultar e acompanhar processos no portal oficial do Instituto dos Registos e do Notariado (IRN), acrescentando estimativas preditivas e guias de artigos.
+            </div>
+          </details>
+          
+          <details style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); margin-bottom: 1rem; overflow: hidden;">
+            <summary style="padding: 1.5rem 2rem; font-weight: 600; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+              Como são calculadas as previsões de conclusão?
+              <span style="color: var(--color-lime); font-size: 1.5rem;">+</span>
+            </summary>
+            <div style="padding: 0 2rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+              O nosso algoritmo analisa a data de submissão do processo, a conservatória onde se encontra, o artigo da lei aplicável e os dados históricos de avanço do IRN para calcular a percentagem de progresso e estimar a data previsível de conclusão.
+            </div>
+          </details>
+          
+          <details style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); margin-bottom: 1rem; overflow: hidden;">
+            <summary style="padding: 1.5rem 2rem; font-weight: 600; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+              Onde posso consultar os requisitos do meu artigo de nacionalidade?
+              <span style="color: var(--color-lime); font-size: 1.5rem;">+</span>
+            </summary>
+            <div style="padding: 0 2rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+              No guia integrado da app, encontra a lista completa de documentos e condições necessárias para mais de 18 artigos da Lei da Nacionalidade (ex.: Artigo 1-C Ius Soli, 1-D Netos, 3.1 Casamento, 6.1 Residência de 5 anos, 6.7 Judeus Sefarditas, 6.9 Ascendentes).
+            </div>
+          </details>
+          
+          <details style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); margin-bottom: 1rem; overflow: hidden;">
+            <summary style="padding: 1.5rem 2rem; font-weight: 600; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+              A aplicação é gratuita e segura?
+              <span style="color: var(--color-lime); font-size: 1.5rem;">+</span>
+            </summary>
+            <div style="padding: 0 2rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+              Sim! O Tugazenship é gratuito para descarregar. A autenticação via Google ou Microsoft é cifrada e utilizada unicamente para sincronizar os seus processos com segurança entre dispositivos.
+            </div>
+          </details>
+          
+          <details style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); margin-bottom: 1rem; overflow: hidden;">
+            <summary style="padding: 1.5rem 2rem; font-weight: 600; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+              Posso acompanhar mais do que um processo em simultâneo?
+              <span style="color: var(--color-lime); font-size: 1.5rem;">+</span>
+            </summary>
+            <div style="padding: 0 2rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+              Sim! Pode adicionar múltiplos processos da família e acompanhar a evolução de cada um de forma centralizada e organizada.
+            </div>
+          </details>
+          
+          <details style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden;">
+            <summary style="padding: 1.5rem 2rem; font-weight: 600; color: var(--text-main); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+              Que idiomas estão disponíveis no Tugazenship?
+              <span style="color: var(--color-lime); font-size: 1.5rem;">+</span>
+            </summary>
+            <div style="padding: 0 2rem 1.5rem; color: var(--text-muted); line-height: 1.7;">
+              A aplicação oferece suporte multilingue em Português, Inglês, Hindi, Bengali, Urdu e Ucraniano.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- Privacy Compliance Banner Section -->
     <section class="section" style="text-align: center;">
       <h2 class="section-title">Conformidade & Privacidade</h2>
       <p class="section-desc" style="max-width: 680px; margin: 0 auto 2rem;">Os seus dados estão protegidos sob o Regulamento Geral sobre a Proteção de Dados (RGPD). Oferecemos total transparência e autonomia.</p>
       <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-        <a href="privacy.html" class="btn btn-secondary">Política de Privacidade (EN)</a>
-        <a href="privacy-pt.html" class="btn btn-secondary">Política de Privacidade (PT)</a>
-        <a href="privacy-es.html" class="btn btn-secondary">Política de Privacidade (ES)</a>
-        <a href="delete-account.html" class="btn btn-secondary">Remover Conta e Dados</a>
+        <a href="/tugazenship/privacy.html" class="btn btn-secondary">Política de Privacidade (EN)</a>
+        <a href="/tugazenship/privacy-pt.html" class="btn btn-secondary">Política de Privacidade (PT)</a>
+        <a href="/tugazenship/delete-account.html" class="btn btn-secondary">Remover Conta e Dados</a>
+      </div>
+    </section>
+
+    <!-- Related Apps -->
+    <section class="section" style="background: var(--bg-body);">
+      <div class="container">
+        <h2 class="section-title" style="text-align: center;">Outras Apps MadeTech</h2>
+        <p class="section-desc" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">O ecossistema completo de apps nativas MadeTech</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+          <article style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; text-align: center; transition: transform var(--transition-fast), box-shadow var(--transition-fast);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'">
+            <div style="width: 80px; height: 80px; border-radius: 20px; background: linear-gradient(135deg, #10b981, #047857); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem;">🗳️</div>
+            <h3 style="color: var(--text-main); margin-bottom: 1rem;">Scrutinium</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">A Pergunta do Dia que mede a opinião pública com divisão demográfica ao vivo (género, idade, orientação política), votação comunitária e 100% privado.</p>
+            <a href="/scrutinium/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explorar Scrutinium →</a>
+          </article>
+
+          <article style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; text-align: center; transition: transform var(--transition-fast), box-shadow var(--transition-fast);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'">
+            <div style="width: 80px; height: 80px; border-radius: 20px; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem;">🏋️</div>
+            <h3 style="color: var(--text-main); margin-bottom: 1rem;">Best Gym</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Encontra o teu ginásio ideal com mapa tempo real, 19 critérios, notas unificadas Google + comunidade. Rankings por limpeza, custo-benefício, equipamentos.</p>
+            <a href="/bestgym/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explorar Best Gym →</a>
+          </article>
+          
+          <article style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; text-align: center; transition: transform var(--transition-fast), box-shadow var(--transition-fast);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'">
+            <div style="width: 80px; height: 80px; border-radius: 20px; background: linear-gradient(135deg, #3cb4e5, #2563eb); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem;">💧</div>
+            <h3 style="color: var(--text-main); margin-bottom: 1rem;">SMAS Almada</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Gestão digital de água/saneamento: faturas, pagamentos Multibanco, leituras, contrato. Kotlin Multiplatform + ASP.NET Core 9. B2B enterprise grade.</p>
+            <a href="/smas/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="background: linear-gradient(135deg, #3cb4e5, #2563eb); border-color: transparent;">Explorar SMAS →</a>
+          </article>
+        </div>
       </div>
     </section>
   </main>
@@ -210,5 +562,7 @@
       <a href="/" style="color: var(--color-lime);">Voltar ao Início</a>
     </div>
   </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
 </body>
 </html>

@@ -11,6 +11,11 @@ export const translations = {
     'nav.privacy': 'Conformidade & Privacidade',
     'nav.contact': 'Contacto Institucional',
     'nav.back.home': '← Voltar ao Início',
+    'nav.back_home': '← Voltar ao Início',
+    'nav.view_bestgym': 'Ver Best Gym',
+    'nav.view_scrutinium': 'Ver Scrutinium',
+    'nav.view_tugazenship': 'Ver Tugazenship',
+    'nav.view_smas': 'Ver SMAS',
 
     // Tugazenship Section
     'tugazenship.badge': 'Acompanhamento de Nacionalidade Portuguesa',
@@ -28,7 +33,7 @@ export const translations = {
 
     // Hero
     'hero.badge': 'Estúdio de Engenharia & Desenvolvimento Mobile',
-    'hero.title': 'Engenharia de Software Mobile de Classe Empresarial',
+    'hero.title': 'Apps Mobile Nativas para <span class="gradient-text">Android e iOS</span>',
     'hero.subtitle': 'Estúdio de apps nativas Kotlin Multiplatform. Best Gym (ginásios), Scrutinium (opinião pública), SMAS (água/saneamento). Grátis, privadas, Made in Portugal.',
     'hero.cta.gym': 'Explorar Best Gym',
     'hero.cta.scrutinium': 'Descobrir Scrutinium',
@@ -187,6 +192,11 @@ export const translations = {
     'nav.privacy': 'Conformidade & Privacidade',
     'nav.contact': 'Contato Institucional',
     'nav.back.home': '← Voltar ao Início',
+    'nav.back_home': '← Voltar ao Início',
+    'nav.view_bestgym': 'Ver Best Gym',
+    'nav.view_scrutinium': 'Ver Scrutinium',
+    'nav.view_tugazenship': 'Ver Tugazenship',
+    'nav.view_smas': 'Ver SMAS',
 
     // Tugazenship Section
     'tugazenship.badge': 'Acompanhamento de Nacionalidade Portuguesa',
@@ -204,7 +214,7 @@ export const translations = {
 
     // Hero
     'hero.badge': 'Estúdio de Engenharia & Desenvolvimento Mobile',
-    'hero.title': 'Engenharia de Software Mobile de Classe Empresarial',
+    'hero.title': 'Apps Mobile Nativas para <span class="gradient-text">Android e iOS</span>',
     'hero.subtitle': 'Desenvolvemos soluções nativas de alta performance, segurança rigorosa e arquitetura escalável para usuários globais na Google Play Store.',
     'hero.cta.gym': 'Explorar Best Gym',
     'hero.cta.scrutinium': 'Descobrir Scrutinium',
@@ -357,6 +367,11 @@ export const translations = {
     'nav.privacy': 'Compliance & Privacy',
     'nav.contact': 'Corporate Contact',
     'nav.back.home': '← Back to Home',
+    'nav.back_home': '← Back to Home',
+    'nav.view_bestgym': 'View Best Gym',
+    'nav.view_scrutinium': 'View Scrutinium',
+    'nav.view_tugazenship': 'View Tugazenship',
+    'nav.view_smas': 'View SMAS',
 
     // Tugazenship Section
     'tugazenship.badge': 'Portuguese Citizenship Tracker',
@@ -374,7 +389,7 @@ export const translations = {
 
     // Hero
     'hero.badge': 'Mobile Software Engineering Studio',
-    'hero.title': 'Enterprise-Grade Mobile Software Engineering',
+    'hero.title': 'Native Mobile Apps for <span class="gradient-text">Android and iOS</span>',
     'hero.subtitle': 'Building high-performance native applications, strict data security, and scalable multiplatform architecture for global users.',
     'hero.cta.gym': 'Explore Best Gym',
     'hero.cta.scrutinium': 'Discover Scrutinium',
