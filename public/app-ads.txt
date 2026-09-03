@@ -1,0 +1,4 @@
+# Authorized sellers for apps on madetech.pt
+# Publisher ID: pub-4519440889141891
+
+google.com, pub-4519440889141891, DIRECT, f08c47fec0942fa0

@@ -18,6 +18,7 @@ export default defineConfig({
         'best-gym/index': resolve(__dirname, 'best-gym/index.html'),
         'scrutinium/index': resolve(__dirname, 'scrutinium/index.html'),
         'smas/index': resolve(__dirname, 'smas/index.html'),
+        'tugazenship/index': resolve(__dirname, 'tugazenship/index.html'),
         'privacy/index': resolve(__dirname, 'privacy/index.html')
       }
     }
