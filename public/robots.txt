@@ -7,4 +7,4 @@ User-agent: Google-adstxt
 Allow: /
 
 # Sitemap
-Sitemap: https://madetech.pt/sitemap.xml
+Sitemap: https://edsondiasalves.github.io/madetech/sitemap.xml
