@@ -76,6 +76,16 @@
   overflow: hidden;
 }
 
+/* Static screenshot inside a phone frame */
+.phone-screenshot {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+}
+
 /* Best Gym Interactive App Screen */
 .gym-app-screen {
   display: flex;

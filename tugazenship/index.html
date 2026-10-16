@@ -208,6 +208,79 @@
       background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
     }
+    .screens-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .screen-card {
+      border-radius: var(--radius-lg);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      transition: transform var(--transition-fast), border-color var(--transition-fast);
+      display: flex;
+      flex-direction: column;
+    }
+    .screen-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(132, 204, 22, 0.45);
+    }
+    .screen-shot {
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .screen-body {
+      padding: 1.5rem;
+    }
+    .screen-body h3 {
+      font-size: 1.05rem;
+      color: var(--text-main);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .screen-body p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+    .screen-body ul {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      padding-left: 1.1rem;
+      margin-top: 0.5rem;
+    }
+    .screen-body li::marker { color: var(--color-lime); }
+    .screen-num {
+      flex-shrink: 0;
+      display: inline-flex;
+      width: 30px;
+      height: 30px;
+      border-radius: var(--radius-sm);
+      background: rgba(132, 204, 22, 0.12);
+      border: 1px solid rgba(132, 204, 22, 0.3);
+      color: var(--color-lime);
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 800;
+      font-family: var(--font-display);
+    }
+    .screen-caption {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      opacity: 0.85;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px dashed var(--border-subtle);
+      text-align: center;
+    }
+    .screen-caption strong { color: var(--color-lime); font-family: 'SFMono-Regular', Consolas, monospace; }
   </style>
 </head>
 <body>
@@ -326,6 +399,118 @@
           <li data-i18n="tugazenship.landing.tech.ads">✓ <strong>Privacidade & Ads:</strong> Google AdMob com consentimento UMP</li>
         </ul>
       </div>
+    </section>
+
+    <!-- Ecrãs da App -->
+    <section id="ecras" class="section">
+      <span class="section-badge" style="color: var(--color-lime);" data-i18n="tugazenship.landing.screens.badge">App em Funcionamento</span>
+      <h2 class="section-title" data-i18n="tugazenship.landing.screens.title">Ecrãs da App</h2>
+      <p class="section-desc" style="max-width: 760px;" data-i18n="tugazenship.landing.screens.desc">
+        Capturas de ecrã reais da aplicação nativa (Compose Multiplatform) executada num dispositivo Android físico.
+        Os dados apresentados são de exemplo e provêm da base de dados Firestore em tempo real.
+      </p>
+
+      <div class="screens-grid">
+        <div class="screen-card">
+          <img src="/tugazenship/screens/01-onboarding.png" alt="Ecrã de boas-vindas com introdução passo a passo" class="screen-shot" loading="lazy">
+          <div class="screen-body">
+            <h3><span class="screen-num">1</span> <span data-i18n="tugazenship.landing.screen1.title">Boas-vindas</span></h3>
+            <p data-i18n="tugazenship.landing.screen1.desc">Introdução em 4 passos que explica como adicionar o código de acesso e acompanhar o processo de nacionalidade em tempo real.</p>
+            <ul>
+              <li data-i18n="tugazenship.landing.screen1.li1">Fluxo de onboarding com indicador de progresso.</li>
+              <li data-i18n="tugazenship.landing.screen1.li2">Disponível em 6 idiomas.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <img src="/tugazenship/screens/02-login.png" alt="Ecrã de autenticação com Google, Microsoft e convidado" class="screen-shot" loading="lazy">
+          <div class="screen-body">
+            <h3><span class="screen-num">2</span> <span data-i18n="tugazenship.landing.screen2.title">Autenticação</span></h3>
+            <p data-i18n="tugazenship.landing.screen2.desc">Entrada segura com <strong>Google</strong> ou <strong>Microsoft</strong> via Firebase Auth, ou acesso como convidado.</p>
+            <ul>
+              <li data-i18n="tugazenship.landing.screen2.li1">Sincronização de processos entre dispositivos.</li>
+              <li data-i18n="tugazenship.landing.screen2.li2">Sessão protegida e dados cifrados.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <img src="/tugazenship/screens/03-home.png" alt="Painel com a lista de processos registados" class="screen-shot" loading="lazy">
+          <div class="screen-body">
+            <h3><span class="screen-num">3</span> <span data-i18n="tugazenship.landing.screen3.title">Meus Processos</span></h3>
+            <p data-i18n="tugazenship.landing.screen3.desc">Painel central com todos os processos: artigo, número de protocolo, requerente, conservatória e data de submissão.</p>
+            <ul>
+              <li data-i18n="tugazenship.landing.screen3.li1">Múltiplos processos de família num só perfil.</li>
+              <li data-i18n="tugazenship.landing.screen3.li2">Botão rápido para adicionar um novo processo.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <img src="/tugazenship/screens/04-novo-processo.png" alt="Escolha entre preenchimento manual ou portal da justiça" class="screen-shot" loading="lazy">
+          <div class="screen-body">
+            <h3><span class="screen-num">4</span> <span data-i18n="tugazenship.landing.screen4.title">Adicionar Processo</span></h3>
+            <p data-i18n="tugazenship.landing.screen4.desc">Dois modos de introdução: <strong>manual</strong> (preencher os dados) ou <strong>portal da Justiça</strong> (recolha automática).</p>
+            <ul>
+              <li data-i18n="tugazenship.landing.screen4.li1">Formulário guiado por passos.</li>
+              <li data-i18n="tugazenship.landing.screen4.li2">Seleção da conservatória e do artigo aplicável.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <img src="/tugazenship/screens/05-estado.png" alt="Estado atual do processo e previsão de conclusão" class="screen-shot" loading="lazy">
+          <div class="screen-body">
+            <h3><span class="screen-num">5</span> <span data-i18n="tugazenship.landing.screen5.title">Estado & Previsão</span></h3>
+            <p data-i18n="tugazenship.landing.screen5.desc">Estado atual do processo no IRN com <strong>data estimada de conclusão</strong> e dias de atraso.</p>
+            <ul>
+              <li data-i18n="tugazenship.landing.screen5.li1">Cálculo de progresso e backlog por artigo e conservatória.</li>
+              <li data-i18n="tugazenship.landing.screen5.li2">Abas de estado atual, artigo e histórico de previsões.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <img src="/tugazenship/screens/06-conservatorias.png" alt="Lista de conservatórias com contactos" class="screen-shot" loading="lazy">
+          <div class="screen-body">
+            <h3><span class="screen-num">6</span> <span data-i18n="tugazenship.landing.screen6.title">Conservatórias</span></h3>
+            <p data-i18n="tugazenship.landing.screen6.desc">Diretório de conservatórias com pesquisa por distrito ou serviço, morada, telefone e email.</p>
+            <ul>
+              <li data-i18n="tugazenship.landing.screen6.li1">Pesquisa instantânea por distrito.</li>
+              <li data-i18n="tugazenship.landing.screen6.li2">Contactos oficiais sempre à mão.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <img src="/tugazenship/screens/07-artigos.png" alt="Lista de artigos da lei da nacionalidade" class="screen-shot" loading="lazy">
+          <div class="screen-body">
+            <h3><span class="screen-num">7</span> <span data-i18n="tugazenship.landing.screen7.title">Guia de Artigos</span></h3>
+            <p data-i18n="tugazenship.landing.screen7.desc">Lista dos artigos da Lei da Nacionalidade com a respetiva descrição (1.c Ius Soli, 1.d Netos, entre outros).</p>
+            <ul>
+              <li data-i18n="tugazenship.landing.screen7.li1">Mais de 18 artigos documentados.</li>
+              <li data-i18n="tugazenship.landing.screen7.li2">Detalhe expansível por artigo.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="screen-card">
+          <img src="/tugazenship/screens/08-requisitos.png" alt="Requisitos e prazos de um artigo" class="screen-shot" loading="lazy">
+          <div class="screen-body">
+            <h3><span class="screen-num">8</span> <span data-i18n="tugazenship.landing.screen8.title">Requisitos & Prazos</span></h3>
+            <p data-i18n="tugazenship.landing.screen8.desc">Requisitos e prazos associados a cada artigo, com a conservatória e a data de submissão.</p>
+            <ul>
+              <li data-i18n="tugazenship.landing.screen8.li1">Checklist de documentos necessários.</li>
+              <li data-i18n="tugazenship.landing.screen8.li2">Prazos legais por artigo.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p class="screen-caption" style="max-width: 760px; margin: 2rem auto 0;" data-i18n="tugazenship.landing.screens.caption">
+        Capturas obtidas na aplicação Android nativa com dados de exemplo sincronizados via Firebase Firestore.
+      </p>
     </section>
 
     <!-- Comparison Table -->
